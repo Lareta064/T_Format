@@ -1,0 +1,66 @@
+include ../mixins/mixins.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		
+		style.
+			@font-face {
+				font-family: 'Mont';
+				src: url('./fonts/Mont-Regular.woff2') format("woff2");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Mont';
+				src: url('./fonts/Mont-SemiBold.woff2') format("woff2");
+				font-weight: 600;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Mont';
+				src: url('./fonts/Mont-Bold.woff2') format("woff2");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Mont';
+				src: url('./fonts/Mont-Light.woff2') format("woff2");
+				font-weight: 300;
+				font-style: normal;
+				font-display: swap;
+			}
+		//======= swiper slider ======
+		link(rel="stylesheet", href="./libs/swiper/swiper.min.css")
+		
+		//============ fancybox =============
+		link(rel="stylesheet", href="./libs/fancybox/fancybox.css")
+		//============ main.css =============
+		link(rel="stylesheet", href="css/main.css")
+		title !{title}
+		
+	body
+		
+		block content
+		
+		
+		//=============== jquery ==================
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		//=============== lazy ==================
+		script(src="./libs/jquery.lazy.min.js")
+		//=============== swiper js ===============
+		script(src="./libs/swiper/swiper.js")
+		//============fancybox====================
+		script(src="./libs/fancybox/fancybox.js")
+		//=============== main js ===================
+		script(src="./js/main.js")
