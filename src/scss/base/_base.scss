@@ -23,7 +23,7 @@
     --dark: #1A1A18;
     --dark-bg: #1A1A18;
 
-    
+
     --ff: 'Mont';
     -ff-sec: 'Montserrat';
   }
@@ -38,7 +38,7 @@
 	width: 100%;
   font-family: var(--ff), sans-serif;
 	-webkit-font-smoothing: antialiased;
-
+   line-height: 1.35;
   }
   .lock {
 	  overflow: hidden;
@@ -103,17 +103,23 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
   transition: background-color 5000s ease-in-out 0s;
 }
-.container, .container-large{
+.container, .header-row{
   width: min(1190px, 100%);
   padding-inline: 15px;
   margin-inline: auto;
 }
-.container-large{
+.header-row{
   width: min(1880px, 100%);
 }
 /*======= классы сетки========*/
-.d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x{
+.d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x, .fl-justify,
+.icon-item,.header-row,.contact-link{
   display: flex;
+  column-gap:14px;
+}
+.fl-y, .fl-col-y,.flex-center,.icon-item,.fl-justify,.header-row,
+.contact-link{
+  align-items: center;
 }
 .fl-col{
   flex-direction: column;
@@ -121,8 +127,8 @@ select:-webkit-autofill:focus {
 .flex-center, .fl-x,.fl-col-x{
   justify-content: center;
 }
-.fl-y, .fl-col-y,.flex-center{
-  align-items: center;
+.fl-justify,.header-top{
+  justify-content: space-between;
 }
 .d-grid{
   display: grid;
@@ -130,6 +136,45 @@ select:-webkit-autofill:focus {
   column-gap: 40px;
   @media (max-width: 1023px) {
     column-gap: 20px;
+  }
+}
+.d-desck{
+  display: block;
+  @media (max-width: 1199px) {
+    display: none!important;
+  }
+}
+.d-tablet {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}
+.d-mobile{
+  display: none;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+.fl-desck {
+  display: flex;
+
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.fl-tablet {
+   display: none;
+  @media (max-width: 1023px) {
+    display: flex;
+  }
+}
+.fl-mobile {
+  display: none;
+  @media (max-width: 767px) {
+    display: none !important;
   }
 }
 /*texts*/

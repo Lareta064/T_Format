@@ -1,7 +1,18 @@
-*[class^="icon-"],*[class^="svg-"]{
+*[class^="svg-"]{
 	display: inline-block;
+}
+svg{
+	color: var(--black);
 }
 .svg-logo{
 	width: 206px;
 	height: 46px;
+}
+.svg-phone{
+	width: 17px;
+	height: 17px;
+}
+.svg-envelope {
+	width: 24px;
+	height: 18px;
 }

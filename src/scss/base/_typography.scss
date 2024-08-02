@@ -1,0 +1,14 @@
+/*=TYPOGRAPHY=*/
+.icon-item,.contact-link{
+	svg, img{flex-shrink: 0;}
+}
+.contact-link{
+	font-size: 12px;
+	font-weight: 600;
+	transition: .3s;
+	&:hover{color: #777;}
+}
+.demi-12{
+	font-size: 12px;
+	font-weight: 600;
+}

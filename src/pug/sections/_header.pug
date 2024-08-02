@@ -1,5 +1,29 @@
 header.header
-	.header-top.container-large
-		svg.svg-logo
-			use(href='./img/sprite.svg#svg-logo')
-		h1 Logo
+	//==== header top ====
+	.header-row.header-top
+		p.demi-12 Производитель спецодежды и текстиля на заказ
+		.header-column.fl-y
+			//==== phone===
+			a.contact-link(href="tel:+77897897878")
+				svg.svg-phone
+					use(href='./img/sprite.svg#svg-phone')
+				span.d-desck Заказать обратный звонок
+				span.d-tablet +7 789 789 78 78
+			//==== wa===
+			a.contact-link(href="#!")
+				img(src="./img/wa.svg", width="16" height="16" alt="whatsapp")
+				span info@format.ru
+			//==== email===
+			a.contact-link(href="mailto:info@format.ru")
+				svg.svg-envelope
+					use(href='./img/sprite.svg#svg-envelope')
+				span info@format.ru
+			
+			//=====menu-toggle===
+			button.menu-toggle
+				span
+	//==== header bottom ====
+	.header-row
+		a(href="#!").logo
+			svg.svg-logo
+				use(href='./img/sprite.svg#svg-logo')
