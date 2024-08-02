@@ -1,4 +1,7 @@
-*[class^="icon-"]{
+*[class^="icon-"],*[class^="svg-"]{
 	display: inline-block;
 }
-
+.svg-logo{
+	width: 206px;
+	height: 46px;
+}
