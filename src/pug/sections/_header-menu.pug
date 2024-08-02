@@ -1,12 +1,12 @@
-.header-menu-wrapper
+.menu-wrapper-content
 	.header-menu.drop-menu
 		ul.level-1
 			li.active
-				a(href="index.html") Главная
+				a.link-center(href="index.html") Главная
 			
 			// пункт меню  с подменю 
 			li.drop-menu.drop-menu_2
-				a(href="#!") Каталог
+				a.link-center(href="#!") Каталог
 				span.drop-icon
 				// второй  уровень
 				.submenu.submenu--medium.submenu-2
@@ -107,11 +107,13 @@
 									li
 										a(href="#!") Пошив комбинезонов
 			li
-				a(href="#!") О компании
-			
+				a.link-center(href="#!") О компании
 			li
-				a(href="#!") Индивидуальный пошив
-				
-										
+				a.link-center(href="#!") Индивидуальный пошив
 			li
-				a(href="#!") Покупателям
+				a.link-center(href="#!") Покупателям
+	
+	//=====logo===
+	.menu-logo
+		svg.svg-logo.svg-logo--white
+			use(href='./img/sprite.svg#svg-logo')
