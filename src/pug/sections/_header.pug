@@ -20,10 +20,19 @@ header.header
 				span info@format.ru
 			
 			//=====menu-toggle===
-			button.menu-toggle
+			button.menu-toggle#menu-toggle
 				span
 	//==== header bottom ====
-	.header-row
+	.header-row.header-bottom
 		a(href="#!").logo
 			svg.svg-logo
 				use(href='./img/sprite.svg#svg-logo')
+		
+		.menu-wrapper
+			include _header-menu.pug
+				
+		
+		button.btn-cart.btn-icon(type="button")
+			svg.svg-cart
+				use(href='./img/sprite.svg#svg-cart')
+

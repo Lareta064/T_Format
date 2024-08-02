@@ -22,6 +22,7 @@
   :root{
     --dark: #1A1A18;
     --dark-bg: #1A1A18;
+    --red: #e3000f;
 
 
     --ff: 'Mont';
@@ -109,7 +110,8 @@ select:-webkit-autofill:focus {
   margin-inline: auto;
 }
 .header-row{
-  width: min(1880px, 100%);
+  width: 100%;
+  padding-inline: 35px;
 }
 /*======= классы сетки========*/
 .d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x, .fl-justify,

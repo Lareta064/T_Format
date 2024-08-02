@@ -1,0 +1,37 @@
+.btn,.btn-icon, .button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+	background: var(--dark-bg);
+	padding-inline: 56px;
+	color: white;
+	height:54px;
+	border-left:3px solid var(--red);
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-align: center;
+	transition: .3s; 
+	&:hover{
+		background-color: var(--red);
+		border-left: 3px solid var(--dark);
+	}
+}
+.button{
+	border-left: 1px solid var(--dark);
+	border: 1px solid var(--dark);
+	color: var(--dark);
+	background-color: #fff;
+	padding-inline: 45px;
+	&:hover{
+		background-color: var(--red);
+		color: white;
+		border-left: 1px solid var(--dark);
+	}
+}
+.btn-icon{
+	width: 80px;
+	height: 80px;
+	padding-inline:10px;
+}
