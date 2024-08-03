@@ -12,9 +12,15 @@
 	@media (max-width: 1023px) {
 		font-size: 32px;
 	}
+	@media (max-width: 767px) {
+	font-size: 20px;
+	}
 }
 .icon-item,.contact-link{
 	svg, img{flex-shrink: 0;}
+	@media (max-width: 767px) {
+	column-gap:6px;
+	}
 }
 .contact-link{
 	font-size: 12px;

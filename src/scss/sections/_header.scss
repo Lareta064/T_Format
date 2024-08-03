@@ -11,6 +11,9 @@
 }
 .header-column{
 	column-gap:45px;
+	@media (max-width: 767px) {
+	column-gap: 20px;
+	}
 }
 .header-top{
 	padding-block:13px 16px;
@@ -42,7 +45,9 @@
 			position: relative;
 			
 			width: 30px;
-			height: 30px;}
+			height: 30px;
+			top:-2px;
+		}
 	}
 	@media (max-width: 767px) {
 		.logo{margin-right: auto;
