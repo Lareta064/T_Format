@@ -1,7 +1,13 @@
 
 .menu-wrapper{
 	margin-left: 135px;
-	@media (max-width: 1199px) {
+	@media (max-width: 1699px) {
+		margin-left: 35px;
+	}
+	@media (max-width: 1439px) {
+		margin-left: 15px;
+	}
+	@media (max-width: 1279px) {
 		position: fixed;
 		inset:0;
 		top: 30px;
@@ -11,7 +17,6 @@
 		z-index: 10;
 		display: flex;
 		margin-left: 0;
-		
 	}
 	.menu-logo {
 		display: none;
@@ -22,7 +27,7 @@
 	display: flex;
 	align-items: center;
 	height: 50px;
-	@media (max-width: 1199px) {
+	@media (max-width: 1279px) {
 	height: auto;
 	}
 }
@@ -36,7 +41,7 @@
 	-ms-flex-align: center;
 	align-items: center;
 	height: 100%;
-	@media (max-width: 1199px) {
+	@media (max-width: 1279px) {
 		flex-direction: column;
 	}
 }
@@ -67,7 +72,7 @@
 			a {color: white;}
 	
 		}
-	@media (max-width: 1199px) {
+	@media (max-width: 1279px) {
 		padding-inline: 0;
 		border-left: 0;
 		&:hover{border-left: 0;}
@@ -79,7 +84,9 @@
 	align-items:center;
 	justify-content: space-between;
 	padding-right: 10px;
-	@media (max-width: 1199px) {
+	a{pointer-events: none;}
+	cursor:pointer;
+	@media (max-width: 1279px) {
 		padding-right: 0;
 	}
 	
@@ -102,7 +109,7 @@
 	
 }
 .drop-icon.drop-icon-mobile{
-	@media (max-width: 1199px) {
+	@media (max-width: 1279px) {
 		.menu-link{position: relative;}
 	.menu-link:after{
 		content: '';
@@ -137,7 +144,7 @@
 	-webkit-transition: .5s;
 	-o-transition: .5s;
 	transition: .5s;
-	@media (max-width: 1199px) {
+	@media (max-width: 1279px) {
 		color: white;
 	}
 }
@@ -159,6 +166,7 @@
 	padding-top: 44px;
 	padding-bottom: 24px;
 	a{color: white}
+	
 }
 .header-menu {
 	.submenu-2, .submenu-3{
@@ -177,7 +185,7 @@
 	
 	padding-inline: 25px;
 	
-	@media (max-width: 1199px) {
+	@media (max-width: 1279px) {
 		padding-inline: 0;
 	}
 }
@@ -230,7 +238,7 @@
 .header-menu  .submenu.submenu-3{
 	top: -20px;
 	left: 100%;
-	@media (max-width: 1199px) {
+	@media (max-width: 1279px) {
 		top: 0;
 		margin-left: 15px;
 	}
@@ -262,7 +270,7 @@ li.drop-menu_3:hover .submenu-3 {
 
 .drop-menu.drop-menu_2 >.drop-icon:after{
 	display: none;
-	@media (max-width: 1199px) {
+	@media (max-width: 1279px) {
 	display: inline-block;
 	transform: rotate(-90deg);
 	}
@@ -275,7 +283,7 @@ li.drop-menu_3:hover .submenu-3 {
 }
 
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
 	.header-menu {
 		align-items: flex-start;
 	.submenu-link{

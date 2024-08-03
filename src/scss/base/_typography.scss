@@ -12,3 +12,24 @@
 	font-size: 12px;
 	font-weight: 600;
 }
+.txt-big{
+	font-size: 24px;
+	font-weight: 800;
+}
+.online-state__dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	background-color: lightgrey;
+}
+.online-state{
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--dark);
+	column-gap:8px;
+}
+.online-state.active{
+	.online-state__dot{background-color: #00A650;}
+}

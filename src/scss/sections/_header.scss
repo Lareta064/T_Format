@@ -1,5 +1,6 @@
 .header{
 	background-color: #fff;
+	
 }
 .header-row{
 	padding-block: 18px;
@@ -17,6 +18,22 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-		
 	}
+	@media (max-width: 1439px) {
+		.logo .svg-logo{width: 160px;}
+	}
+}
+.contacts-phone{
+	margin-left: auto;
+	margin-right: 80px;
+	white-space: nowrap;
+	@media (max-width: 1439px) {
+		.txt-big{font-size: 18px;}
+				margin-right: 60px;
+	}
+		@media (max-width: 1364px) {
+			.txt-big {font-size: 16px;}
+				
+			
+		}
 }
