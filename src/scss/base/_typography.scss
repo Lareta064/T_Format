@@ -1,6 +1,6 @@
 /*=TYPOGRAPHY=*/
 .h1{
-	font-weight: 800;
+	font-weight: 700;
 	font-size: 46px;
 	color: var(--dark);
 	@media (max-width: 1439px) {
@@ -14,6 +14,13 @@
 	}
 	@media (max-width: 767px) {
 	font-size: 20px;
+	}
+}
+.h3{
+	font-size: 20px;
+	font-weight: 600;
+	@media (max-width: 767px) {
+	  font-size: 14px;
 	}
 }
 .icon-item,.contact-link{
@@ -34,7 +41,7 @@
 }
 .txt-big{
 	font-size: 24px;
-	font-weight: 800;
+	font-weight: 700;
 }
 .online-state__dot {
 	width: 10px;
@@ -52,4 +59,23 @@
 }
 .online-state.active{
 	.online-state__dot{background-color: #00A650;}
+}
+.mark-list{
+	li{
+		position: relative;
+		padding-left: 20px;
+	}
+	li:before{
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		width: 13px;
+		height: 13px;
+		background-image: url('../img/li-mark.webp');
+		background-size: 13px 13px;
+	}
 }

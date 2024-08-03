@@ -1,0 +1,53 @@
+.serv-card{
+	width: 100%;
+	min-height: 360px;
+	position: relative;
+	padding: 50px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	&__img{
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		inset:0;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+		&:after{
+			content:'';
+			position: absolute;
+			inset: 0;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+
+	}
+	&__text{
+		width: 100%;
+		color: #fff;
+		position: relative;
+		z-index: 2;
+		.h3{
+			margin-bottom: 20px;
+			text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+			text-transform: uppercase;
+		}
+		ul{
+			li +li{margin-top: 14px;}
+			a{
+				font-size: 12px;
+				text-decoration: underline;
+				text-decoration-skip-ink: none;
+				color: white;
+			}
+		}
+	}
+}
+.services-content{
+	display: grid;
+	grid-template-columns:  repeat(3, 1fr);
+	column-gap:40px;
+	row-gap: 40px;
+}
