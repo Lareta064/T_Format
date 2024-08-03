@@ -63,4 +63,50 @@
 	@media (max-width: 1023px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	@media (max-width: 767px) {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 16px;
+	}
+}
+@media (max-width: 767px) {
+	.serv-card{
+		display: block;
+		height: auto;
+		min-height: unset;
+		padding: 0;
+		max-width: 400px;;
+		.serv-card__img{display: none;}
+		.h3{color: var(--dark); text-shadow: none;margin-bottom: 0;}
+		.mark-list{
+			display: none;
+			padding-block:20px;
+			a{color: var(--dark-bg)};
+			padding-right: 40px;
+			
+		}
+
+	}
+	.serv-card.active{
+		.mark-list{display: block;}
+		.serv-card-btn:after{
+			transform: rotate(90deg);
+		}
+	}
+	.serv-card-btn{
+		position: relative;
+		&:after{
+			content: '';
+			width: 16px;
+			height: 16px;
+			display: block;
+			background-size: 8px 13px;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			transition: .3s; 
+			right: 0;
+			top: 1px;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L6.5 6.5L1 12' stroke='%231A1A18' stroke-width='1.52' /%3e%3c/svg%3e");
+		}
+	}
 }

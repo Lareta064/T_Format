@@ -117,5 +117,24 @@ document.addEventListener("DOMContentLoaded", function () {
 			 el: ".hero-pagination",
 			 clickable: true,
 		}
-	})
+	});
+	/************************** */
+	const servCards = document.querySelectorAll('.serv-card');
+	
+		for(item of servCards){
+			const servCardBtn = item.querySelector('.serv-card-btn');
+			
+			servCardBtn.addEventListener('click', ()=>{
+				const thisParent = servCardBtn.closest('.serv-card');
+				if(thisParent.classList.contains('active')){
+					 thisParent.classList.remove('active');
+					 console.log('131');
+				}else{
+					thisParent.classList.add('active');
+					console.log(thisParent);
+				}
+			})
+
+		}
+
 });
