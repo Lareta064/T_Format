@@ -1,7 +1,11 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header.pug
+	.page-wrapper
+		include ../sections/_header.pug
+		main.main
+			include ../sections/_hero.pug
+		include ../sections/_footer.pug
 	
 	
 	

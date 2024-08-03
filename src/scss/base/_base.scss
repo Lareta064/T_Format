@@ -40,6 +40,7 @@
   font-family: var(--ff), sans-serif;
 	-webkit-font-smoothing: antialiased;
    line-height: 1.35;
+   font-weight: 16px;
   }
   .lock {
 	  overflow: hidden;
@@ -118,12 +119,12 @@ select:-webkit-autofill:focus {
 }
 /*======= классы сетки========*/
 .d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x, .fl-justify,
-.icon-item,.header-row,.contact-link,.online-state{
+.icon-item,.header-row,.contact-link,.online-state,.btn-group{
   display: flex;
   column-gap:14px;
 }
 .fl-y, .fl-col-y,.flex-center,.icon-item,.fl-justify,.header-row,
-.contact-link,.online-state{
+.contact-link,.online-state,.btn-group{
   align-items: center;
 }
 .fl-col{

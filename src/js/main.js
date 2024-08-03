@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		// Проверка размера экрана при изменении размера окна
 		window.addEventListener('resize', checkScreenSize);
 	}	
-		// моб меню - показать выпадающие меню
+	// моб меню - показать выпадающие меню
 	const openMenuLevel2 = document.querySelectorAll('.drop-menu_2');
 	const openMenuLevel3 = document.querySelectorAll('.drop-menu_3');
 
@@ -105,5 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	for (let item of openMenuLevel3) {
 		showSubmenu(item, '.submenu-3');
 	}
-
+	/*=============== END MOBILE MENU ==================*/
+	var heroSlider = new Swiper('.hero-swiper', {
+		pagination:{
+			 el: ".hero-pagination",
+			 clickable: true,
+		}
+	})
 });

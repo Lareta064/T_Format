@@ -1,0 +1,27 @@
+.hero{
+	padding-block: 42px;
+}
+.hero-swiper-wrapper{
+	width: calc(50vw + 50%);
+	max-width: 1457px;
+}
+.hero-slide{
+	display: flex;
+	column-gap:24px;
+	&-img{
+		flex-shrink: 0;
+		width: 57%;
+	}
+	&-text{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		row-gap:18px;
+		justify-content: center;
+		&>*{width: 100%;}
+	}
+}
+.swiper-pagination{
+	display: flex;
+	bottom: 0;
+}
