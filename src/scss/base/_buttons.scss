@@ -34,4 +34,7 @@
 	width: 80px;
 	height: 80px;
 	padding-inline:10px;
+	@media (max-width: 1279px) {
+		padding-inline: 4px;
+	}
 }

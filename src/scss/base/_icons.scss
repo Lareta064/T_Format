@@ -24,4 +24,8 @@ svg{
 	height: 40px;
 	color: white;
 	fill: transparent;
+	@media (max-width: 1279px) {
+	width: 24px;
+	height: 24px;
+	}
 }

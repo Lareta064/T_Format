@@ -112,6 +112,9 @@ select:-webkit-autofill:focus {
 .header-row{
   width: 100%;
   padding-inline: 35px;
+  @media (max-width: 1199px) {
+  padding-inline: 15px;
+  }
 }
 /*======= классы сетки========*/
 .d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x, .fl-justify,
@@ -142,43 +145,19 @@ select:-webkit-autofill:focus {
 }
 .d-desck{
   display: block;
-  @media (max-width: 1199px) {
+  @media (max-width: 1279px) {
     display: none!important;
   }
 }
-.d-tablet {
+.d-laptop {
   display: none;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1279px) {
     display: block;
   }
 }
-.d-mobile{
-  display: none;
-  @media (max-width: 767px) {
-    display: none;
-  }
-}
-.fl-desck {
-  display: flex;
 
-  @media (max-width: 1199px) {
-    display: none;
-  }
-}
 
-.fl-tablet {
-   display: none;
-  @media (max-width: 1023px) {
-    display: flex;
-  }
-}
-.fl-mobile {
-  display: none;
-  @media (max-width: 767px) {
-    display: none !important;
-  }
-}
 /*texts*/
 .txt-center{
   text-align: center;
