@@ -12,11 +12,15 @@
 	text-transform: uppercase;
 	font-weight: 600;
 	text-align: center;
-	transition: .3s; 
+	transition: .3s;
+	white-space: nowrap;
 	&:hover{
 		background-color: var(--red);
 		border-left: 3px solid var(--dark);
 		color: white;
+	}
+	@media (max-width: 1199px) {
+		padding-inline: 45px;
 	}
 }
 .button{
@@ -30,12 +34,16 @@
 		color: white;
 		border-left: 1px solid var(--dark);
 	}
+	@media (max-width: 1199px) {
+		padding-inline: 25px;
+	}
 }
 .btn-icon{
 	width: 80px;
 	height: 80px;
 	padding-inline:10px;
 	@media (max-width: 1279px) {
-		padding-inline: 4px;
+		padding-inline: 4px!important;
 	}
+	
 }

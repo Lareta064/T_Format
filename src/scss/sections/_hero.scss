@@ -4,6 +4,9 @@
 .hero-swiper-wrapper{
 	width: calc(50vw + 50%);
 	max-width: 1457px;
+	@media (max-width: 1439px) {
+		width:100%;
+	}
 }
 .hero-slide{
 	display: flex;
@@ -19,6 +22,11 @@
 			right: 0;
 			bottom: 23px;
 			background-color: #fff;
+			width: 219px;
+			height: auto;
+			@media (max-width: 1199px) {
+				width: 150px;
+			}
 		}
 		img{
 			width: 100%;
@@ -33,6 +41,18 @@
 		justify-content: center;
 		background-color: #fff;
 		&>*{width: 100%;}
+	}
+	@media (max-width: 1439px) {
+		&-img{
+			width: 50%;
+			height: 500px;
+		}
+	}
+	@media (max-width: 1023px) {
+		&-img {
+			width: 30%;
+			height: 400px;
+		}
 	}
 }
 .swiper-pagination{

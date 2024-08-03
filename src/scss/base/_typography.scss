@@ -3,6 +3,15 @@
 	font-weight: 800;
 	font-size: 46px;
 	color: var(--dark);
+	@media (max-width: 1439px) {
+		font-size: 40px;
+	}
+	@media (max-width: 1199px) {
+		font-size: 36px;
+	}
+	@media (max-width: 1023px) {
+		font-size: 32px;
+	}
 }
 .icon-item,.contact-link{
 	svg, img{flex-shrink: 0;}
