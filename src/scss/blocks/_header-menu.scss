@@ -13,7 +13,11 @@
 		margin-left: 0;
 		
 	}
+	.menu-logo {
+		display: none;
+	}
 }
+
 .header-menu {
 	display: flex;
 	align-items: center;
@@ -71,11 +75,39 @@
 		&:hover{border-left: 0;}
 	}
 }
-.drop-icon {
+.drop-icon{
+	position: relative;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+	
+}
+.drop-icon.drop-icon-mobile:after{
+	display: none!important;
+	
+}
+.drop-icon.drop-icon-mobile{
+	@media (max-width: 1199px) {
+		
+	.menu-link:after{
+		content: '';
+			display: inline-block;
+			position: relative;
+			right: -10px;
+			width: 13px;
+			height: 8px;
+			opacity: 0.6;
+			transform: rotate(-90deg);
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 1.25L6.5 6.75L1 1.25' stroke='white' stroke-width='1.52' /%3e%3c/svg%3e");
+		}
+		&.active .menu-link:after{transform: rotate(0);}
+	}
+	
+}
+.drop-icon:after {
+	content:'';
 	display: inline-block;
-	position: absolute;
-	top: 10px;
-	right: 20px;
+	transform: rotate(-90deg);
 	width: 13px;
 	height: 8px;
 	opacity: 0.6;
@@ -164,7 +196,7 @@
 	border-left-color: transparent;
 	&>a{background-image: linear-gradient(to right, white, white);}
 }
-.submenu ul li.drop-menu_3:hover > .drop-icon{
+.submenu ul li.drop-menu_3:hover > .drop-icon:after{
 	transform: rotate(-90deg);
 	opacity: 1;
 }
@@ -215,7 +247,7 @@ li.drop-menu_3:hover .submenu-3 {
 }
 
 
-.drop-menu.drop-menu_2 >.drop-icon{
+.drop-menu.drop-menu_2 >.drop-icon:after{
 	display: none;
 	@media (max-width: 1199px) {
 	display: inline-block;
@@ -224,13 +256,13 @@ li.drop-menu_3:hover .submenu-3 {
 }
 
 
-.drop-icon.active {
-	transform: rotate(90deg);
+.drop-icon.active:after {
+	transform: rotate(0);
 	
 }
-.drop-menu_2>.drop-icon {
-	top: 44%;
-	right: 10px;
+.drop-menu_2>.drop-icon:after {
+	// top: 44%;
+	// right: 10px;
 	
 }
 @media (min-width: 1200px) {
@@ -241,8 +273,10 @@ li.drop-menu_3:hover .submenu-3 {
 
 @media (max-width: 1199px) {
 	.header-menu {
-		
 		align-items: flex-start;
+	.submenu-link{
+		font-size: 16px;
+	}
 	}
 	.menu-wrapper-content{
 		height: auto;
@@ -313,11 +347,6 @@ li.drop-menu_3:hover .submenu-3 {
 		height: 100%;
 		min-height: 50px;
 		top:0;
-	}
-	.drop-menu_2>.drop-icon {
-		top: 10px;
-		
-		right: 0;
 	}
 	
 
