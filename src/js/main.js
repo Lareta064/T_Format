@@ -107,6 +107,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	/*=============== END MOBILE MENU ==================*/
 	var heroSlider = new Swiper('.hero-swiper', {
+		speed: 1000,
+		effect: 'fade',
+		loop: true,
+		autoplay:{
+			delay: 3000,
+		},
 		pagination:{
 			 el: ".hero-pagination",
 			 clickable: true,
