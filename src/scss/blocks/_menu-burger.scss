@@ -2,14 +2,17 @@
 .menu-toggle {
 	display: none;
 	flex-shrink: 0;
-	width: 24px;
-	height: 24px;
-
+	width: 33px;
+	height: 30px;
+	border-left:3px solid transparent;
 	z-index: 11;
 	cursor: pointer;
 	justify-content: center;
 	align-items: center;
-
+	&.active{
+		background-color: var(--dark-bg);
+		border-left: 3px solid var(--red);
+	}
 }
 
 @media (max-width: 1279px) {
@@ -63,7 +66,7 @@
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
-	background-color: var(--dark);
+	background-color: white;
 }
 
 .active.menu-toggle span:before {
@@ -71,10 +74,6 @@
 	-webkit-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
-	background-color: var(--dark);
+	background-color: white;
 }
 
-.page-wrapper--white .menu-toggle span,
-.active .menu-toggle span {
-	background-color: var(--dark);
-}

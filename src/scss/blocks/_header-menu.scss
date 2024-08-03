@@ -10,14 +10,16 @@
 	@media (max-width: 1279px) {
 		position: fixed;
 		inset:0;
-		top: 30px;
+		top: 34px;
 		background-color: rgba(255,255,255, .7);
 		padding-right: 15px;
 		padding-left: 16px;
 		z-index: 10;
 		margin-left: 0;
-		display: none;
-		&.active{display: flex;}
+		transform: translateX(110%);
+		display: flex;
+		transition: .3s; 
+		&.active{transform: translateX(0);}
 	}
 	.menu-logo {
 		display: none;
@@ -29,7 +31,11 @@
 	align-items: center;
 	height: 50px;
 	@media (max-width: 1279px) {
+
 	height: auto;
+	max-height: calc(100vh - 150px);
+	overflow:hidden;
+	overflow-y: auto;
 	}
 }
 
@@ -44,6 +50,7 @@
 	height: 100%;
 	@media (max-width: 1279px) {
 		flex-direction: column;
+		height: auto;
 	}
 }
 .header-menu .menu-link{
@@ -60,12 +67,12 @@
 	
 	&:hover{a{color: white;}}
 }
-.header-menu .menu-list-item:hover {
-	background-color: var(--dark);
-	border-left: 3px solid var(--red);}
+
 .header-menu ul .menu-list-item{
 	padding-inline: 25px;
 	border-left:3px solid transparent;
+	background-color: var(--dark);
+	
 	&:hover {
 			background-color: var(--dark);
 			border-left: 3px solid var(--red);
@@ -75,8 +82,8 @@
 		}
 	@media (max-width: 1279px) {
 		padding-inline: 0;
-		border-left: 0;
-		&:hover{border-left: 0;}
+		border-left: 3px solid transparent;
+		&:hover{border-left: 3px solid transparent;}
 	}
 }
 .drop-icon{
