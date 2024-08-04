@@ -173,5 +173,5 @@ select:-webkit-autofill:focus {
 }
 .dark-bg{
   background-color: var(--dark-bg);
-  &>*{color: white;}
+  * , .h1{color: white;}
 }
