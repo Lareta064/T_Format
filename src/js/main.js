@@ -126,12 +126,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			
 			servCardBtn.addEventListener('click', ()=>{
 				const thisParent = servCardBtn.closest('.serv-card');
+				const dropList = thisParent.querySelector('.mark-list');
+				console.log(dropList.scrollHeight);
 				if(thisParent.classList.contains('active')){
 					 thisParent.classList.remove('active');
-					 console.log('131');
+					 if(dropList){dropList.style.maxHeight = 0;}
+					 
+					 
 				}else{
 					thisParent.classList.add('active');
-					console.log(thisParent);
+					if(dropList){dropList.style.maxHeight = dropList.scrollHeight + 'px';}
 				}
 			})
 

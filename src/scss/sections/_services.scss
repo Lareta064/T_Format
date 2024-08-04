@@ -6,7 +6,7 @@
 	width: 100%;
 	min-height: 360px;
 	position: relative;
-	padding: 50px 20px;
+	padding: 10px 20px 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -26,7 +26,7 @@
 			content:'';
 			position: absolute;
 			inset: 0;
-			background-color: rgba(0, 0, 0, 0.6);
+			background-color: rgba(0, 0, 0, 0.5);
 		}
 
 	}
@@ -39,6 +39,7 @@
 			margin-bottom: 20px;
 			text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 			text-transform: uppercase;
+			cursor:pointer;
 		}
 		ul{
 			li +li{margin-top: 14px;}
@@ -50,12 +51,10 @@
 			}
 		}
 	}
-	&:hover .serv-card__img:after{
-		background-color: rgba(0, 0, 0, 0.4);
+	&.active .serv-card__img:after{
+		background-color: rgba(0, 0, 0, 0.6);
 	}
-	&:hover .serv-card__img img{
-		transform: scale(1.05);
-	}
+	
 }
 .services-content{
 	display: grid;
@@ -72,6 +71,12 @@
 		gap: 16px;
 	}
 }
+.mark-list {
+	transition: .3s; 
+	max-height: 0;
+	overflow: hidden;
+}
+
 @media (max-width: 767px) {
 	.serv-card{
 		display: block;
@@ -81,17 +86,13 @@
 		max-width: 400px;;
 		.serv-card__img{display: none;}
 		.h3{color: var(--dark); text-shadow: none;margin-bottom: 0;}
-		.mark-list{
-			display: none;
-			padding-block:20px;
-			padding-right: 40px;
-			a{color: var(--dark-bg)};
-			
-		}
-
+		.mark-list{a{color: var(--dark-bg)}}
 	}
 	.serv-card.active{
-		.mark-list{display: block;}
+		.mark-list{
+			padding-block:20px;
+			padding-right: 40px;
+		}
 		.serv-card-btn:after{
 			transform: rotate(90deg);
 		}
