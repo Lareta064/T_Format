@@ -1,0 +1,48 @@
+//===== support ===
+section.support
+	.container
+		.support-content.d-grid
+			.support-consultant
+				h2.h2 С вами работают
+				.support-photo
+					img(src="./img/support.webp", width="360" height="400" alt="img")
+				.support-name
+					.h3 Наталья
+					.txt-18 Менеджер
+				.support-contacts
+					a(href="tel:+78998998989").contact-link
+						.txt-18 Телефон
+						.h3 + 7 899 899 89 89
+					.online-state.active
+						span.online-state__dot
+						span.online-state__text.txt-18 Сейчас работаем, звоните!
+				a.contact-link.social-wapp-round(href="#!")
+					span.round-icon
+						img(src="./img/wa-white.webp", width="16" height="16" alt="whatsapp")
+					span.txt-18  Написать в Whatsapp
+			//===== form block ====
+			.support-form
+				h2.h2 Отправить заявку
+				form.contact-form(action="#" method="method")
+					.form-item
+						label Ваше имя:
+						input(type="text" name="name")
+					.form-item
+						label Email:
+						input(type="text" name="email")
+					.form-item
+						label Телефон:
+						input(type="text" name="phone")
+					.form-item
+						.custom-file-input
+							input#file-input.file-input(type='file')
+							label.file-label(for='file-input')
+								svg.svg-paper
+									use(href='./img/sprite.svg#svg-paper')
+								span.file-text Прикрепить файл
+								
+					.form-item
+						label Комментарий к заявке:
+						textarea(name="message")
+					.form-btn
+						button.btn(type="submit") Отправить

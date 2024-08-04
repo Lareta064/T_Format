@@ -137,8 +137,16 @@ document.addEventListener("DOMContentLoaded", function () {
 					thisParent.classList.add('active');
 					if(dropList){dropList.style.maxHeight = dropList.scrollHeight + 'px';}
 				}
-			})
-
+			});
 		}
+	// ======custom input type file ====
+	const fileInput = document.getElementById('file-input');
+  	const fileLabel = document.querySelector('.file-label');
+	if(fileInput){
 
+		fileInput.addEventListener('change', function() {
+			const fileName = fileInput.files[0]?.name || 'Прикрепить файл';
+			fileLabel.querySelector('.file-text').textContent = fileName;
+		});
+	}
 });

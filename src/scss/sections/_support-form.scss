@@ -1,0 +1,45 @@
+.support{
+	margin-top: 0;
+	position: relative;
+	&:before{
+		content: '';
+		width: 56%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		background-color: #FAFAFA;
+	}
+}
+.support-content{
+	.support-consultant{
+		grid-column: span 4;
+		padding-top: 80px;
+		padding-bottom: 100px;
+		.support-photo, .support-name, .support-contacts{
+			margin-bottom: 22px;
+			&>*+*{margin-top: 8px;}
+		}
+	}
+	.support-form{
+		grid-column: span 8;
+		padding-top: 80px;
+		padding-bottom: 100px;
+		&>*{
+			position: relative;
+			z-index: 2;
+			margin-left: 60px;
+			padding-left: 40px;
+		}
+
+	}
+	.contact-form{
+		padding: 40px;
+		padding-top: 10px;
+		.form-item{margin-bottom: 30px;}
+		.form-btn{
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}
