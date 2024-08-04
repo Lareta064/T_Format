@@ -2,15 +2,52 @@
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: 40px;
+	justify-content: center;
 	.benefit-item{
 		text-align: center;
 		width: calc((100% - 160px)/5);
 		font-size: 16px;
 		font-weight: 700;
 		.benefit-img{margin-bottom: 40px;}
+		p{
+			min-height: 60px;
+		}
 		.link{
 			margin-top: 20px;
 			
+		}
+		@media (max-width: 1199px) {
+			.benefit-img{margin-bottom: 22px;}
+			.benefit-img svg{
+				width: 40px;
+				height: 40px;
+			}
+			p{
+				font-size: 14px;
+				max-width: 250px;
+				margin-inline: auto;
+			}
+			
+		}
+		@media (max-width: 1023px) {
+		  .link{font-size: 12px;}
+		}
+	}
+	@media (max-width: 1100px) {
+		.benefit-item{
+			width: calc((100% - 40px) / 3);
+		}
+	}
+	@media (max-width: 1199px) {
+		column-gap: 20px;
+		row-gap:40px;
+	}
+	@media (max-width: 580px) {
+		.benefit-item{width: calc((100% - 22px) / 2);}
+		.benefit-item p{
+			font-size: 10px;
+			max-width: 125px;
+			min-height: 37px;
 		}
 	}
 }
