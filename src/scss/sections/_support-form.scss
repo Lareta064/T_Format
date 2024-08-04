@@ -9,6 +9,39 @@
 		bottom: 0;
 		right: 0;
 		background-color: #FAFAFA;
+		@media (max-width: 1899px) {
+			width: 60%;
+		}
+		@media (max-width: 1439px) {
+			width: 65%;
+		}
+		@media (max-width: 767px) {
+		display: none;
+		}
+	}
+	@media (max-width: 767px) {
+	.support-photo{margin-bottom: 0;}
+	.support-name{.txt-18{font-size: 12px;}}
+	.online-state__text, .social-wapp-round .txt-18{font-size: 10px;;}
+	}
+
+}
+.support-consultant-info{
+	@media (max-width: 767px) {
+	 display: flex;
+	 column-gap: 20px;
+	}
+}
+.support-consultant-block{
+	@media (max-width: 767px) {
+	display: flex;
+	flex-direction: column;
+	// justify-content: space-between;
+	width: 50%;
+	flex-shrink: 0;
+	}
+	@media (max-width: 580px) {
+		justify-content: space-between;
 	}
 }
 .support-content{
@@ -16,10 +49,31 @@
 		grid-column: span 4;
 		padding-top: 80px;
 		padding-bottom: 100px;
-		.support-photo, .support-name, .support-contacts{
-			margin-bottom: 22px;
-			&>*+*{margin-top: 8px;}
+		@media (max-width: 767px) {
+			grid-column: span 12;
+			padding-top: 60px;
+			padding-bottom: 0;
 		}
+		
+	}
+	.support-photo, .support-name, .support-contacts{
+		margin-bottom: 22px;
+		&>*+*{margin-top: 8px;}
+		@media (max-width: 767px) {
+			margin-bottom: 8px;
+		}
+	}
+	.support-contacts .contact-link{
+		@media (max-width: 1279px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		@media (max-width: 767px) {
+			.h3{font-size: 16px;}
+		}
+	}
+	.support-photo img{
+		aspect-ratio:18 / 23 ;
 	}
 	.support-form{
 		grid-column: span 8;
@@ -30,16 +84,49 @@
 			z-index: 2;
 			margin-left: 60px;
 			padding-left: 40px;
+			@media (max-width: 1279px) {
+				margin-left: 0;
+				padding-left: 20px;
+			}
+			@media (max-width: 767px) {
+			padding-left: 0;
+			}
 		}
-
+		@media (max-width: 767px) {
+			grid-column: span 12;
+			padding-bottom: 60px;
+			.form-item.form-item--file{
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
 	}
 	.contact-form{
-		padding: 40px;
+		padding-left: 40px;
 		padding-top: 10px;
-		.form-item{margin-bottom: 30px;}
+		
+		.form-item{
+			margin-bottom: 30px;
+			@media (max-width: 767px) {
+			margin-bottom: 18px;
+			}
+			
+		}
 		.form-btn{
 			display: flex;
 			justify-content: flex-end;
+			.btn{
+				width: 260px;
+				@media (max-width: 1023px) {
+					width: 135px;
+				}
+			}
+		}
+		@media (max-width: 1279px) {
+			padding-inline:20px;
+		}
+		@media (max-width: 767px) {
+			padding-inline: 0;
 		}
 	}
 }

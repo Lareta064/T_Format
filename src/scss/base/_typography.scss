@@ -1,6 +1,7 @@
 /*=TYPOGRAPHY=*/
 .h1{
 	font-weight: 700;
+	
 	font-size: 46px;
 	color: var(--dark);
 	@media (max-width: 1439px) {
@@ -20,6 +21,12 @@
 	font-size: 32px;
 	font-weight: 700;
 	margin-bottom: 20px;
+	@media (max-width: 1199px) {
+		font-size: 28px;
+	}
+	@media (max-width: 767px) {
+		font-size: 24px;
+	}
 }
 .h3, .txt-20{
 	font-size: 20px;

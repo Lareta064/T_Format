@@ -15,10 +15,20 @@ form, label, input, textarea{display: block;}
 	label{
 		margin-bottom: 12px;
 		font-size: 18px;
+		@media (max-width: 1199px) {
+		font-size: 16px;
+		}
+		@media (max-width: 767px) {
+		font-size: 12px;
+		margin-bottom: 6px;
+		}
 	}
 	textarea{
 		height: 130px;
 		resize: none;
+		@media (max-width: 767px) {
+		height: 100px;
+		}
 	}
 }
 .btn-slim{
@@ -55,6 +65,10 @@ form, label, input, textarea{display: block;}
 		font-size: 14px;
 		text-transform: uppercase;
 		margin-bottom: 0;
+		@media (max-width: 767px) {
+			font-size: 10px;
+			height: 32px;
+		}
 	}
 	
 }

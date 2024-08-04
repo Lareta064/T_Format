@@ -1,18 +1,4 @@
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Medium.woff2') format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
 
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Bold.woff2') format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
 * {
 	  box-sizing: border-box;
     background-repeat: no-repeat;
@@ -26,7 +12,8 @@
     --red: #e3000f;
     --green: #00C31F;
 
-    --ff: 'Mont';
+    // --ff: 'Mont';
+    --ff: 'Montserrat';
     -ff-sec: 'Montserrat';
   }
   html {
@@ -133,18 +120,18 @@ section +section {
 }
 /*======= классы сетки========*/
 .d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x, .fl-justify,
-.icon-item,.header-row,.contact-link,.online-state,.btn-group{
+.icon-item,.header-row,.contact-link,.online-state,.btn-group,.round-icon{
   display: flex;
   column-gap:14px;
 }
 .fl-y, .fl-col-y,.flex-center,.icon-item,.fl-justify,.header-row,
-.contact-link,.online-state,.btn-group{
+.contact-link,.online-state,.btn-group,.round-icon{
   align-items: center;
 }
 .fl-col{
   flex-direction: column;
 }
-.flex-center, .fl-x,.fl-col-x{
+.flex-center, .fl-x,.fl-col-x,.round-icon{
   justify-content: center;
 }
 .fl-justify,.header-top{

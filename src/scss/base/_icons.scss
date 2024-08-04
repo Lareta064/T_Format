@@ -38,12 +38,19 @@ svg{
 	width: 20px;
 	height: 20px;
 	fill: transparent;
+	@media (max-width: 767px) {
+	width: 15px;
+	height: 15px;
+	}
 }
 .round-icon{
 	width: 30px;
 	height: 30px;
+	
 	border-radius: 50%;
 	flex-shrink:0;
 	background-color: var(--green);
 	svg{color: white;}
+	transition: .3s; 
+	&:hover{opacity: .7;}
 }

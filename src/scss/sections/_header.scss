@@ -36,6 +36,7 @@
 		position: absolute;
 		right: 0;
 		top: 0;
+		min-width: unset!important;
 	}
 	@media (max-width: 1439px) {
 		.logo .svg-logo{width: 135px; height: 30px;}
