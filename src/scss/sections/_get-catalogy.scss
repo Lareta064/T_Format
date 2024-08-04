@@ -1,0 +1,34 @@
+.get-catalogy{
+	padding-top: 236px;
+	padding-bottom: 85px;
+	.h1{color: white; margin-bottom: 5px;}
+}
+.get-catalogy-bg{
+	padding-top: 21px;
+	padding-bottom: 29px;
+}
+.get-catalogy-row{
+	position: relative;
+	max-width: 65.5%;
+	.txt-20{max-width: 50%;}
+	.get-catalogy-img{
+		position: absolute;
+		right: 0;
+		transform: translateX(100%);
+		width: 53%;
+		bottom: -115px;
+		max-width: 400px;
+
+	}
+}
+.get-catalogy-form{
+	margin-top: 10px;
+	display: flex;
+	column-gap: 20px;
+	.form-item{flex-grow: 1;}
+	.form-btn{flex-shrink: 0;}
+	.button-outline{
+		height: 44px;
+		width: 219px;
+	}
+}

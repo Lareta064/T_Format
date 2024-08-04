@@ -79,13 +79,14 @@
   
   input,
   button, textarea, textarea:focus, select, select:focus, button:focus, input:focus, a, a:active {
+    padding: 0;
 	  outline: none;
     font-family: inherit;
     font-size: inherit;
   }
   input::placeholder{
     font-family: inherit;
-    font-size: inherit;
+    font-size: 12px;
   } 
   button,input[type="submit"] {
 	padding: 0;
@@ -172,4 +173,5 @@ select:-webkit-autofill:focus {
 }
 .dark-bg{
   background-color: var(--dark-bg);
+  &>*{color: white;}
 }

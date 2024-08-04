@@ -1,4 +1,4 @@
-.btn,.btn-icon, .button{
+.btn,.btn-icon, .button, .button-outline{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -29,7 +29,7 @@
 	 padding-inline: 15px;
 	}
 }
-.button{
+.button, .button-outline{
 	border-left: 1px solid var(--dark);
 	border: 1px solid var(--dark);
 	color: var(--dark);
@@ -40,6 +40,23 @@
 		color: white;
 		border-left: 1px solid var(--dark);
 	}
+	@media (max-width: 1199px) {
+		padding-inline: 25px;
+	}
+}
+.button-outline{
+	border-left: 1px solid white;
+	border: 1px solid white;
+	color: white;
+	background-color: transparent;
+	padding-inline: 45px;
+
+	&:hover {
+		background-color: var(--red);
+		color: white;
+		border-left: 1px solid white;
+	}
+
 	@media (max-width: 1199px) {
 		padding-inline: 25px;
 	}

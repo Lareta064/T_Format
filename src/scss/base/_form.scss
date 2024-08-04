@@ -1,0 +1,10 @@
+form, label, input, textarea{display: block;}
+.form-item{
+	position: relative;
+	input{
+		width: 100%;
+		height: 44px;
+		background-color: #fff;
+		padding-inline:13px;
+	}
+}

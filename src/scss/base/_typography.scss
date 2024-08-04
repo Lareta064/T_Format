@@ -16,13 +16,14 @@
 	font-size: 20px;
 	}
 }
-.h3{
+.h3, .txt-20{
 	font-size: 20px;
 	font-weight: 600;
 	@media (max-width: 767px) {
 	  font-size: 14px;
 	}
 }
+.txt-20{font-weight: 400;}
 .bold-18{
 	font-size: 18px;
 	font-weight: 700;
@@ -30,6 +31,7 @@
 		font-size: 14px
 	}
 }
+.txt-light{font-weight: 300;}
 .icon-item,.contact-link{
 	svg, img{flex-shrink: 0;}
 	@media (max-width: 767px) {
