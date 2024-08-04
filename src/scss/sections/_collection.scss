@@ -1,0 +1,19 @@
+.collection-wrapper{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap:40px;
+	.mini-card{
+		grid-column: span 3;
+		@media (max-width: 767px) {grid-column: span 6;}
+	}
+	@media (max-width: 1439px) {
+	column-gap: 16px;
+		row-gap:32px;
+	}
+	@media (max-width: 1023px) {
+		column-gap: 10px;
+	}
+	@media (max-width: 767px) {
+		column-gap: 22px;
+	}
+}

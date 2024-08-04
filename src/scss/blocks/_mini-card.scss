@@ -1,0 +1,30 @@
+.mini-card{
+	width: 100%;
+	display: block;
+	background-color: #fff;
+	.card-img{
+		width: 100%;
+		aspect-ratio: 26 / 37;
+		border: 1px solid rgba(0,0,0, .3);
+		margin-bottom: 23px;
+		@media (max-width: 767px) {
+			margin-bottom: 14px;
+		}
+	}
+	.bold-18{
+		
+		display: inline;
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: var(--dark);
+	}
+	}
+.card-img{
+	overflow: hidden;
+	display: block;
+}
+.card-img img{
+	transition: .3s; 
+	width: 100%;
+	height: 100%;
+}

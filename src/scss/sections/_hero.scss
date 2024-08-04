@@ -1,6 +1,7 @@
 .hero{
 	padding-block: 42px;
 	background-color: #FAFAFA;
+	overflow: hidden;
 	@media (max-width: 767px) {
 	padding-top: 12px;
 	padding-bottom: 24px;
