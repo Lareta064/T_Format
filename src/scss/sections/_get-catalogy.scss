@@ -1,13 +1,20 @@
 .get-catalogy{
 	padding-top: 236px;
-	padding-bottom: 85px;
+	margin-top: 50px;
 	.h1{color: white; margin-bottom: 5px;}
-	@media (max-width: 767px) {
+	@media (max-width:1100px) {
+		padding-top: 200px;
+	}
+	@media (max-width: 1023px) {
 	padding-top: 150px;
+	}
+	@media (max-width: 767px) {
+	 padding-top: 85px;
 	}
 	@media (max-width: 576px) {
 		position: relative;
 		padding-top: 120px;
+		margin-top: 40px;
 		.h1{
 			position: absolute;
 			top: 40px;
