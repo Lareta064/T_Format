@@ -1,0 +1,16 @@
+.benefits-content{
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 40px;
+	.benefit-item{
+		text-align: center;
+		width: calc((100% - 160px)/5);
+		font-size: 16px;
+		font-weight: 700;
+		.benefit-img{margin-bottom: 40px;}
+		.link{
+			margin-top: 20px;
+			
+		}
+	}
+}

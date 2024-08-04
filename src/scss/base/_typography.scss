@@ -31,6 +31,18 @@
 		font-size: 14px
 	}
 }
+.txt-center{text-align: center;}
+.link {
+	display: inline-block;
+	width: fit-content;
+	border-bottom: 1px solid currentColor;
+	font-weight: 600;
+	font-size: 14px;
+	transition: .3s; 
+	&:hover{
+		opacity: .7;
+	}
+}
 .txt-light{font-weight: 300;}
 .icon-item,.contact-link{
 	svg, img{flex-shrink: 0;}
@@ -51,6 +63,24 @@
 .txt-big{
 	font-size: 24px;
 	font-weight: 700;
+}
+.grey-bg {
+	background-color: #FAFAFA;
+}
+
+.dark-bg {
+	background-color: var(--dark-bg);
+
+	*,
+	.h1 {
+		color: white;
+	}
+}
+.p-80{
+	padding-block:80px;
+	@media (max-width: 767px) {
+		padding-block: 40px;
+	}
 }
 .online-state__dot {
 	width: 10px;
