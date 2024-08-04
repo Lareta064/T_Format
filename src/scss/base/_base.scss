@@ -125,6 +125,12 @@ select:-webkit-autofill:focus {
   padding-inline: 15px;
   }
 }
+section +section {
+  margin-top: 80px;
+  @media (max-width: 767px) {
+     margin-top: 60px;
+  }
+}
 /*======= классы сетки========*/
 .d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x, .fl-justify,
 .icon-item,.header-row,.contact-link,.online-state,.btn-group{
@@ -148,7 +154,7 @@ select:-webkit-autofill:focus {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 40px;
-  @media (max-width: 1023px) {
+  @media (max-width: 1439px) {
     column-gap: 20px;
   }
 }
