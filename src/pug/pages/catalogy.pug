@@ -4,7 +4,8 @@ block content
 	.page-wrapper
 		include ../sections/_header.pug
 		main.main.catalogy-main
-			.hero-inner
+			//====hero=====
+			section.hero-inner
 				.container
 					//=====breadcrumbs===
 					.breadcrumbs
@@ -37,12 +38,31 @@ block content
 								span.custom-option(data-value='4') Пошив халатов
 								span.custom-option(data-value='5') Пошив рабочих костюмов
 								span.custom-option(data-value='6') Пошив халатов
-								span.custom-option(data-value='2') Пошив  жилетов
-								span.custom-option(data-value='3') Пошив рабочих костюмов
-								span.custom-option(data-value='4') Пошив халатов
-								span.custom-option(data-value='5') Пошив рабочих костюмов
-								span.custom-option(data-value='6') Пошив халатов
-			
+								
+					article.catalogy-category
+						h2.h2 Пошив спецодежды
+						.filters-block.d-flex
+							.form-item
+								label.form-checkbox.d-flex
+									input(type="checkbox" name="checkbox_name")
+									span.txt-12 Показывать только в наличии
+							.form-group.d-flex
+								label Фильровать по цене от
+								input(type="number" name="price_min")
+								label до
+								input(type="number" name="price_max")
+								button.button.button--dark.btn-mini(type="button") Применить
+
+							.custom-select-wrapper.filter-select
+								.custom-select
+									.custom-select-trigger Фильтровать по
+									.custom-options
+										span.custom-option(data-value='1') По цвету
+										span.custom-option(data-value='2') По сезону
+										span.custom-option(data-value='3') По возрастанию
+										span.custom-option(data-value='4') По убыванию
+										
+
 			include ../sections/_statistic.pug
 			include ../sections/_services.pug
 			//- include ../sections/_components.pug

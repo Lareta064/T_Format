@@ -31,16 +31,9 @@ form, label, input, textarea{display: block;}
 		}
 	}
 }
-.btn-slim{
-	height: 44px;
-	width: 219px;
-	padding-inline: 10px;
 
-	@media (max-width: 767px) {
-		height: 35px; width: 134px;
-		 
-	}
-}
+
+
 /* input type file*/
 .custom-file-input {
 	display: flex;
@@ -89,12 +82,11 @@ form, label, input, textarea{display: block;}
 .custom-select-trigger {
 	display: block;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	background: #f2f2f2;
-	text-decoration: underline;
-	text-decoration-skip-ink: none;
+	background: #fff;
+
 	padding: 6px 40px 8px 18px;
 	position: relative;
-	text-align: center;
+	
 	cursor: pointer;
 
 	&:after {
@@ -128,7 +120,7 @@ form, label, input, textarea{display: block;}
 	overflow: hidden;
 	transition: max-height 0.3s ease;
 	z-index: 10;
-	text-align: center;
+	
 
 }
 
@@ -143,12 +135,12 @@ form, label, input, textarea{display: block;}
 	display: block;
 	cursor: pointer;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	background: #f2f2f2;
-	text-decoration: underline;
-	text-decoration-skip-ink: none;
+	background: #fff;
+	
 	padding: 6px 40px 8px 18px;
 
 }
+
 
 .custom-option:hover {
 	background-color: #f2f2f2;
@@ -156,4 +148,13 @@ form, label, input, textarea{display: block;}
 
 .custom-select.open .custom-options {
 	display: block;
+}
+/******************/
+.form-checkbox{
+	align-items: center;
+	column-gap:5px;
+	input{
+		width: 18px;
+		height: 18px;
+	}
 }

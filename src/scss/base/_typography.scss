@@ -71,10 +71,11 @@
 	transition: .3s;
 	&:hover{color: #777;}
 }
-.demi-12, .contact-link{
+.demi-12, .contact-link, .txt-12{
 	font-size: 12px;
 	font-weight: 600;
 }
+.txt-12{font-weight: 400;}
 .txt-big{
 	font-size: 24px;
 	font-weight: 700;

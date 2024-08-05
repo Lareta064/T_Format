@@ -1,0 +1,31 @@
+.filters-block{
+	width: 100%;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	border-top: 1px solid rgba(26, 26, 24, 0.2);
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(26, 26, 24, 0.2);
+	.form-group,.form-item{align-items: center;}
+	label{
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+	.form-group{
+		column-gap:12px;
+		input{
+			font-size: 12px;
+			width: 66px;
+			height: 26px;
+			padding-inline: 5px;
+			text-align: center;
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.3);
+		}
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			/* display: none; <- Crashes Chrome on hover */
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+}
