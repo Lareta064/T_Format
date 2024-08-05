@@ -46,32 +46,24 @@ block content
 								label.form-checkbox.d-flex
 									input(type="checkbox" name="checkbox_name")
 									span.txt-12 Показывать только в наличии
-							.form-group.d-flex
-								label Фильровать по цене от
-								input(type="number" name="price_min")
-								label до
-								input(type="number" name="price_max")
-								button.button.button--dark.btn-mini(type="button") Применить
+							.filters-block-inner
+								.form-group.d-flex
+									label Фильровать по цене от
+									input(type="number" name="price_min")
+									label до
+									input(type="number" name="price_max")
+									button.button.button--dark.btn-mini(type="button") Применить
 
-							.custom-select-wrapper.filter-select
-								.custom-select
-									.custom-select-trigger Фильтровать по
-									.custom-options
-										span.custom-option(data-value='1') По цвету
-										span.custom-option(data-value='2') По сезону
-										span.custom-option(data-value='3') По возрастанию
-										span.custom-option(data-value='4') По убыванию
-										
+								.custom-select-wrapper.filter-select
+									.custom-select
+										.custom-select-trigger Фильтровать по
+										.custom-options
+											span.custom-option(data-value='1') По цвету
+											span.custom-option(data-value='2') По сезону
+											span.custom-option(data-value='3') По возрастанию
+											span.custom-option(data-value='4') По убыванию
 
-			include ../sections/_statistic.pug
-			include ../sections/_services.pug
-			//- include ../sections/_components.pug
-			include ../sections/_get-catalogy.pug
-			include ../sections/_collection.pug
-			include ../sections/_get-sample.pug
-			include ../sections/_benefits.pug
-			include ../sections/_clients.pug
-			include ../sections/_about.pug
+			
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
 
