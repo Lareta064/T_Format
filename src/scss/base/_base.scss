@@ -158,4 +158,38 @@ section +section {
     display: block;
   }
 }
+.breadcrumbs {
+  margin-bottom: 28px;
 
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.breadcrumbs li {
+  position: relative;
+  display: inline;
+  font-size: 12px;
+
+  a {
+    color: var(--dark);
+  }
+
+
+
+  &:last-child>* {
+    color: var(--dark);
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: default;
+  }
+
+}
+
+.breadcrumbs li+li:before {
+  content: "/\00a0";
+  padding: 0 3px;
+  color: var(--dark);
+}
+ 

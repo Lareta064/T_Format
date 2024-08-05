@@ -1,0 +1,48 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper
+		include ../sections/_header.pug
+		main.main
+			.hero-inner
+				.container
+					//=====breadcrumbs===
+					.breadcrumbs
+						ul
+							li
+								a(href="index.html") Главная 
+							li
+								a(href="catalogy.html") Каталог
+							li
+								a(href="#!") Спецодежда
+					//===content ====
+					h1.h1 Спецодежда на заказ
+					.preview-text
+						p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+					.catalogy-menu
+						a(href="").label-link  Пошив сигнальных жилетов
+						a(href="").label-link  Пошив  жилетов
+						a(href="").label-link  Пошив рабочих костюмов
+						a(href="").label-link  Пошив халатов
+						a(href="").label-link  Пошив сигнальных жилетов
+						a(href="").label-link  Пошив халатов
+			
+			include ../sections/_statistic.pug
+			include ../sections/_services.pug
+			//- include ../sections/_components.pug
+			include ../sections/_get-catalogy.pug
+			include ../sections/_collection.pug
+			include ../sections/_get-sample.pug
+			include ../sections/_benefits.pug
+			include ../sections/_clients.pug
+			include ../sections/_about.pug
+			include ../sections/_subscribe-form.pug
+			include ../sections/_support-form.pug
+
+
+		include ../sections/_footer.pug
+	
+	
+	
+block variables
+	-var title = "Page";
