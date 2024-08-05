@@ -72,3 +72,88 @@ form, label, input, textarea{display: block;}
 	}
 	
 }
+.custom-select-wrapper {
+	position: relative;
+	width: 100%;
+	user-select: none;
+}
+
+.custom-select {
+	position: relative;
+	width: 100%;
+	font-size: 12px;
+	color: var(--dark);
+	
+}
+
+.custom-select-trigger {
+	display: block;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background: #f2f2f2;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	padding: 6px 40px 8px 18px;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 14px;
+		height: 7px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6L7.84853 0.848528C7.3799 0.379898 6.6201 0.379898 6.15147 0.848527L0.999999 6' stroke='%23000000' stroke-linecap='round' /%3e%3c/svg%3e");
+		position: absolute;
+		right: 13px;
+		top: 13px;
+		pointer-events: none;
+		transform: rotate(180deg);
+		z-index: 3;
+	}
+
+	.open &:after {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6L7.84853 0.848528C7.3799 0.379898 6.6201 0.379898 6.15147 0.848527L0.999999 6' stroke='%232DBFCA' stroke-linecap='round' /%3e%3c/svg%3e");
+		transform: rotate(0);
+	}
+}
+
+.custom-options {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: #fff;	
+	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.06);
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+	z-index: 10;
+	text-align: center;
+
+}
+
+.custom-options.custom-options--rel {
+	position: relative;
+	top: auto;
+	
+}
+
+.custom-option {
+	
+	display: block;
+	cursor: pointer;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background: #f2f2f2;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	padding: 6px 40px 8px 18px;
+
+}
+
+.custom-option:hover {
+	background-color: #f2f2f2;
+}
+
+.custom-select.open .custom-options {
+	display: block;
+}

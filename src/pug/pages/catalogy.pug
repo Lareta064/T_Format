@@ -3,7 +3,7 @@ extends ../layouts/layout.pug
 block content
 	.page-wrapper
 		include ../sections/_header.pug
-		main.main
+		main.main.catalogy-main
 			.hero-inner
 				.container
 					//=====breadcrumbs===
@@ -26,6 +26,22 @@ block content
 						a(href="").label-link  Пошив халатов
 						a(href="").label-link  Пошив сигнальных жилетов
 						a(href="").label-link  Пошив халатов
+					
+					.custom-select-wrapper.catalogy-menu-mobile
+						.custom-select
+							.custom-select-trigger Пошив сигнальных жилетов
+							.custom-options.custom-options--rel
+								span.custom-option(data-value='1') Пошив сигнальных жилетов
+								span.custom-option(data-value='2') Пошив  жилетов
+								span.custom-option(data-value='3') Пошив рабочих костюмов
+								span.custom-option(data-value='4') Пошив халатов
+								span.custom-option(data-value='5') Пошив рабочих костюмов
+								span.custom-option(data-value='6') Пошив халатов
+								span.custom-option(data-value='2') Пошив  жилетов
+								span.custom-option(data-value='3') Пошив рабочих костюмов
+								span.custom-option(data-value='4') Пошив халатов
+								span.custom-option(data-value='5') Пошив рабочих костюмов
+								span.custom-option(data-value='6') Пошив халатов
 			
 			include ../sections/_statistic.pug
 			include ../sections/_services.pug

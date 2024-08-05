@@ -13,6 +13,18 @@
 	flex-wrap: wrap;
 	gap:24px;
 }
+.catalogy-main .catalogy-menu{
+	@media (max-width: 767px) {
+	display: none;
+	}
+}
+.catalogy-main .catalogy-menu-mobile{
+	display: none;
+	
+	@media (max-width: 767px) {
+	display: block;
+	}
+}
 .label-link{
 	display: inline-flex;
 	padding: 6px 18px;

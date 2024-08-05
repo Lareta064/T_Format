@@ -149,4 +149,50 @@ document.addEventListener("DOMContentLoaded", function () {
 			fileLabel.querySelector('.file-text').textContent = fileName;
 		});
 	}
+		/*========CUSTOM SELECT======= */
+ 	const customSelects = document.querySelectorAll('.custom-select');
+
+    customSelects.forEach((customSelect) => {
+        const selectTrigger = customSelect.querySelector('.custom-select-trigger');
+        const optionsContainer = customSelect.querySelector('.custom-options');
+        const optionsList = customSelect.querySelectorAll('.custom-option');
+
+        // Toggle options dropdown
+        selectTrigger.addEventListener('click', function(e) {
+            e.stopPropagation(); // Останавливаем распространение события
+            const isOpen = customSelect.classList.contains('open');
+            closeAllSelects();
+            if (!isOpen) {
+                customSelect.classList.add('open');
+                optionsContainer.style.maxHeight = optionsContainer.scrollHeight + 'px';
+            } else {
+                optionsContainer.style.maxHeight = '0';
+            }
+        });
+
+        // Update selected option
+        optionsList.forEach((option) => {
+            option.addEventListener('click', function() {
+                selectTrigger.textContent = option.textContent;
+                selectTrigger.dataset.value = option.dataset.value;
+                customSelect.classList.remove('open');
+                optionsContainer.style.maxHeight = '0';
+            });
+        });
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function() {
+        closeAllSelects();
+    });
+
+    function closeAllSelects() {
+        customSelects.forEach((select) => {
+            select.classList.remove('open');
+            const optionsContainer = select.querySelector('.custom-options');
+            if (optionsContainer) {
+                optionsContainer.style.maxHeight = '0';
+            }
+        });
+    }
 });
