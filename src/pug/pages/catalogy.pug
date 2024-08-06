@@ -28,6 +28,7 @@ block content
 						a(href="").label-link  Пошив сигнальных жилетов
 						a(href="").label-link  Пошив халатов
 					
+					//====== ссылки-меню для моб версии =====
 					.custom-select-wrapper.catalogy-menu-mobile
 						.custom-select
 							.custom-select-trigger Пошив сигнальных жилетов
@@ -38,11 +39,13 @@ block content
 								span.custom-option(data-value='4') Пошив халатов
 								span.custom-option(data-value='5') Пошив рабочих костюмов
 								span.custom-option(data-value='6') Пошив халатов
-								
+					
+					//======ARTICLE =====			
 					article.catalogy-category
 						h2.h2 Пошив спецодежды
+						
+						//====FILTERS=======
 						.filters-block.d-flex
-							
 							label.form-checkbox.d-flex
 								input(type="checkbox" name="checkbox_name")
 								span.txt-12 Показывать только в наличии
@@ -72,7 +75,8 @@ block content
 											span.custom-option(data-value='3') По возрастанию
 											span.custom-option(data-value='4') По убыванию
 
-			
+							//====== filter icon for mobile ===
+							button.btn-icon.filters-toggle 555
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
 

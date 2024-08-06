@@ -5,6 +5,7 @@
 	border-top: 1px solid rgba(26, 26, 24, 0.2);
 	column-gap: 70px;
 	border-bottom: 1px solid rgba(26, 26, 24, 0.2);
+	.filters-toggle{display: none;}
 	.custom-select-wrapper {margin-left: auto;}
 		
 	.form-group,.form-group label, .form-checkbox,.filters-block-inner{align-items: center;}
@@ -48,12 +49,18 @@
 	}
 	@media (max-width: 767px) {
 		position: relative;
-		
+		flex-direction: row;
+		justify-content: space-between;
+		border:0;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		.filters-toggle{display: flex;}
 		.filters-block-inner{
 			position: absolute;
 			right: 0;top:100%;
 			left: 0;
 			z-index: 5;
+			margin-top: -7px;
 			background-color: var(--dark);
 			padding: 24px 20px;
 			flex-direction: column;
