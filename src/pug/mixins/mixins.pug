@@ -1,0 +1,33 @@
+mixin mini-card(title, img, state="", label1, label2)
+	.mini-card
+		a(href="./img/product"+ img +".webp" data-fancybox).card-img
+			img.lazy(src="./img/product"+ img +".webp", width="260" height="361" alt="img")
+			if label1
+				.label-red Акция
+			if label2
+				.label-green Новинка
+		
+		.card-info
+			.h4 #{title}
+			.d-flex
+				.card-group
+					if state == "active"
+						.online-state.active
+							span.online-state__dot
+							span.online-state__text.demi-12 В наличии
+						
+					
+					if state == "to-order"
+						.online-state.to-order
+							span.online-state__dot
+							span.online-state__text.demi-12 Под заказ
+						
+				
+					.card-price от #[span 1 590] руб.
+					
+				//====button===
+				.card-button
+					button.btn
+						svg.svg-cart
+							use(href='./img/sprite.svg#svg-cart')
+						span В корзину

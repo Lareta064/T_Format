@@ -76,7 +76,44 @@ block content
 											span.custom-option(data-value='4') По убыванию
 
 							//====== filter icon for mobile ===
-							button.btn-icon.filters-toggle#filters-toggle 555
+							button.btn-icon.filters-toggle#filters-toggle
+								svg.svg-filters
+									use(href='./img/sprite.svg#svg-flters')
+			
+						//======= PRODUCT CARDS ========
+						.catalogy-cards
+							//===single-card======
+							.mini-card-box
+								+mini-card('Костюм 	Костюм УЛУЙШН - 678', 1, "active", 'Акция','Новинка')
+							//===single-card======
+							.mini-card-box
+								+mini-card('Халат темный бязевый', 2 ,"active")
+							//===single-card======
+							.mini-card-box
+								+mini-card('Костюм Автосервис', 5, "to-order", 'Акция')
+							//===single-card======
+							.mini-card-box
+								+mini-card('Какое-то название в две строки', 6, "" )
+							//===single-card======
+							.mini-card-box
+								+mini-card('Костюм 	летний', 1,"", 'Акция','Новинка')
+							.mini-card-box
+								+mini-card('Костюм Тундра', 3,"",  'Акция')
+							//===single-card======
+							.mini-card-box
+								+mini-card('Костюм 	Костюм УЛУЙШН - 678', 4, "active")
+							//===single-card======
+							.mini-card-box
+								+mini-card('Костюм 	Костюм УЛУЙШН - 678', 2, "active")
+							
+						.pagination
+							a(href="#!") 1
+							a.active(href="#!") 2
+							a(href="#!") 3
+							a(href="#!") 4
+							a(href="#!") ...
+							a(href="#!") 8
+			
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
 

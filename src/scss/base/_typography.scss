@@ -36,7 +36,10 @@
 	  font-size: 14px;
 	}
 }
-
+.h4{
+	font-weight: 700;
+	font-size: 16px;
+}
 .bold-18, .demi-18, .txt-18{
 	font-size: 18px;
 	font-weight: 700;
@@ -116,6 +119,11 @@
 }
 .online-state.active{
 	.online-state__dot{background-color: #00A650;}
+}
+.online-state.to-order {
+	.online-state__dot {
+		background-color: #FFDA00;
+	}
 }
 .mark-list{
 	li{

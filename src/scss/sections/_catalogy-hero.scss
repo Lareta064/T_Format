@@ -59,3 +59,22 @@
 .custom-select-wrapper.filter-select{
 	max-width: 242px;
 }
+.catalogy-cards{
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	.mini-card-box:nth-child(-n+4){
+		border-top:0;
+	}
+	@media (max-width: 1199px) {
+		grid-template-columns: repeat(3, 1fr);
+		
+	}
+	@media (max-width: 1023px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 767px) {
+		column-gap:20px;
+		row-gap:24px;
+	}
+}

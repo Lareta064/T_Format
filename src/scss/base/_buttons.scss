@@ -2,6 +2,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	column-gap:10px;
+	
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
 	background: var(--dark-bg);
 	padding-inline: 56px;
@@ -28,6 +30,9 @@
 	 min-width: 135px;
 	 padding-inline: 15px;
 	}
+		svg {
+			flex-shrink: 0
+		}
 }
 
 .button, .button-outline{
