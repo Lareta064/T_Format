@@ -67,7 +67,10 @@
 			align-items: flex-start;
 			row-gap: 33px;
 			border-left: 3px solid var(--red);
-		
+			display: none;
+			&.active{
+				display: flex;
+			}
 			.form-checkbox {display: flex;}
 			&>*{color: white!important;}
 			.form-checkbox, .form-group, .form-item{
@@ -117,6 +120,7 @@
 				background: var(--dark);
 				color: white;
 			}
+
 		}
 	}
 }

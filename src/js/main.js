@@ -195,4 +195,35 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+	function setupActive(buttonClass, contentClass) {
+		const button = document.querySelector(`#${buttonClass}`);
+		const content = document.querySelector(`#${contentClass}`);
+
+		function toggleContent() {
+			if (content.classList.contains('active')) {
+				
+				content.classList.remove('active');
+				button.classList.remove('active');
+			} else {
+				
+				content.classList.add('active');
+				button.classList.add('active');
+			}
+		}
+
+		// Add click event listener to the button
+		button.addEventListener('click', toggleContent);
+
+		// Close content if clicked outside
+		document.addEventListener('click', function (event) {
+			if (!button.contains(event.target) && !content.contains(event.target)) {
+				
+				content.classList.remove('active');
+				button.classList.remove('active');
+			}
+		});
+	}
+
+	// Call the function with the class names of the button and content
+	setupActive('filters-toggle', 'filters-drop');
 });

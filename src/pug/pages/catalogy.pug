@@ -50,7 +50,7 @@ block content
 								input(type="checkbox" name="checkbox_name")
 								span.txt-12 Показывать только в наличии
 							
-							.filters-block-inner.d-flex
+							.filters-block-inner.d-flex#filters-drop
 								//==== этоткомпонент виден на экранах меньше 768пикс, в выпадающем фильтре===
 								label.form-checkbox.d-flex
 									input(type="checkbox" name="checkbox_name")
@@ -76,7 +76,7 @@ block content
 											span.custom-option(data-value='4') По убыванию
 
 							//====== filter icon for mobile ===
-							button.btn-icon.filters-toggle 555
+							button.btn-icon.filters-toggle#filters-toggle 555
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
 
