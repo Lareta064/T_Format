@@ -42,18 +42,27 @@ block content
 					article.catalogy-category
 						h2.h2 Пошив спецодежды
 						.filters-block.d-flex
-							.form-item
+							
+							label.form-checkbox.d-flex
+								input(type="checkbox" name="checkbox_name")
+								span.txt-12 Показывать только в наличии
+							
+							.filters-block-inner.d-flex
+								//==== этоткомпонент виден на экранах меньше 768пикс, в выпадающем фильтре===
 								label.form-checkbox.d-flex
 									input(type="checkbox" name="checkbox_name")
 									span.txt-12 Показывать только в наличии
-							.filters-block-inner
+								
+								//====price inputs=====
 								.form-group.d-flex
-									label Фильровать по цене от
-									input(type="number" name="price_min")
+									p Фильровать по цене
+									label от
+										input(type="number" name="price_min")
 									label до
-									input(type="number" name="price_max")
+										input(type="number" name="price_max")
 									button.button.button--dark.btn-mini(type="button") Применить
-
+								
+								//====custom select=====
 								.custom-select-wrapper.filter-select
 									.custom-select
 										.custom-select-trigger Фильтровать по

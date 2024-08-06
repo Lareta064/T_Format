@@ -3,15 +3,26 @@
 	padding-top: 14px;
 	padding-bottom: 14px;
 	border-top: 1px solid rgba(26, 26, 24, 0.2);
-	justify-content: space-between;
+	column-gap: 70px;
 	border-bottom: 1px solid rgba(26, 26, 24, 0.2);
-	.form-group,.form-item{align-items: center;}
+	.custom-select-wrapper {margin-left: auto;}
+		
+	.form-group,.form-group label, .form-checkbox,.filters-block-inner{align-items: center;}
+	.filters-block-inner{
+		flex-grow: 1;
+		.form-checkbox{
+			display: none;
+		}
+	}
 	label{
 		font-size: 12px;
 		margin-bottom: 0;
 	}
 	.form-group{
 		column-gap:12px;
+		font-size: 12px;
+		p{white-space: nowrap;}
+		label{display: flex; column-gap:12px; flex-shrink:0}
 		input{
 			font-size: 12px;
 			width: 66px;
@@ -26,6 +37,79 @@
 			/* display: none; <- Crashes Chrome on hover */
 			-webkit-appearance: none;
 			margin: 0;
+		}
+	}
+	@media (max-width: 1199px) {
+		column-gap:30px
+	}
+	@media (max-width: 1023px) {
+	 flex-direction: column;
+	 row-gap:20px;
+	}
+	@media (max-width: 767px) {
+		position: relative;
+		
+		.filters-block-inner{
+			position: absolute;
+			right: 0;top:100%;
+			left: 0;
+			z-index: 5;
+			background-color: var(--dark);
+			padding: 24px 20px;
+			flex-direction: column;
+			align-items: flex-start;
+			row-gap: 33px;
+			border-left: 3px solid var(--red);
+		
+			.form-checkbox {display: flex;}
+			&>*{color: white!important;}
+			.form-checkbox, .form-group, .form-item{
+				input{
+					color: white;
+					border-color: white;
+					background-color: var(--dark);
+				}
+			}
+			.form-group {
+				flex-wrap: wrap;
+				p {width: 100%; color: white; margin-bottom:8px;}
+				button,.button {display: none;	}
+				
+			}
+			.custom-select-wrapper {
+				margin-left: 0;
+			}
+
+			.custom-select-trigger {
+				
+				border: 1px solid white;
+				background: var(--dark);
+				color: white;
+				&:after {
+						
+						background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6L7.84853 0.848528C7.3799 0.379898 6.6201 0.379898 6.15147 0.848527L0.999999 6' stroke='white' stroke-linecap='round' /%3e%3c/svg%3e");}
+			}
+			.custom-options{
+				background-color: var(--dark);
+				position: relative;
+				top: auto;
+				display: flex;
+				flex-direction: column;
+				row-gap:12px;
+			}
+			.open .custom-options{
+				border: 1px solid white;
+				border-top:0;
+				padding-block: 15px;
+			}
+			.custom-option{
+				border: 1px solid white;
+				border: 1px solid transparent;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				background: var(--dark);
+				color: white;
+			}
 		}
 	}
 }
