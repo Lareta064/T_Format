@@ -1,0 +1,35 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper
+		include ../sections/_header.pug
+		main.main
+			section.blog-hero
+				.container
+					.blog-hero-content.d-grid
+						.blog-hero-txt
+							h1.h1 Спецодежда на заказ
+							.preview-text
+								p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+
+								p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+							button.btn(type="button") Связаться с нами
+						
+						.blog-hero-img
+							p.h1 Спецодежда на заказ
+							img(src="./img/hero-slide2.webp", alt="img")
+
+			
+			section.blog-content
+				.container
+					
+			include ../sections/_subscribe-form.pug
+			include ../sections/_support-form.pug
+
+
+		include ../sections/_footer.pug
+	
+	
+	
+block variables
+	-var title = "Страница одного товара";

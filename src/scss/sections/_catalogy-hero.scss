@@ -3,11 +3,15 @@
 	.h1{
 		margin-bottom: 20px;
 	}
-	.preview-text{
+	
+}
+.preview-text{
 		margin-bottom: 30px;
 		max-width: 853px;
+		p+p{
+			margin-top: 1em;
+		}
 	}
-}
 .catalogy-menu{
 	display: flex;
 	flex-wrap: wrap;
