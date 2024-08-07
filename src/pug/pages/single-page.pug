@@ -18,59 +18,85 @@ block content
 								a(href="#!") Спецодежда
 					//===content ====
 					.d-grid.single-product-grid
-						.grid-5.fotorama
-							.fotorama-display
-								a.fd-link(href="./img/fotorama.webp" data-fancybox)
-									img.fd-img(src="./img/product4.webp", alt="")
-							.fotorama-thumbs
-								.ft-item.ft-item-active
-									img(src="./img/product4.webp",data-src="./img/fotorama.webp" alt="alt")
-								.ft-item
-									img(src="./img/product1.webp",data-src="./img/product1.webp" alt="alt")
-								.ft-item
-									img(src="./img/product2.webp",data-src="./img/product2.webp" alt="alt")
-								.ft-item
-									img(src="./img/product3.webp",data-src="./img/product3.webp" alt="alt")
-						.grid-7.single-product-info
-							
-							.product-info-article
-								p Артикул: 432543543654
-								.rating-stars
-									span
-									span
-									span
-									span
-									span.star-grey
-							//===title====
-							h1.h1 Костюм УЛЙШН -342
-							//=====menu links===
-							.product-info-menu
-								a(href="#!").link Описание и характеристики
-								a(href="#!").link Материалы
-								a(href="#!").link Оплата и доставка
-								a(href="#!").link Гарантия
+						//====заголовк для моб версии ====
+						.single-product-column
+							.single-product-title
+								.product-info-article
+									p Артикул: 432543543654
+									.rating-stars
+										span
+										span
+										span
+										span
+										span.star-grey
+								//===title====
+								p.h1 Костюм УЛЙШН -342
+								//=====menu links===
+								.product-info-menu
+									a(href="#!").link Описание и характеристики
+									a(href="#!").link Материалы
+									a(href="#!").link Оплата и доставка
+									a(href="#!").link Гарантия
+							.fotorama
+								.fotorama-display
+									a.fd-link(href="./img/fotorama.webp" data-fancybox)
+										img.fd-img(src="./img/product4.webp", alt="")
+								.fotorama-thumbs
+									.ft-item.ft-item-active
+										img(src="./img/product4.webp",data-src="./img/fotorama.webp" alt="alt")
+									.ft-item
+										img(src="./img/product1.webp",data-src="./img/product1.webp" alt="alt")
+									.ft-item
+										img(src="./img/product2.webp",data-src="./img/product2.webp" alt="alt")
+									.ft-item
+										img(src="./img/product3.webp",data-src="./img/product3.webp" alt="alt")
+						//====RIGHT COLUMN ====
+						.single-product-info
+							.single-product-title
+								.product-info-article
+									p Артикул: 432543543654
+									.rating-stars
+										span
+										span
+										span
+										span
+										span.star-grey
+								//===title====
+								h1.h1 Костюм УЛЙШН -342
+								//=====menu links===
+								.product-info-menu
+									a(href="#!").link Описание и характеристики
+									a(href="#!").link Материалы
+									a(href="#!").link Оплата и доставка
+									a(href="#!").link Гарантия
 				
 							//=====deskp ====
-							.product-info-text.txt-14
-								p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
-								p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
-							//=====sale block====
-							.sale-block
-								.sale-block-label Акция!
-								.sale-block-txt
-									.txt-14 Тут будет описание акции к примеру:
-									.txt-20 СКИДКА  15% при заказе от 120 штук
-				
-							//=====bay block ====
-							.product-bay
-								.card-group
-									.online-state.active
-										span.online-state__dot
-										span.online-state__text В наличии
-									.card-price от #[span 1 590] руб.
+							.product-info-column
+								.product-info-text.txt-14
+									p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+									p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+								//=====sale block  for >768====
+								.sale-block.sale-block--desktop
+									.sale-block-label Акция!
+									.sale-block-txt
+										.txt-14 Тут будет описание акции к примеру:
+										.txt-20 СКИДКА  15% при заказе от 120 штук
+					
+								//=====sale block  for mobile====
+								.sale-block.sale-block--mobile
+									.sale-block__row
+										.sale-block-label Акция!
+										.txt-14 Тут будет описание акции к примеру:
+									.sale-block-txt
+										.txt-20 СКИДКА  15% при заказе от 120 штук
+								//=====bay block ====
+								.product-bay
+									.card-group
+										.online-state.active
+											span.online-state__dot
+											span.online-state__text В наличии
+										.card-price от #[span 1 590] руб.
 									
-								//====button===
-								.card-button
 									button.btn
 										svg.svg-cart
 											use(href='./img/sprite.svg#svg-cart')
@@ -82,50 +108,15 @@ block content
 							.additional-serv
 								.additional-serv-item
 									img(src="./img/add-serv1.webp", width="60" height="60" alt="")
-									p Нанесем логотип
+									p Нанесем<br>логотип
 								
 								.additional-serv-item
 									img(src="./img/add-serv2.webp", width="60" height="60" alt="")
-									p Добавим вышивку
+									p Добавим<br>вышивку
 								
 								.additional-serv-item
 									img(src="./img/add-serv3.webp", width="60" height="60" alt="")
-									p Индивидуальный пошив
-					
-			//======= PRODUCT CARDS ========
-			.catalogy-cards
-				//===single-card======
-				.mini-card-box
-					+mini-card('Костюм 	Костюм УЛУЙШН - 678', 1, "active", 'Акция','Новинка')
-				//===single-card======
-				.mini-card-box
-					+mini-card('Халат темный бязевый', 2 ,"active")
-				//===single-card======
-				.mini-card-box
-					+mini-card('Костюм Автосервис', 5, "to-order", 'Акция')
-				//===single-card======
-				.mini-card-box
-					+mini-card('Какое-то название в две строки', 6, "" )
-				//===single-card======
-				.mini-card-box
-					+mini-card('Костюм 	летний', 1,"", 'Акция','Новинка')
-				.mini-card-box
-					+mini-card('Костюм Тундра', 3,"",  'Акция')
-				//===single-card======
-				.mini-card-box
-					+mini-card('Костюм 	Костюм УЛУЙШН - 678', 4, "active")
-				//===single-card======
-				.mini-card-box
-					+mini-card('Костюм 	Костюм УЛУЙШН - 678', 2, "active")
-				
-			.pagination
-				a(href="#!") 1
-				a.active(href="#!") 2
-				a(href="#!") 3
-				a(href="#!") 4
-				a(href="#!") ...
-				a(href="#!") 8
-
+									p Индивидуальный<br>пошив
 					
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
