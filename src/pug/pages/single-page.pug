@@ -189,7 +189,14 @@ block content
 									a(href="").label-link  Пошив сигнальных жилетов
 									a(href="").label-link  Пошив халатов
 			
-			
+			section.similar
+				.container
+					h2.h2 Похожие товары
+					.four-columns
+						+product-card('Костюм УЛУЙШН - 678', 2, "active")
+						+product-card('Костюм УЛУЙШН - 678', 3, "active")
+						+product-card('Костюм УЛУЙШН - 678', 4, "active")
+						+product-card('Костюм УЛУЙШН - 678', 1, "active")
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
 

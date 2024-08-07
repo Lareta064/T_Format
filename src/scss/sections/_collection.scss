@@ -1,5 +1,7 @@
 .collection{
-	// padding-block: 85px 78px;
+	.mini-card .card-img{
+		border: 1px solid rgba(0, 0, 0, .3);
+	}
 }
 .collection-wrapper{
 	display: grid;

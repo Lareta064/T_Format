@@ -142,20 +142,25 @@ article{
 .fl-justify,.header-top,.product-info-menu,.product-info-article{
   justify-content: space-between;
 }
-.d-grid{
+.d-grid,.four-columns{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: 40px;
+  gap: 40px;
   @media (max-width: 1439px) {
-    column-gap: 20px;
+    gap: 20px;
   }
 }
-.grid-5{
-  grid-column: span 5;
+.four-columns{
+  &>*{
+    grid-column: span 3;
+  }
+  @media (max-width: 767px) {
+  &>* {
+      grid-column: span 6;
+    }
+  }
 }
-.grid-7 {
-  grid-column: span 7;
-}
+
 .d-desck{
   display: block;
   @media (max-width: 1279px) {

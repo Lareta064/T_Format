@@ -1,6 +1,10 @@
-.single-product-grid, .single-product-info{
+.single-product-column, .single-product-info{
 	position: sticky;
 	top:0;
+	height: fit-content;
+	@media (max-width: 767px) {
+	position: relative;
+	}
 }
 .product-info-menu{
 	font-weight: 700;
