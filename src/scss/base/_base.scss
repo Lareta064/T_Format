@@ -149,6 +149,12 @@ article{
     column-gap: 20px;
   }
 }
+.grid-5{
+  grid-column: span 5;
+}
+.grid-7 {
+  grid-column: span 7;
+}
 .d-desck{
   display: block;
   @media (max-width: 1279px) {

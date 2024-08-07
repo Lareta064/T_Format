@@ -226,4 +226,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Call the function with the class names of the button and content
 	setupActive('filters-toggle', 'filters-drop');
+	/**********FOTORAMA*********** */
+	 const fotoramaThumbs = document.querySelector('.fotorama-thumbs');
+     const mainImage = document.querySelector('.fd-img');
+    const mainLink = document.querySelector('.fd-link');
+
+    fotoramaThumbs.addEventListener('click', (event) => {
+        const clickedItem = event.target.closest('.ft-item');
+        if (!clickedItem) return;
+
+        // Remove active class from all thumbnails
+        document.querySelectorAll('.ft-item').forEach(item => {
+            item.classList.remove('ft-item-active');
+        });
+
+        // Add active class to clicked thumbnail
+        clickedItem.classList.add('ft-item-active');
+
+        // Update the main image src and link href
+        const imgElement = clickedItem.querySelector('img');
+        mainImage.src = imgElement.getAttribute('src');
+        mainLink.href = imgElement.getAttribute('data-src');
+    });
+
+    // Click outside to remove active state (Optional)
+    document.addEventListener('click', (event) => {
+        if (!fotoramaThumbs.contains(event.target)) {
+            document.querySelectorAll('.ft-item').forEach(item => {
+                item.classList.remove('ft-item-active');
+            });
+        }
+    });
 });

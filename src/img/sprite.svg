@@ -127,10 +127,14 @@
 			
 		</g>
 	</symbol>
-	<!-- <symbol id="svg-">
-		<g></g>
+	<symbol id="svg-star" viewBox="0 0 17 16">
+		<g>
+			<path
+				d="M8.5 0L11.1979 4.78661L16.584 5.87336L12.8653 9.91839L13.4962 15.3766L8.5 13.09L3.50383 15.3766L4.13465 9.91839L0.416019 5.87336L5.80207 4.78661L8.5 0Z"
+				fill="currentColor" />
+		</g>
 	</symbol>
-	<symbol id="svg-">
+	<!-- <symbol id="svg-">
 		<g></g>
 	</symbol> -->
 
