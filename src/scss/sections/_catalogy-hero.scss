@@ -63,6 +63,19 @@
 	margin-top: 20px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	position: relative;
+	&:after{
+		content:'';
+		position: absolute;
+		display: block;
+		height: 1px;
+		width: 100%;
+		background-color: #fff;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+	}
 	.mini-card-box:nth-child(-n+4){
 		border-top:0;
 	}
