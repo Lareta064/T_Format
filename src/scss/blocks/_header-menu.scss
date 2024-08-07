@@ -80,6 +80,9 @@
 			a {color: white;}
 	
 		}
+	@media (max-width: 1599px) {
+		padding-inline: 20px;
+	}
 	@media (max-width: 1279px) {
 		padding-inline: 0;
 		background-color: var(--dark);
