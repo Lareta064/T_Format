@@ -1,4 +1,4 @@
-.hero-inner{
+.inner-main{
 	padding-top: 16px;
 	.h1{
 		margin-bottom: 20px;
@@ -13,12 +13,12 @@
 	flex-wrap: wrap;
 	gap:24px;
 }
-.catalogy-main .catalogy-menu{
+.catalogy-main-content .catalogy-menu{
 	@media (max-width: 767px) {
 	display: none;
 	}
 }
-.catalogy-main .catalogy-menu-mobile{
+.catalogy-main-content .catalogy-menu-mobile{
 	display: none;
 
 	@media (max-width: 767px) {

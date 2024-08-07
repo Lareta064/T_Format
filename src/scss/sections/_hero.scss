@@ -113,7 +113,7 @@
 }
 .swiper .swiper-pagination{
 	display: flex;
-	bottom: 0;
+	bottom: 10px;
 	column-gap: 16px;
 	
 }
@@ -127,7 +127,8 @@
 	box-sizing: border-box;
 	cursor: pointer;
 	opacity: 1;
-	transition: .3s; 
+	transition: .3s;
+	
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active{
 	background: rgba(26, 26, 27, .6);
