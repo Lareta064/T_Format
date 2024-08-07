@@ -1,0 +1,29 @@
+.sale-block{
+	display: flex;
+	margin-block:30px;
+	&-label{
+		padding: 34px 24px;
+		
+		background-color: var(--red);
+		color: white;
+		display: flex;
+		align-items: center;
+		font-size: 20px;
+		font-weight: 600;
+		flex-shrink: 0;
+	}
+	&-txt{
+		background-color: #F2F2F2;
+		padding: 8px 24px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap:10px;
+		flex-grow: 1;
+		.txt-14{
+			font-weight: 600;
+			width: 100%;
+		}
+		.txt-20{font-weight: 700; line-height: 1.5;width: 100%;}
+	}
+}

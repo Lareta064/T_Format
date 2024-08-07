@@ -41,117 +41,78 @@ block content
 										span
 										span
 										span.star-grey
+								//===title====
 								h1.h1 Костюм УЛЙШН -342
+								//=====menu links===
+								.product-info-menu
+									a(href="#!").link Описание и характеристики
+									a(href="#!").link Материалы
+									a(href="#!").link Оплата и доставка
+									a(href="#!").link Гарантия
 					
+								//=====deskp ====
+								.product-info-text.txt-14
+									p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+									p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+								//=====sale block====
+								.sale-block
+									.sale-block-label Акция!
+									.sale-block-txt
+										.txt-14 Тут будет описание акции к примеру:
+										.txt-20 СКИДКА  15% при заказе от 120 штук
 					
-					h1.h1 Спецодежда на заказ
-					.preview-text
-						p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
-					.catalogy-menu
-						a(href="").label-link  Пошив сигнальных жилетов
-						a(href="").label-link  Пошив  жилетов
-						a(href="").label-link  Пошив рабочих костюмов
-						a(href="").label-link  Пошив халатов
-						a(href="").label-link  Пошив сигнальных жилетов
-						a(href="").label-link  Пошив халатов
+								//=====bay block ====
+								.product-bay
+									.card-group
+										.online-state.active
+											span.online-state__dot
+											span.online-state__text В наличии
+										.card-price от #[span 1 590] руб.
+										
+									//====button===
+									.card-button
+										button.btn
+											svg.svg-cart
+												use(href='./img/sprite.svg#svg-cart')
+											span В корзину
+
+										button.button Заказать в 1 клик
 					
-					//====== ссылки-меню для моб версии =====
-					.custom-select-wrapper.catalogy-menu-mobile
-						.custom-select
-							.custom-select-trigger Пошив сигнальных жилетов
-							.custom-options.custom-options--rel
-								span.custom-option(data-value='1') Пошив сигнальных жилетов
-								span.custom-option(data-value='2') Пошив  жилетов
-								span.custom-option(data-value='3') Пошив рабочих костюмов
-								span.custom-option(data-value='4') Пошив халатов
-								span.custom-option(data-value='5') Пошив рабочих костюмов
-								span.custom-option(data-value='6') Пошив халатов
-					
-					//======ARTICLE =====
-					article.catalogy-category
-						h2.h2 Пошив спецодежды
+					//======= PRODUCT CARDS ========
+					.catalogy-cards
+						//===single-card======
+						.mini-card-box
+							+mini-card('Костюм 	Костюм УЛУЙШН - 678', 1, "active", 'Акция','Новинка')
+						//===single-card======
+						.mini-card-box
+							+mini-card('Халат темный бязевый', 2 ,"active")
+						//===single-card======
+						.mini-card-box
+							+mini-card('Костюм Автосервис', 5, "to-order", 'Акция')
+						//===single-card======
+						.mini-card-box
+							+mini-card('Какое-то название в две строки', 6, "" )
+						//===single-card======
+						.mini-card-box
+							+mini-card('Костюм 	летний', 1,"", 'Акция','Новинка')
+						.mini-card-box
+							+mini-card('Костюм Тундра', 3,"",  'Акция')
+						//===single-card======
+						.mini-card-box
+							+mini-card('Костюм 	Костюм УЛУЙШН - 678', 4, "active")
+						//===single-card======
+						.mini-card-box
+							+mini-card('Костюм 	Костюм УЛУЙШН - 678', 2, "active")
 						
-						//====FILTERS=======
-						.filters-block.d-flex
-							label.form-checkbox.d-flex
-								input(type="checkbox" name="checkbox_name")
-								span.txt-12 Показывать только в наличии
-							
-							.filters-block-inner.d-flex#filters-drop
-								//==== этоткомпонент виден на экранах меньше 768пикс, в выпадающем фильтре===
-								label.form-checkbox.d-flex
-									input(type="checkbox" name="checkbox_name")
-									span.txt-12 Показывать только в наличии
-								
-								//====price inputs=====
-								.form-group.d-flex
-									p Фильровать по цене
-									label от
-										input(type="number" name="price_min")
-									label до
-										input(type="number" name="price_max")
-									button.button.button--dark.btn-mini(type="button") Применить
-								
-								//====custom select=====
-								.custom-select-wrapper.filter-select
-									.custom-select
-										.custom-select-trigger Фильтровать по
-										.custom-options
-											span.custom-option(data-value='1') По цвету
-											span.custom-option(data-value='2') По сезону
-											span.custom-option(data-value='3') По возрастанию
-											span.custom-option(data-value='4') По убыванию
+					.pagination
+						a(href="#!") 1
+						a.active(href="#!") 2
+						a(href="#!") 3
+						a(href="#!") 4
+						a(href="#!") ...
+						a(href="#!") 8
 
-							//====== filter icon for mobile ===
-							button.btn-icon.filters-toggle#filters-toggle
-								svg.svg-filters
-									use(href='./img/sprite.svg#svg-flters')
-			
-						//======= PRODUCT CARDS ========
-						.catalogy-cards
-							//===single-card======
-							.mini-card-box
-								+mini-card('Костюм 	Костюм УЛУЙШН - 678', 1, "active", 'Акция','Новинка')
-							//===single-card======
-							.mini-card-box
-								+mini-card('Халат темный бязевый', 2 ,"active")
-							//===single-card======
-							.mini-card-box
-								+mini-card('Костюм Автосервис', 5, "to-order", 'Акция')
-							//===single-card======
-							.mini-card-box
-								+mini-card('Какое-то название в две строки', 6, "" )
-							//===single-card======
-							.mini-card-box
-								+mini-card('Костюм 	летний', 1,"", 'Акция','Новинка')
-							.mini-card-box
-								+mini-card('Костюм Тундра', 3,"",  'Акция')
-							//===single-card======
-							.mini-card-box
-								+mini-card('Костюм 	Костюм УЛУЙШН - 678', 4, "active")
-							//===single-card======
-							.mini-card-box
-								+mini-card('Костюм 	Костюм УЛУЙШН - 678', 2, "active")
-							
-						.pagination
-							a(href="#!") 1
-							a.active(href="#!") 2
-							a(href="#!") 3
-							a(href="#!") 4
-							a(href="#!") ...
-							a(href="#!") 8
-
-					//====ARTICLE =====
-					article.article-description.d-grid
-						.article-description__txt
-							.h2 Тут еще подзаголовок
-							p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
-							p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
-							p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
-						.article-description__img
-							img.lazy(src="./img/banner.webp", width="273" height="476" alt="img")
-							.banner-txt Рекламный баннер
-			
+					
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
 

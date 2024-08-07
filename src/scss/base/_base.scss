@@ -124,12 +124,13 @@ article{
 }
 /*======= классы сетки========*/
 .d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x, .fl-justify,
-.icon-item,.header-row,.contact-link,.online-state,.btn-group,.round-icon{
+.icon-item,.header-row,.contact-link,.online-state,.btn-group,
+.round-icon,.product-info-menu,.product-info-article{
   display: flex;
   column-gap:14px;
 }
 .fl-y, .fl-col-y,.flex-center,.icon-item,.fl-justify,.header-row,
-.contact-link,.online-state,.btn-group,.round-icon{
+.contact-link,.online-state,.btn-group,.round-icon,.product-info-menu,.product-info-article{
   align-items: center;
 }
 .fl-col{
@@ -138,7 +139,7 @@ article{
 .flex-center, .fl-x,.fl-col-x,.round-icon{
   justify-content: center;
 }
-.fl-justify,.header-top{
+.fl-justify,.header-top,.product-info-menu,.product-info-article{
   justify-content: space-between;
 }
 .d-grid{
