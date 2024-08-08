@@ -43,8 +43,19 @@ block content
 									.label-red.label-big Акция!
 									.label-green.label-big Новинка
 									//===ссылка с изображением===
-									a.fd-link(href="./img/fotorama.webp" data-fancybox)
-										img.fd-img(src="./img/product4.webp", alt="")
+									
+									a.fd-link(href='./img/fotorama.webp' data-fancybox='album1' )
+										img.fd-img(src='./img/product4.webp' alt='Thumbnail 1')
+									//=== ниже добавляем все картинки товара , что бы в одной галереи пролистывались. Изначально они скрыты, но при открытии галереи будут листаться ====
+									a(href='./img/product4.webp' data-fancybox='album1' style='display:none;')
+										img(src='./img/product3.webp' alt='Thumbnail 2')
+									a(href='./img/product3.webp' data-fancybox='album1' style='display:none;')
+										img(src='./img/product3.webp' alt='Thumbnail 3')
+									a(href='./img/product2.webp' data-fancybox='album1' style='display:none;')
+										img(src='./img/product2.webp' alt='Thumbnail 2')
+									a(href='./img/product1.webp' data-fancybox='album1' style='display:none;')
+										img(src='./img/product1.webp' alt='Thumbnail 3')
+										
 								//===миниатюры===
 								.fotorama-thumbs
 									.ft-item.ft-item-active
@@ -73,7 +84,7 @@ block content
 									a(href="#product-specifications").link Описание и характеристики
 									a(href="#materials").link Материалы
 									a(href="#payment").link Оплата и доставка
-									a(href="#guarantee") Гарантия
+									a(href="#guarantee").link Гарантия
 				
 							//=====deskp ====
 							.product-info-column
