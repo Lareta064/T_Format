@@ -21,9 +21,7 @@
 }
 .select-city{
 	width:fit-content;
-	// padding-right: 16px;
 	position: relative;
-	
 }
 .select-city{
 	.select-city-trigger{
@@ -131,4 +129,17 @@
 }
 .select-city-tabs.active {
 	display: block;
+}
+.footer-contacts{
+	.contact-link, address{
+		font-size: 12px;
+		color: white;
+		display: block;
+		margin-top: 20px;
+	}
+	.contact-phone{
+		font-weight: 700;
+		font-size: 14px;
+	}
+	address{max-width: 150px;}
 }
