@@ -1,6 +1,7 @@
 .accordion-classic{
 	.accordion-header{
 		padding-top: 30px;
+		font-weight: 700;
 		padding-bottom: 30px;
 		padding-right: 40px;
 		border-top:1px solid #dadada;
@@ -36,6 +37,7 @@
 		}
 	}
 	.accordion-body{
+		display: none;
 		padding-block:20px;
 		p+p{margin-top: 1em;}
 		@media (max-width: 767px) {
