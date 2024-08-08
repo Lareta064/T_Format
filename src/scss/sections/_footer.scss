@@ -15,6 +15,9 @@
 	grid-column: span 7;
 	display: flex;
 	column-gap: 40px;
+	justify-content: space-between;
+	a{display: inline;}
+	li +li{margin-top: 20px;}
 }
 .select-city{
 	width:fit-content;
@@ -26,8 +29,8 @@
 	.select-city-trigger{
 		width: fit-content;
 		padding-right: 24px;
-		padding-top: 8px;
 		position: relative;
+		cursor:pointer;
 		&:after{
 			content: '';
 			display: inline-block;
@@ -37,7 +40,7 @@
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6L7.84853 0.848528C7.3799 0.379898 6.6201 0.379898 6.15147 0.848527L0.999999 6' stroke='%23ffffff' stroke-linecap='round' /%3e%3c/svg%3e");
 			position: absolute;
 			right: 0;
-			top: 15px;
+			top: 5px;
 			pointer-events: none;
 			transform: rotate(180deg);
 			z-index: 3;
@@ -89,11 +92,12 @@
 .select-city .select-city-tabs{
 	display: none;
 	position: absolute;
+	z-index: 5;
 	top: calc(100% + 20px);
 	border: 1px solid #dadada;
-	left: -20px;
+	right:0;
 	width: 460px;
-	
+	background-color: #000000;
 	padding: 14px;
 	padding-right: 10px;
 
