@@ -45,3 +45,26 @@
 	}
 	
 }
+.get-sample-full{
+	.get-sample-text .h2{display: none;}
+	.get-sample-content{
+		grid-column: span 3;
+		&>*+*{margin-top: 40px;}
+		@media (max-width: 767px) {
+			grid-column: span 12;
+			max-width: 360px;
+			&>*+* {margin-top: 16px;}
+		}
+	}
+	.get-sample-descrip{
+		grid-column: span 9;
+		p+p{margin-top: 1em;}
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	@media (max-width: 767px) {
+		.h2{display: none;}
+		.get-sample-content .h2{display: block;}
+	}
+}

@@ -149,7 +149,7 @@ block content
 										tr
 											td 62-64
 											td 170-176
-								
+					//===== блок с текстовыми колонками =====			
 					article.custom-text
 						.h2 Колонки
 						//=== 4 колонки ====
@@ -175,6 +175,59 @@ block content
 
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
+			section.news
+				.container
+					h2.h2 Новости
+					.news-cards
+						//===single card ====
+						.picture-card
+							.picture-card__img
+								img.lazy(src="./img/custom.webp", width="260" height="173" alt="img")
+							.picture-card__txt
+								a(href="#!").bold-18 Наименование статьи
+								.txt-14 Мы занимаем лидирующие позиции по производству спецодежды и ее реал. Мы занимаем лидирующие позиции по производству спецодежды и ее реал.
+						//===single card ====
+						.picture-card
+							.picture-card__img
+								img.lazy(src="./img/custom.webp", width="260" height="173" alt="img")
+							.picture-card__txt
+								a(href="#!").bold-18 Наименование статьи  в две строчки текста
+								.txt-14 Мы занимаем лидирующие позиции по производству спецодежды и ее реал.
+						//===single card ====
+						.picture-card
+							.picture-card__img
+								img.lazy(src="./img/custom.webp", width="260" height="173" alt="img")
+							.picture-card__txt
+								a(href="#!").bold-18 Наименование статьи
+								.txt-14 Мы занимаем лидирующие позиции по производству спецодежды и ее реал.
+						//===single card ====
+						.picture-card
+							.picture-card__img
+								img.lazy(src="./img/custom.webp", width="260" height="173" alt="img")
+							.picture-card__txt
+								a(href="#!").bold-18 Наименование статьи
+								.txt-14 Мы занимаем лидирующие позиции по производству спецодежды и ее реал.			
+			//==== получиь образец ====
+			section.get-sample
+				.container
+					h2.h2 Получить образец
+					.get-sample-full.d-grid
+						.get-sample-content
+							.get-sample-img
+								picture
+									img.lazy(src="./img/forma.webp", width="361" height="312" alt="img")
+							.get-sample-text
+								p.h2 Получить образец
+								p Получите образец нашей работы в кратчайшие сроки. Сделаем по вашим лекалам.
+							.get-sample-btn
+								button.btn(type="button") ЗАПРОСИТЬ СЕЙЧАС
+						.get-sample-descrip
+							p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+
+							p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+
+							p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+			
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
 

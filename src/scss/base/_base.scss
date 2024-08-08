@@ -157,7 +157,7 @@ article{
 .fl-justify,.header-top,.product-info-menu,.product-info-article{
   justify-content: space-between;
 }
-.d-grid,.four-columns,.two-column-block,.four-column-txt,.three-column-txt,.two-column-txt{
+.d-grid,.four-columns,.two-column-block,.four-column-txt,.three-column-txt,.two-column-txt,.news-cards{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 40px;

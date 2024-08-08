@@ -1,0 +1,49 @@
+.picture-card{
+	width: 100%;
+	img{
+		width: 100%;
+		aspect-ratio: 260 / 173;
+		object-fit: cover;
+	}
+	&__txt{
+		padding-top: 16px;
+		&>*+*{margin-top: 16px;}
+	}
+	.bold-18{
+		display: inline;
+		text-decoration: underline;
+		text-decoration-skip: none;
+		display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+	}
+	.txt-14{
+		
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+	}
+	@media (max-width: 1023px) {
+		.bold-18 {font-size: 12px;}
+		&__txt {
+			padding-top: 8px;
+			&>*+* {
+				margin-top: 8px;
+			}
+		}
+		.txt-14 {font-size: 10px;}
+	}
+
+	
+}
+.news-cards{
+	.picture-card{grid-column: span 3;}
+		@media (max-width: 767px) {
+			.picture-card {
+				grid-column: span 6;
+			}
+		}
+	
+}
