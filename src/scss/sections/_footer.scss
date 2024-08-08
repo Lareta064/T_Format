@@ -10,6 +10,15 @@
 .footer-text{
 	grid-column: span 5;
 	&>*+*{margin-top: 24px;}
+	@media (max-width: 1023px) {
+		grid-column: span 12;
+		max-width: 600px;
+		margin-bottom: 20px;
+	}
+	@media (max-width: 767px) {
+	margin-bottom: 16px;
+	text-align: center;
+	}
 }
 .footer-nav{
 	grid-column: span 7;
@@ -18,6 +27,20 @@
 	justify-content: space-between;
 	a{display: inline;}
 	li +li{margin-top: 20px;}
+	@media (max-width: 1023px) {
+		grid-column: span 12;
+	}
+	@media (max-width: 767px) {
+		display: grid;
+		grid-template-columns: 1fr;
+		text-align: center;
+		row-gap:16px;
+	}
+}
+.custom-select-wrapper{
+	@media (max-width: 1023px) {
+	display: none;
+	}
 }
 .select-city{
 	width:fit-content;
@@ -141,5 +164,12 @@
 		font-weight: 700;
 		font-size: 14px;
 	}
-	address{max-width: 150px;}
+	address{
+		max-width: 150px;
+		@media (max-width: 767px) {
+		margin-left: auto;
+		margin-right: auto;
+		
+		}
+	}
 }
