@@ -15,6 +15,14 @@
     // --ff: 'Mont';
     --ff: 'Montserrat';
     -ff-sec: 'Montserrat';
+    
+    /*таблица №2*/
+    /*ширина таблицы */
+    --tableSecondWidth: 100%;
+    /*ширина первой ячейки */
+    --tableNoBorderFirstCell: 50%;
+    /*ширина третьей ячейки*/
+    --tableNoBorderLastCell: 60px;
   }
   html {
 	 scroll-behavior: smooth;
@@ -50,13 +58,20 @@
   h2,
   h3,
   h4,h5,h6,
-  p, ul, ol {
+  p, ul {
 
   margin: 0;
   padding: 0;
   list-style-type: none;
   }
- 
+ ol{
+  margin: 0;
+  padding-left: 16px;
+  li{
+    padding-left: 5px;
+    line-height: 2;
+  }
+ }
   img {
 	max-width: 100%;
 	height: auto;
@@ -142,7 +157,7 @@ article{
 .fl-justify,.header-top,.product-info-menu,.product-info-article{
   justify-content: space-between;
 }
-.d-grid,.four-columns{
+.d-grid,.four-columns,.two-column-block,.four-column-txt,.three-column-txt,.two-column-txt{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 40px;
@@ -160,7 +175,14 @@ article{
     }
   }
 }
-
+.two-column-block >*{
+  grid-column: span 6;
+}
+.border-decore{
+  padding:21px;
+  padding-left: 50px;
+  border-left:3px solid var(--red);
+}
 .d-desck{
   display: block;
   @media (max-width: 1279px) {

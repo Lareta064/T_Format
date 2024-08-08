@@ -23,7 +23,7 @@ block content
 			section.portfolio
 				.container
 					h2.h2 Наши работы
-					.portfolio-swiper-wrapper
+					article.portfolio-swiper-wrapper
 						.portfolio-swiper.swiper
 							.swiper-wrapper
 								.swiper-slide
@@ -47,6 +47,134 @@ block content
 							.swiper-button-next
 							.swiper-button-prev
 					
+					article.custom-text
+						.h2 Наши работы
+						p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+						
+						//===left border text
+						.border-decore
+							p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+						
+						p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+					//===block===
+					article.custom-text
+						.two-column-block
+							.text-block
+								p  Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+								ol
+									li Нумерованный список
+									li Нумерованный список
+									li Нумерованный список
+									li Нумерованный список
+									li Нумерованный список
+								p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+
+							
+							img.lazy(src="./img/custom.webp", width="558" height="372" alt="img")
+					
+					//===  block ====
+					article.custom-text
+						p Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.
+						
+						ul
+							li Маркированный список
+							li Маркированный список
+							li Маркированный список
+							li Маркированный список
+							li Маркированный список
+					
+					//===  block ====
+					article.custom-text
+						.h2 Таблицы
+						//-значения ширины таблицы с текстами, первой и последней ячеек прописаны в css , в root
+						.tables-wrapper
+							//====table===
+							.table-large
+								table
+									thead
+										tr
+											th Наименование
+											th Тип
+											th №
+
+									tbody
+										tr
+											td Варежка
+											td Соломенная
+											td 32
+										tr
+											td Халат медицинский
+											td Бязевый
+											td 40
+										tr
+											td Комбинизон с карманами
+											td Полиэстер
+											td 48
+							//==table===
+							.table
+								table
+									thead
+										tr
+											td Размер
+										
+											td Рост
+									tbody
+										tr
+											td 44-46
+											td 170-176
+										tr
+											td 46-48
+											td 170-176 						
+										tr
+											td 48-50
+											td 170-176
+										tr
+											td 50-52
+											td 170-176
+										tr
+											td 52-54
+											td 170-176
+										tr
+											td 54-56
+											td 170-176
+										tr
+											td 56-58
+											td 170-176
+										tr
+											td 58-60
+											td 170-176
+										tr
+											td 60-62
+											td 170-176
+										tr
+											td 62-64
+											td 170-176
+								
+					article.custom-text
+						.h2 Колонки
+						//=== 4 колонки ====
+						.four-column-txt.mt-40
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+						//====три колонки ====
+						.three-column-txt.mt-40
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						
+						//==== две колонки ===
+						.two-column-txt.mt-40
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug
 

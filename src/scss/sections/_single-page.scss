@@ -163,25 +163,25 @@
 	display: grid;
 	grid-template-columns: 260px 1fr;
 	column-gap:40px;
-	table{
-		border-spacing: 0;
-		@media (max-width: 1364px) {
-		width: 100%;
-		display: table;
-		table-layout: fixed;
-		}
-	}
-	td, th{
-		height: 30px;
-		font-size: 16px;
-		text-align: center;
-		font-weight: 600;
-		border:1px solid #bababa;
-		min-width: 130px;
-	}
-	tbody tr:nth-child(2n){
-		background-color: #f2f2f2;;
-	}
+	// table{
+	// 	border-spacing: 0;
+	// 	@media (max-width: 1364px) {
+	// 	width: 100%;
+	// 	display: table;
+	// 	table-layout: fixed;
+	// 	}
+	// }
+	// td, th{
+	// 	height: 30px;
+	// 	font-size: 16px;
+	// 	text-align: center;
+	// 	font-weight: 600;
+	// 	border:1px solid #bababa;
+	// 	min-width: 130px;
+	// }
+	// tbody tr:nth-child(2n){
+	// 	background-color: #f2f2f2;;
+	// }
 	.product-specifications-txt{
 		p+p{margin-top: 16px;}
 	}
