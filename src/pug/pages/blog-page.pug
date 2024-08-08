@@ -19,9 +19,33 @@ block content
 							p.h1 Спецодежда на заказ
 							img(src="./img/hero-slide2.webp", alt="img")
 
-			
-			section.blog-content
+			//=====Наши работы ======
+			section.portfolio
 				.container
+					h2.h2 Наши работы
+					.portfolio-swiper-wrapper
+						.portfolio-swiper.swiper
+							.swiper-wrapper
+								.swiper-slide
+									img.border-img.lazy(src="./img/product1.webp", width="231" height="321" alt="img")
+								.swiper-slide
+									img.border-img.lazy(src="./img/product2.webp", width="231" height="321" alt="img")
+								.swiper-slide
+									img.border-img.lazy(src="./img/product3.webp", width="231" height="321" alt="img")
+								.swiper-slide
+									img.border-img.lazy(src="./img/product4.webp", width="231" height="321" alt="img")
+								.swiper-slide
+									img.border-img.lazy(src="./img/product1.webp", width="231" height="321" alt="img")
+								.swiper-slide
+									img.border-img.lazy(src="./img/product2.webp", width="231" height="321" alt="img")
+								.swiper-slide
+									img.border-img.lazy(src="./img/product3.webp", width="231" height="321" alt="img")
+								.swiper-slide
+									img.border-img.lazy(src="./img/product4.webp", width="231" height="321" alt="img")
+						//====swiper navigation
+						.swiper-nav
+							.swiper-button-next
+							.swiper-button-prev
 					
 			include ../sections/_subscribe-form.pug
 			include ../sections/_support-form.pug

@@ -118,6 +118,22 @@ document.addEventListener("DOMContentLoaded", function () {
 			 clickable: true,
 		}
 	});
+	var portfolioSwiper = new Swiper('.portfolio-swiper', {
+		slidesPerView:2,
+		speed:1000,
+		navigation:{
+			nextEl:'.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			640: {
+			slidesPerView: 3,
+			},
+			768:{
+				slidesPerView: 4,
+			}
+		}
+	});
 	/************************** */
 	const servCards = document.querySelectorAll('.serv-card');
 	
