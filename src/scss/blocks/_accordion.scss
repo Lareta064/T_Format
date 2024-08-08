@@ -30,10 +30,12 @@
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='4' viewBox='0 0 19 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.6798 0.680176V3.84018H11.1998H11.2558H7.89582H7.83982H0.319824V0.680176H7.83982H11.1998H18.6798Z' fill='black' /%3e%3c/svg%3e");
 		}
 		@media (max-width: 1199px) {
-		font-size: 16px;
+			font-size: 16px;
+			padding-top: 20px;
+			padding-bottom: 20px;	
 		}
 		@media (max-width: 767px) {
-		font-size: 12px;
+			font-size: 12px;
 		}
 	}
 	.accordion-body{
