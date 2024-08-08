@@ -1,0 +1,48 @@
+.accordion-classic{
+	.accordion-header{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		padding-right: 40px;
+		border-top:1px solid #dadada;
+		border-bottom: 1px solid #dadada;
+		background-color: #fff;
+		font-size: 20px;
+		position: relative;
+		cursor:pointer;
+		&:after{
+			content:'';
+			width: 19px;
+			height: 19px;
+			
+			display: flex;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 2;
+			pointer-events: none;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.36 7.64V10.8H10.88V18.64H7.52V10.8H0V7.64H7.52V0H10.88V7.64H18.36Z' fill='black' /%3e%3c/svg%3e");
+			background-repeat: no-repeat;
+			background-position: center;;
+		}
+		&.open:after{
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='4' viewBox='0 0 19 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.6798 0.680176V3.84018H11.1998H11.2558H7.89582H7.83982H0.319824V0.680176H7.83982H11.1998H18.6798Z' fill='black' /%3e%3c/svg%3e");
+		}
+		@media (max-width: 1199px) {
+		font-size: 16px;
+		}
+		@media (max-width: 767px) {
+		font-size: 12px;
+		}
+	}
+	.accordion-body{
+		padding-block:20px;
+		p+p{margin-top: 1em;}
+		@media (max-width: 767px) {
+			padding-block: 16px;
+		p{
+			font-size: 12px;
+		}
+		}
+	}
+}
