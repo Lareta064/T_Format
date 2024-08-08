@@ -246,31 +246,131 @@ document.addEventListener("DOMContentLoaded", function () {
 	 const fotoramaThumbs = document.querySelector('.fotorama-thumbs');
      const mainImage = document.querySelector('.fd-img');
     const mainLink = document.querySelector('.fd-link');
+	if(fotoramaThumbs){
+		fotoramaThumbs.addEventListener('click', (event) => {
+			const clickedItem = event.target.closest('.ft-item');
+			if (!clickedItem) return;
 
-    fotoramaThumbs.addEventListener('click', (event) => {
-        const clickedItem = event.target.closest('.ft-item');
-        if (!clickedItem) return;
+			// Remove active class from all thumbnails
+			document.querySelectorAll('.ft-item').forEach(item => {
+				item.classList.remove('ft-item-active');
+			});
 
-        // Remove active class from all thumbnails
-        document.querySelectorAll('.ft-item').forEach(item => {
-            item.classList.remove('ft-item-active');
-        });
+			// Add active class to clicked thumbnail
+			clickedItem.classList.add('ft-item-active');
 
-        // Add active class to clicked thumbnail
-        clickedItem.classList.add('ft-item-active');
-
-        // Update the main image src and link href
-        const imgElement = clickedItem.querySelector('img');
-        mainImage.src = imgElement.getAttribute('src');
-        mainLink.href = imgElement.getAttribute('data-src');
-    });
+			// Update the main image src and link href
+			const imgElement = clickedItem.querySelector('img');
+			mainImage.src = imgElement.getAttribute('src');
+			mainLink.href = imgElement.getAttribute('data-src');
+		});
+	}
 
     // Click outside to remove active state (Optional)
-    document.addEventListener('click', (event) => {
-        if (!fotoramaThumbs.contains(event.target)) {
-            document.querySelectorAll('.ft-item').forEach(item => {
-                item.classList.remove('ft-item-active');
-            });
-        }
-    });
+    // document.addEventListener('click', (event) => {
+    //     if (!fotoramaThumbs.contains(event.target)) {
+    //         document.querySelectorAll('.ft-item').forEach(item => {
+    //             item.classList.remove('ft-item-active');
+    //         });
+    //     }
+    // });
+
+	/*================ STAGES TABS============ */
+	$('.custom-tabs').each(function() {
+		console.log('555');
+		let ths = $(this);
+		ths.find('.tab-item').not(':first').hide();
+		ths.find('.tab-btn').click(function() {
+			console.log('444');
+			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
+			ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+		}).eq(0).addClass('active');
+		
+	});
+
+	/*============== ACORDION ========== */
+	;(function ($, window, document, undefined) {
+		"use strict";
+		var pluginName = 'simpleAccordion',
+		defaults = {
+			multiple: false,
+			speedOpen: 300,
+			speedClose: 150,
+			easingOpen: null,
+			easingClose: null,
+			headClass: 'accordion-header',
+			bodyClass: 'accordion-body',
+			openClass: 'open',
+			defaultOpenClass: 'default-open',
+			cbClose: null, //function (e, $this) {},
+			cbOpen: null //function (e, $this) {}
+		};
+		function Accordion(element, options) {
+			this.$el = $(element);
+			this.options = $.extend({}, defaults, options);
+			this._defaults = defaults;
+			this._name = pluginName;
+			if (typeof this.$el.data('multiple') !== 'undefined') {
+				this.options.multiple = this.$el.data('multiple');
+				} else {
+				this.options.multiple = this._defaults.multiple;
+			}
+			this.init();
+		}
+		Accordion.prototype = {
+			init: function () {
+				var o = this.options,
+				$headings = this.$el.children('.' + o.headClass);
+				$headings.on('click', {_t:this}, this.headingClick);
+				$headings.filter('.' + o.defaultOpenClass).first().click();
+			},
+			headingClick: function (e) {
+				var $this = $(this),
+				_t = e.data._t,
+				o = _t.options,
+				$headings = _t.$el.children('.' + o.headClass),
+				$currentOpen = $headings.filter('.' + o.openClass);
+				if (!$this.hasClass(o.openClass)) {
+					if ($currentOpen.length && o.multiple === false) {
+						$currentOpen.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+							if ($.isFunction(o.cbClose)) {
+								o.cbClose(e, $currentOpen);
+							}
+							$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+								if ($.isFunction(o.cbOpen)) {
+									o.cbOpen(e, $this);
+								}
+							});
+						});
+						} else {
+						$this.addClass(o.openClass).next('.' + o.bodyClass).slideDown(o.speedOpen, o.easingOpen, function () {
+							$this.removeClass(o.defaultOpenClass);
+							if ($.isFunction(o.cbOpen)) {
+								o.cbOpen(e, $this);
+							}
+						});
+					}
+					} else {
+					$this.removeClass(o.openClass).next('.' + o.bodyClass).slideUp(o.speedClose, o.easingClose, function () {
+						if ($.isFunction(o.cbClose)) {
+							o.cbClose(e, $this);
+						}
+					});
+				}
+			}
+		};
+		$.fn[pluginName] = function (options) {
+			return this.each(function () {
+				if (!$.data(this, 'plugin_' + pluginName)) {
+					$.data(this, 'plugin_' + pluginName,
+					new Accordion(this, options));
+				}
+			});
+		};
+	}(jQuery, window, document));
+	$(function() {
+    	$('.accordion-group').simpleAccordion();
+	});
+
+
 });
