@@ -277,12 +277,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	/*================ STAGES TABS============ */
 	$('.custom-tabs').each(function() {
-		console.log('555');
+		
 		let ths = $(this);
 		ths.find('.tab-item').not(':first').hide();
+		console.log($('.tab-item'));
 		ths.find('.tab-btn').click(function() {
-			console.log('444');
 			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
+
 			ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass('active');
 		
@@ -372,5 +373,53 @@ document.addEventListener("DOMContentLoaded", function () {
     	$('.accordion-group').simpleAccordion();
 	});
 
+	/*********************** */
+	const trigger = document.querySelector('.select-city-trigger');
+  const tabs = document.querySelector('.select-city-tabs');
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabItems = document.querySelectorAll('.tab-item');
+  const customOptions = document.querySelectorAll('.custom-option');
+ if(trigger){
 
+
+  // Toggle visibility of tabs on trigger click
+  trigger.addEventListener('click', () => {
+    tabs.classList.toggle('active');
+    trigger.classList.toggle('open', tabs.classList.contains('active')); // Update trigger class
+  });
+
+  // Handle tab button clicks
+  tabButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      // Remove active class from all tab buttons
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to the clicked tab button
+      button.classList.add('active');
+
+      // Remove active class from all tab items
+      tabItems.forEach(item => item.classList.remove('active'));
+      // Add active class to the tab item corresponding to the clicked button
+      tabItems[index].classList.add('active');
+    });
+  });
+
+  // Handle option selection
+  customOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      // Set the text of the trigger to the selected option's text
+      trigger.textContent = option.textContent;
+      // Hide the tab content and remove open class
+      tabs.classList.remove('active');
+      trigger.classList.remove('open');
+    });
+  });
+
+  // Close tabs if clicked outside
+  document.addEventListener('click', (event) => {
+    if (!tabs.contains(event.target) && !trigger.contains(event.target)) {
+      tabs.classList.remove('active');
+      trigger.classList.remove('open');
+    }
+  });
+	}
 });

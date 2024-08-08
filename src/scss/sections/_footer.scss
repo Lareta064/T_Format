@@ -1,0 +1,130 @@
+.footer{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #000000;
+	color: #ffffff;
+}
+.footer-top{
+	padding-bottom: 40px;
+}
+.footer-text{
+	grid-column: span 5;
+	&>*+*{margin-top: 24px;}
+}
+.footer-nav{
+	grid-column: span 7;
+	display: flex;
+	column-gap: 40px;
+}
+.select-city{
+	width:fit-content;
+	// padding-right: 16px;
+	position: relative;
+	
+}
+.select-city{
+	.select-city-trigger{
+		width: fit-content;
+		padding-right: 24px;
+		padding-top: 8px;
+		position: relative;
+		&:after{
+			content: '';
+			display: inline-block;
+			
+			width: 14px;
+			height: 7px;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6L7.84853 0.848528C7.3799 0.379898 6.6201 0.379898 6.15147 0.848527L0.999999 6' stroke='%23ffffff' stroke-linecap='round' /%3e%3c/svg%3e");
+			position: absolute;
+			right: 0;
+			top: 15px;
+			pointer-events: none;
+			transform: rotate(180deg);
+			z-index: 3;
+			transition: .3s; 
+		}
+	}
+	.select-city-trigger.open:after{
+		transform:rotate(180deg);
+	}
+}
+.select-city .tabs-trigger {
+	display: flex;
+	column-gap: 5px;
+	padding-bottom: 10px;
+}
+
+.select-city .tab-btn {
+	font-size: 13px;
+	text-transform: uppercase;
+	cursor:pointer;
+	&:hover{
+		opacity: .8;
+	}
+}
+
+.select-city .tab-btn.active {
+	color: red;
+}
+
+.select-city .tab-item {
+	display: none;
+	padding-bottom: 12px;
+	.custom-option{
+		padding: 0;
+		font-size: 12px;
+		transition: .3s; 
+		&:hover{
+			background-color: transparent;
+			opacity: .7;
+		}
+	}
+}
+
+.select-city .tab-item.active {
+	display: flex;
+	flex-wrap:wrap;
+	gap:10px;
+}
+.select-city .select-city-tabs{
+	display: none;
+	position: absolute;
+	top: calc(100% + 20px);
+	border: 1px solid #dadada;
+	left: -20px;
+	width: 460px;
+	
+	padding: 14px;
+	padding-right: 10px;
+
+	.tabs-content{
+		max-height: 110px;
+		overflow: hidden;
+		overflow-y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: #dadada transparent;
+		&::-webkit-scrollbar {
+			width: 3px;
+		}
+	
+		&::-webkit-scrollbar {
+			width: 3px;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			width: 3px;
+			border-radius: 5px;
+			height: 20px;
+			background-color: #dadada;
+		}
+	
+		&::-webkit-scrollbar-track {
+			width: 3px;
+			border-radius: 5px;
+			background-color: transparent;
+		}
+	}
+}
+.select-city-tabs.active {
+	display: block;
+}
