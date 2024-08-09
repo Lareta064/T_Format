@@ -11,6 +11,7 @@
     --dark-bg: #1A1A18;
     --red: #e3000f;
     --green: #00C31F;
+    --grey-bg: #f2f2f2;
 
     // --ff: 'Mont';
     --ff: 'Montserrat';
@@ -80,12 +81,17 @@
   }
   
   input,
-  button, textarea, textarea:focus, select, select:focus, button:focus, input:focus, a, a:active {
+  button, textarea{
     padding: 0;
 	  outline: none;
     font-family: inherit;
     font-size: inherit;
   }
+     textarea:focus,
+     select,
+     select:focus,
+     button:focus,
+     input:focus{outline: none;}
   input::placeholder{
     font-family: inherit;
     font-size: 12px;

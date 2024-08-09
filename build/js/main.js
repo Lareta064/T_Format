@@ -242,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Call the function with the class names of the button and content
 	setupActive('filters-toggle', 'filters-drop');
+	setupActive('label-trigger', 'catalogy-menu-drop');
 	/**********FOTORAMA*********** */
 	 const fotoramaThumbs = document.querySelector('.fotorama-thumbs');
      const mainImage = document.querySelector('.fd-img');
