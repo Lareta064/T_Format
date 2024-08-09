@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		speed: 1000,
 		effect: 'fade',
 		loop: true,
-		autoplay:{
-			delay: 3000,
-		},
+		// autoplay:{
+		// 	delay: 3000,
+		// },
 		pagination:{
 			 el: ".hero-pagination",
 			 clickable: true,
