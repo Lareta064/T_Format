@@ -42,7 +42,7 @@ mixin product-card(title, img, state="", label1, label2)
 				.label-green Новинка
 		
 		.card-info
-			.h4 #{title}
+			a(href="single-page.html").h4 #{title}
 			.d-flex
 				.card-group
 					if state == "active"

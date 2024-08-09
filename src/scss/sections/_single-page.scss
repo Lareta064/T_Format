@@ -196,7 +196,7 @@
 	p+p {margin-top: 1em;}
 	article + article{margin-top: 60px;}
 	@media (max-width: 767px) {
-		p {font-size: 12px;}
+		p:not( .h1) {font-size: 12px;}
 		article+article {margin-top: 40px;}
 	}
 }
