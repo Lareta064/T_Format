@@ -135,26 +135,89 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 	/************************** */
-	const servCards = document.querySelectorAll('.serv-card');
-	
-		for(item of servCards){
-			const servCardBtn = item.querySelector('.serv-card-btn');
-			
-			servCardBtn.addEventListener('click', ()=>{
-				const thisParent = servCardBtn.closest('.serv-card');
-				const dropList = thisParent.querySelector('.mark-list');
-				console.log(dropList.scrollHeight);
-				if(thisParent.classList.contains('active')){
-					 thisParent.classList.remove('active');
-					 if(dropList){dropList.style.maxHeight = 0;}
-					 
-					 
-				}else{
-					thisParent.classList.add('active');
-					if(dropList){dropList.style.maxHeight = dropList.scrollHeight + 'px';}
+
+	const serviceCards = document.querySelectorAll('.serv-card');
+    if(serviceCards.length > 0){
+		function setupEventListeners() {
+			const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+			if (mediaQuery.matches) {
+				/** Event for screen < 768 */
+				serviceCards.forEach(card => {
+					const servCardBtn = card.querySelector('.serv-card-btn');
+					const markList = card.querySelector('.mark-list');
+
+					const clickHandler = () => {
+						if (card.classList.contains('active')) {
+							card.classList.remove('active');
+							markList.style.maxHeight = '0';
+						} else {
+							card.classList.add('active');
+							markList.style.maxHeight = markList.scrollHeight + 'px';
+						}
+					};
+
+					servCardBtn.addEventListener('click', clickHandler);
+
+					// Store handler to remove later
+					card.clickHandler = clickHandler;
+				});
+			} else {
+				/** Event for screen >= 768 */
+				serviceCards.forEach(card => {
+					const markList = card.querySelector('.mark-list');
+
+					const mouseEnterHandler = () => {
+						card.classList.add('active');
+						markList.style.maxHeight = markList.scrollHeight + 'px';
+					};
+
+					const mouseLeaveHandler = () => {
+						card.classList.remove('active');
+						markList.style.maxHeight = '0';
+					};
+
+					card.addEventListener('mouseenter', mouseEnterHandler);
+					card.addEventListener('mouseleave', mouseLeaveHandler);
+
+					// Store handlers to remove later
+					card.mouseEnterHandler = mouseEnterHandler;
+					card.mouseLeaveHandler = mouseLeaveHandler;
+				});
+			}
+		}
+
+		function removeEventListeners() {
+			serviceCards.forEach(card => {
+				const servCardBtn = card.querySelector('.serv-card-btn');
+
+				// Remove click handlers for mobile
+				if (card.clickHandler) {
+					servCardBtn.removeEventListener('click', card.clickHandler);
+					delete card.clickHandler;
+				}
+
+				// Remove mouseenter/mouseleave handlers for desktop
+				if (card.mouseEnterHandler) {
+					card.removeEventListener('mouseenter', card.mouseEnterHandler);
+					delete card.mouseEnterHandler;
+				}
+				if (card.mouseLeaveHandler) {
+					card.removeEventListener('mouseleave', card.mouseLeaveHandler);
+					delete card.mouseLeaveHandler;
 				}
 			});
 		}
+
+		// Initial setup
+		setupEventListeners();
+
+		// Re-apply event listeners on screen resize
+		window.addEventListener('resize', function() {
+			removeEventListeners();
+			setupEventListeners();
+		});
+	}
 	// ======custom input type file ====
 	const fileInput = document.getElementById('file-input');
   	const fileLabel = document.querySelector('.file-label');

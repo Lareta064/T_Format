@@ -45,14 +45,15 @@
 				text-decoration: underline;
 				text-decoration-skip-ink: none;
 				color: white;
-				&:hover{text-decoration: none;}
 			}
 		}
 	}
-	&.active .serv-card__img:after{
-		background-color: rgba(0, 0, 0, 0.6);
-	}
 	
+}
+.mark-list {
+	transition: .3s;
+	max-height: 0;
+	overflow: hidden;
 }
 .services-content{
 	display: grid;
@@ -68,11 +69,6 @@
 		grid-template-columns: repeat(1, 1fr);
 		gap: 16px;
 	}
-}
-.mark-list {
-	transition: .3s; 
-	max-height: 0;
-	overflow: hidden;
 }
 
 @media (max-width: 767px) {
