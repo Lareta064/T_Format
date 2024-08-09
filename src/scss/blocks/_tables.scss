@@ -1,8 +1,8 @@
 table {
 	border-spacing: 0;
-	width: 100%;
-		display: table;
-		table-layout: fixed;
+	// width: 100%;
+	display: table;
+	table-layout: fixed;
 	
 }
 
@@ -13,8 +13,11 @@ th {
 	text-align: center;
 	font-weight: 600;
 	border: 1px solid #bababa;
-	min-width: 130px;
+	// min-width: 130px;
 	padding: 4px 10px;
+	@media (max-width: 767px) {
+	font-size: 12px;
+	}
 }
 
 tbody tr:nth-child(2n) {
@@ -24,7 +27,7 @@ tbody tr:nth-child(2n) {
 	table{
 		border-left: 1px solid  #bababa;
 		border-right: 1px solid  #bababa;
-		width: var(--tableSecondWidth);
+		// width: var(--tableSecondWidth);
 	}
 	td,th{
 		border-right: 1px solid transparent;
@@ -36,10 +39,10 @@ tbody tr:nth-child(2n) {
 		}
 	}
 
-	td:first-child,
-	th:first-child{width: var(--tableNoBorderFirstCell);;}
+	// td:first-child,
+	// th:first-child{width: var(--tableNoBorderFirstCell);;}
 	td:last-child,th:last-child{
-		width: var(--tableNoBorderLastCell);
+		// width: var(--tableNoBorderLastCell);
 		text-align: center;
 	}
 }

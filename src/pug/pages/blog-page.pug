@@ -27,21 +27,29 @@ block content
 						.portfolio-swiper.swiper
 							.swiper-wrapper
 								.swiper-slide
-									img.border-img.lazy(src="./img/product1.webp", width="231" height="321" alt="img")
+									a(href="./img/product1.webp" data-fancybox)
+										img.border-img.lazy(src="./img/product1.webp", width="231" height="321" alt="img")
 								.swiper-slide
-									img.border-img.lazy(src="./img/product2.webp", width="231" height="321" alt="img")
+									a(href="./img/product2.webp" data-fancybox)
+										img.border-img.lazy(src="./img/product2.webp", width="231" height="321" alt="img")
 								.swiper-slide
-									img.border-img.lazy(src="./img/product3.webp", width="231" height="321" alt="img")
+									a(href="./img/product3.webp" data-fancybox)
+										img.border-img.lazy(src="./img/product3.webp", width="231" height="321" alt="img")
 								.swiper-slide
-									img.border-img.lazy(src="./img/product4.webp", width="231" height="321" alt="img")
+									a(href="./img/product4.webp" data-fancybox)
+										img.border-img.lazy(src="./img/product4.webp", width="231" height="321" alt="img")
 								.swiper-slide
-									img.border-img.lazy(src="./img/product1.webp", width="231" height="321" alt="img")
+									a(href="./img/product1.webp" data-fancybox)
+										img.border-img.lazy(src="./img/product1.webp", width="231" height="321" alt="img")
 								.swiper-slide
-									img.border-img.lazy(src="./img/product2.webp", width="231" height="321" alt="img")
+									a(href="./img/product2.webp" data-fancybox)
+										img.border-img.lazy(src="./img/product2.webp", width="231" height="321" alt="img")
 								.swiper-slide
-									img.border-img.lazy(src="./img/product3.webp", width="231" height="321" alt="img")
+									a(href="./img/product3.webp" data-fancybox)
+										img.border-img.lazy(src="./img/product3.webp", width="231" height="321" alt="img")
 								.swiper-slide
-									img.border-img.lazy(src="./img/product4.webp", width="231" height="321" alt="img")
+									a(href="./img/product5.webp" data-fancybox)
+										img.border-img.lazy(src="./img/product4.webp", width="231" height="321" alt="img")
 						//====swiper navigation
 						.swiper-nav
 							.swiper-button-next
@@ -88,7 +96,7 @@ block content
 					article.custom-text
 						.h2 Таблицы
 						//-значения ширины таблицы с текстами, первой и последней ячеек прописаны в css , в root
-						.tables-wrapper
+						.two-column-block
 							//====table===
 							.table-large
 								table
@@ -154,7 +162,7 @@ block content
 					article.custom-text
 						.h2 Колонки
 						//=== 4 колонки ====
-						.four-column-txt.mt-40
+						.four-column-txt.mt-40.two-column-mobile
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -181,35 +189,35 @@ block content
 					h2.h2 Новости
 					.news-cards
 						//===single card ====
-						.picture-card
+						a(href="#!").picture-card
 							.picture-card__img
 								img.lazy(src="./img/custom.webp", width="260" height="173" alt="img")
 							.picture-card__txt
-								a(href="#!").bold-18 Наименование статьи
+								.bold-18 Наименование статьи
 								.txt-14 Мы занимаем лидирующие позиции по производству спецодежды и ее реал. Мы занимаем лидирующие позиции по производству спецодежды и ее реал.
 						//===single card ====
 						.picture-card
-							.picture-card__img
+							a(href="#!").picture-card__img
 								img.lazy(src="./img/custom.webp", width="260" height="173" alt="img")
 							.picture-card__txt
-								a(href="#!").bold-18 Наименование статьи  в две строчки текста
+								.bold-18 Наименование статьи  в две строчки текста
 								.txt-14 Мы занимаем лидирующие позиции по производству спецодежды и ее реал.
 						//===single card ====
 						.picture-card
-							.picture-card__img
+							a(href="#!").picture-card__img
 								img.lazy(src="./img/custom.webp", width="260" height="173" alt="img")
 							.picture-card__txt
-								a(href="#!").bold-18 Наименование статьи
+								.bold-18 Наименование статьи
 								.txt-14 Мы занимаем лидирующие позиции по производству спецодежды и ее реал.
 						//===single card ====
 						.picture-card
-							.picture-card__img
+							a(href="#!").picture-card__img
 								img.lazy(src="./img/custom.webp", width="260" height="173" alt="img")
 							.picture-card__txt
-								a(href="#!").bold-18 Наименование статьи
+								.bold-18 Наименование статьи
 								.txt-14 Мы занимаем лидирующие позиции по производству спецодежды и ее реал.			
 			//==== получиь образец ====
-			section.get-sample
+			section.get-sample.get-sample-full
 				.container
 					h2.h2 Получить образец
 					.get-sample-full.d-grid

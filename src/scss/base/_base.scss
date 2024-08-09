@@ -19,11 +19,11 @@
     
     /*таблица №2*/
     /*ширина таблицы */
-    --tableSecondWidth: 100%;
+    // --tableSecondWidth: 100%;
     /*ширина первой ячейки */
-    --tableNoBorderFirstCell: 50%;
+    // --tableNoBorderFirstCell: 50%;
     /*ширина третьей ячейки*/
-    --tableNoBorderLastCell: 60px;
+    // --tableNoBorderLastCell: 60px;
   }
   html {
 	 scroll-behavior: smooth;
@@ -175,14 +175,23 @@ article{
   &>*{
     grid-column: span 3;
   }
-  @media (max-width: 767px) {
-  &>* {
+  @media (max-width: 1023px) {
+    &>* {
       grid-column: span 6;
+    }
+  }
+  @media (max-width: 767px) {
+    &>* {
+        grid-column: span 12;
     }
   }
 }
 .two-column-block >*{
   grid-column: span 6;
+  @media (max-width: 767px) {
+    grid-column: span 12;
+    row-gap:20px;
+  }
 }
 .border-decore{
   padding:21px;

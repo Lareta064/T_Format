@@ -155,3 +155,21 @@
 		&>* {grid-column: span 6;}
 	}
 }
+@media (max-width: 767px) {
+.four-column-txt,
+	.three-column-txt,
+	.two-column-txt {
+		&>*+* {
+			margin-top: 0;
+		}
+
+		&>* {
+			grid-column: span 12;
+		}
+		&.two-column-mobile{
+			&>* {
+					grid-column: span 6;
+				}
+		}
+	}
+}

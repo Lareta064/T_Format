@@ -39,7 +39,12 @@
 			cursor:pointer;
 		}
 		ul{
-			li +li{margin-top: 14px;}
+			li +li{
+				margin-top: 8px;
+				@media (max-width: 767px) {
+				margin-top: 10px;
+				}
+			}
 			a{
 				font-size: 12px;
 				text-decoration: underline;

@@ -31,6 +31,7 @@
 }
 .statistic-content{
 	display: flex;
+	
 	@media (max-width: 767px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -41,9 +42,10 @@
 }
 .statistic-img img{
 	width: 260px;
-	height: 150px;
+	height: 100%;
+	object-fit: cover;
 	@media (max-width: 1023px) {
-		height: 130px;
+		height: auto;
 	}
 	@media (max-width: 767px) {
 	  height: 90px;
