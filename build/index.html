@@ -1,737 +1,1156 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!--====убрать синий цвет у ссылок в сафари ========-->
-		<meta name="format-detection" content="telephone=no">
-		<style>
-			//- @font-face {
-			//- 	font-family: 'Mont';
-			//- 	src: url('./fonts/Mont-Regular.woff2') format("woff2");
-			//- 	font-weight: 400;
-			//- 	font-style: normal;
-			//- 	font-display: swap;
-			//- }
-			//- @font-face {
-			//- 	font-family: 'Mont';
-			//- 	src: url('./fonts/Mont-SemiBold.woff2') format("woff2");
-			//- 	font-weight: 600;
-			//- 	font-style: normal;
-			//- 	font-display: swap;
-			//- }
-			//- @font-face {
-			//- 	font-family: 'Mont';
-			//- 	src: url('./fonts/Mont-Bold.woff2') format("woff2");
-			//- 	font-weight: 700;
-			//- 	font-style: normal;
-			//- 	font-display: swap;
-			//- }
-			//- @font-face {
-			//- 	font-family: 'Mont';
-			//- 	src: url('./fonts/Mont-Light.woff2') format("woff2");
-			//- 	font-weight: 300;
-			//- 	font-style: normal;
-			//- 	font-display: swap;
-			//- }
-			@font-face {
-				font-family: 'Montserrat';
-				src: url('./fonts/Montserrat-Regular.woff2') format("woff2");
-				font-weight: 400;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Montserrat';
-				src: url('./fonts/Montserrat-Medium.woff2') format("woff2");
-				font-weight: 500;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Montserrat';
-				src: url('./fonts/Montserrat-SemiBold.woff2') format("woff2");
-				font-weight: 600;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Montserrat';
-				src: url('./fonts/Montserrat-Bold.woff2') format("woff2");
-				font-weight: 700;
-				font-style: normal;
-				font-display: swap;
-			}
-		</style>
-		<!--======= swiper slider ======-->
-		<link rel="stylesheet" href="./libs/swiper/swiper.min.css">
-		<!--============ fancybox =============-->
-		<link rel="stylesheet" href="./libs/fancybox/fancybox.css">
-		<!--============ main.css =============-->
-		<link rel="stylesheet" href="css/main.css">
-		<title>Page</title>
-	</head>
-	<body>
-		<div class="page-wrapper">
-			<header class="header">
-				<!--==== header top ====-->
-				<div class="header-row header-top">
-					<p class="demi-12">Производитель спецодежды и текстиля на заказ</p>
-					<div class="header-column fl-y">
-						<!--==== phone===--><a class="contact-link" href="tel:+77897897878">
-							<svg class="svg-phone">
-								<use href="./img/sprite.svg#svg-phone"></use>
-							</svg><span class="d-desck">Заказать обратный звонок</span><span class="d-laptop">+7 789 789 78 78</span></a>
-						<!--==== wa===--><a class="contact-link social-wapp" href="#!"><img src="./img/wa.svg" width="16" height="16" alt="whatsapp"><span> Whatsapp</span></a>
-						<!--==== email===--><a class="contact-link contact-link--email" href="mailto:info@format.ru">
-							<svg class="svg-envelope">
-								<use href="./img/sprite.svg#svg-envelope"></use>
-							</svg><span>info@format.ru</span></a>
-						<!--=====menu-toggle===-->
-						<button class="menu-toggle" id="menu-toggle"><span></span></button>
-					</div>
-				</div>
-				<!--==== header bottom ====-->
-				<div class="header-row header-bottom"><a class="logo" href="index.html">
-						<svg class="svg-logo">
-							<use href="./img/sprite.svg#svg-logo"></use>
-						</svg></a>
-					<div class="menu-wrapper" id="menu">
-						<div class="menu-wrapper-content">
-							<div class="header-menu drop-menu">
-								<ul class="menu-list">
-									<li class="menu-list-item"><a class="menu-link" href="index.html">Главная</a></li>
-									<!-- пункт меню  с подменю -->
-									<li class="menu-list-item drop-menu drop-menu_2">
-										<div class="drop-icon drop-icon-mobile"><a class="menu-link" href="#!">Каталог</a></div>
-										<!-- второй  уровень-->
-										<div class="submenu submenu-2">
-											<ul class="submenu-list">
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="catalogy.html">Пошив рабочей одежды</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">Пошив униформы</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">Пошив медицинской формы</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">Пошив текстиля на заказ</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">ОЕМ товары под логотипы</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">Шевроны</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="menu-list-item"><a class="menu-link" href="#!">О компании</a></li>
-									<li class="menu-list-item"><a class="menu-link" href="#!">Индивидуальный пошив</a></li>
-									<li class="menu-list-item"><a class="menu-link" href="#!">Покупателям</a></li>
-								</ul>
-							</div>
-							<!--=====logo===-->
-							<div class="menu-logo">
-								<svg class="svg-logo svg-logo--white">
-									<use href="./img/sprite.svg#svg-logo"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-					<div class="contacts-phone"><a class="txt-big" href="">+7 789 789 78 78</a>
-						<div class="online-state active"><span class="online-state__dot"></span><span class="online-state__text">Сейчас работаем</span></div>
-					</div>
-					<button class="btn-cart btn-icon" type="button">
-						<svg class="svg-cart">
-							<use href="./img/sprite.svg#svg-cart"></use>
-						</svg>
-					</button>
-				</div>
-			</header>
-			<main class="main">
-				<!--======= HERO ======-->
-				<section class="hero">
-					<div class="container">
-						<div class="hero-swiper-wrapper">
-							<!--===slider====-->
-							<div class="hero-swiper swiper">
-								<div class="swiper-wrapper">
-									<!--=== single slide ====-->
-									<div class="swiper-slide">
-										<div class="hero-slide">
-											<!--====slide text ====-->
-											<div class="hero-slide-text">
-												<div class="h1">Производство спецодежды из наличия и на заказ</div>
-												<!--====slide img mobile====-->
-												<div class="hero-slide-img__mobile">
-													<div class="hero-slide-label"><img src="./img/mark.webp" width="78" height="31" alt="logo"></div>
-													<picture><img class="lazy" src="./img/hero-slide.webp" width="305" height="207" alt="img"></picture>
-												</div>
-												<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
-												<div class="btn-group"><a class="btn" href="#!">Связаться с нами</a><a class="button" href="#!">Вторая кнопка</a></div>
-											</div>
-											<!--====slide img ====-->
-											<div class="hero-slide-img">
-												<div class="hero-slide-label"><img src="./img/mark.webp" width="219" height="86" alt="logo"></div>
-												<picture><img class="lazy" src="./img/hero-slide.webp" width="857" height="580" alt="img"></picture>
-											</div>
-										</div>
-									</div>
-									<!--=== single slide ====-->
-									<div class="swiper-slide">
-										<div class="hero-slide">
-											<!--====slide text ====-->
-											<div class="hero-slide-text">
-												<div class="h1">Качество, оперативность, низкие цены!</div>
-												<!--====slide img _mobile ====-->
-												<div class="hero-slide-img__mobile">
-													<picture><img class="lazy" src="./img/hero-slide2.webp" width="305" height="207" alt="img"></picture>
-												</div>
-												<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
-												<div class="btn-group"><a class="btn" href="#!">Связаться с нами</a><a class="button" href="#!">Вторая кнопка</a></div>
-											</div>
-											<!--====slide img ====-->
-											<div class="hero-slide-img">
-												<picture><img class="lazy" src="./img/hero-slide2.webp" width="857" height="580" alt="img"></picture>
-											</div>
-										</div>
-									</div>
-									<!--=== single slide ====-->
-									<div class="swiper-slide">
-										<div class="hero-slide">
-											<!--====slide text ====-->
-											<div class="hero-slide-text">
-												<div class="h1">Производство спецодежды из наличия и на заказ</div>
-												<!--====slide img mobile====-->
-												<div class="hero-slide-img__mobile">
-													<picture><img class="lazy" src="./img/hero-slide3.webp" width="305" height="207" alt="img"></picture>
-												</div>
-												<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
-												<div class="btn-group"><a class="btn" href="#!">Связаться с нами</a><a class="button" href="#!">Вторая кнопка</a></div>
-											</div>
-											<!--====slide img ====-->
-											<div class="hero-slide-img">
-												<picture><img class="lazy" src="./img/hero-slide3.webp" width="857" height="580" alt="img"></picture>
-											</div>
-										</div>
-									</div>
-									<!--=== single slide ====-->
-									<div class="swiper-slide">
-										<div class="hero-slide">
-											<!--====slide text ====-->
-											<div class="hero-slide-text">
-												<div class="h1">Постоянным клиентам скидка до 30%!</div>
-												<!--====slide img mobile====-->
-												<div class="hero-slide-img__mobile">
-													<picture><img class="lazy" src="./img/hero-slide4.webp" width="305" height="207" alt="img"></picture>
-												</div>
-												<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
-												<div class="btn-group"><a class="btn" href="#!">Связаться с нами</a><a class="button" href="#!">Вторая кнопка</a></div>
-											</div>
-											<!--====slide img ====-->
-											<div class="hero-slide-img">
-												<picture><img class="lazy" src="./img/hero-slide4.webp" width="857" height="580" alt="img"></picture>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--=====slider paginatopn ======-->
-								<div class="hero-pagination swiper-pagination"></div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--====== statistic ========-->
-				<section class="statistic">
-					<div class="container">
-						<div class="statistic-bg">
-							<div class="statistic-content">
-								<div class="statistic-img"><img src="./img/img.webp" width="260" height="150" alt="alt"></div>
-								<div class="statistic-item">
-									<p>18 000 +</p><span>Изделий выпущено<br> за последний год</span>
-								</div>
-								<div class="statistic-item">
-									<p>346</p><span>Сотрудников</span>
-								</div>
-								<div class="statistic-item">
-									<p>1 348</p><span>Станков запущено</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="services">
-					<div class="container">
-						<h2 class="h1">Пошив на заказ</h2>
-						<div class="services-content">
-							<!--==== single card ===-->
-							<div class="serv-card">
-								<div class="serv-card__img"><img class="lazy" src="./img/serv1.webp" width="360" height="360" alt="alt"></div>
-								<div class="serv-card__text">
-									<div class="h3 serv-card-btn">Пошив рабочей одежды</div>
-									<ul class="mark-list">
-										<li><a href="#!">Пошив сигнальных жилетов</a></li>
-										<li><a href="#!">Пошив рабочих костюмов</a></li>
-										<li><a href="#!">Пошив халатов</a></li>
-										<li><a href="#!">Пошив комбинезонов</a></li>
-										<li><a href="#!">Пошив рабочих брюк</a></li>
-										<li><a href="#!">Пошив фартуков</a></li>
-										<li><a href="#!">Пошив зимней спецодежды</a></li>
-									</ul>
-								</div>
-							</div>
-							<!--==== single card ===-->
-							<div class="serv-card">
-								<div class="serv-card__img"><img class="lazy" src="./img/serv2.webp" width="360" height="360" alt="alt"></div>
-								<div class="serv-card__text">
-									<div class="h3 serv-card-btn">Пошив униформы</div>
-									<ul class="mark-list">
-										<li><a href="#!">Пошив сигнальных жилетов</a></li>
-										<li><a href="#!">Пошив рабочих костюмов</a></li>
-										<li><a href="#!">Пошив халатов</a></li>
-										<li><a href="#!">Пошив комбинезонов</a></li>
-										<li><a href="#!">Пошив рабочих брюк</a></li>
-										<li><a href="#!">Пошив фартуков</a></li>
-										<li><a href="#!">Пошив зимней спецодежды</a></li>
-									</ul>
-								</div>
-							</div>
-							<!--==== single card ===-->
-							<div class="serv-card">
-								<div class="serv-card__img"><img class="lazy" src="./img/serv3.webp" width="360" height="360" alt="alt"></div>
-								<div class="serv-card__text">
-									<div class="h3 serv-card-btn">Пошив медицинской формы</div>
-									<ul class="mark-list">
-										<li><a href="#!">Пошив сигнальных жилетов</a></li>
-										<li><a href="#!">Пошив рабочих костюмов</a></li>
-										<li><a href="#!">Пошив халатов</a></li>
-										<li><a href="#!">Пошив комбинезонов</a></li>
-									</ul>
-								</div>
-							</div>
-							<!--==== single card ===-->
-							<div class="serv-card">
-								<div class="serv-card__img"><img class="lazy" src="./img/serv4.webp" width="360" height="360" alt="alt"></div>
-								<div class="serv-card__text">
-									<div class="h3 serv-card-btn">Пошив текстиля на заказ</div>
-									<ul class="mark-list">
-										<li><a href="#!">Пошив сигнальных жилетов</a></li>
-										<li><a href="#!">Пошив рабочих костюмов</a></li>
-										<li><a href="#!">Пошив халатов</a></li>
-										<li><a href="#!">Пошив комбинезонов</a></li>
-										<li><a href="#!">Пошив рабочих брюк</a></li>
-									</ul>
-								</div>
-							</div>
-							<!--==== single card ===-->
-							<div class="serv-card">
-								<div class="serv-card__img"><img class="lazy" src="./img/serv5.webp" width="360" height="360" alt="alt"></div>
-								<div class="serv-card__text">
-									<div class="h3 serv-card-btn">ОЕМ товары под логотипы</div>
-									<ul class="mark-list">
-										<li><a href="#!">Пошив сигнальных жилетов</a></li>
-										<li><a href="#!">Пошив рабочих костюмов</a></li>
-										<li><a href="#!">Пошив халатов</a></li>
-										<li><a href="#!">Пошив комбинезонов</a></li>
-										<li><a href="#!">Пошив рабочих брюк</a></li>
-									</ul>
-								</div>
-							</div>
-							<!--==== single card ===-->
-							<div class="serv-card">
-								<div class="serv-card__img"><img class="lazy" src="./img/serv6.webp" width="360" height="360" alt="alt"></div>
-								<div class="serv-card__text">
-									<div class="h3 serv-card-btn">Шевроны</div>
-									<ul class="mark-list">
-										<li><a href="#!">Пошив сигнальных жилетов</a></li>
-										<li><a href="#!">Пошив рабочих костюмов</a></li>
-										<li><a href="#!">Пошив халатов</a></li>
-										<li><a href="#!">Пошив комбинезонов</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--====== GET CATALOGY ====-->
-				<section class="get-catalogy">
-					<div class="get-catalogy-bg dark-bg">
-						<div class="container">
-							<div class="get-catalogy-row">
-								<h2 class="h1">Наш каталог</h2>
-								<p class="txt-20">Получите наш каталог в формате  PDF на email за 5&nbsp;секунд</p>
-								<!--====form====-->
-								<form class="get-catalogy-form" action="#">
-									<div class="form-item">
-										<input type="text" name="email" placeholder="Введите ваш email">
-									</div>
-									<div class="form-btn">
-										<button class="button-outline btn-slim" type="submit">Получить</button>
-									</div>
-								</form>
-								<!--=== image====-->
-								<div class="get-catalogy-img">
-									<picture><img class="lazy" src="./img/mockup1.webp" width="400" height="545" alt="img"></picture>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--=====OUR COLLECTION====-->
-				<section class="collection">
-					<div class="container">
-						<h2 class="h1">Наша коллекция</h2>
-						<div class="collection-wrapper">
-							<div class="mini-card"><a class="card-img" href="./img/product1.webp" data-fancybox><img class="lazy" src="./img/product1.webp" width="260" height="361" alt="img"></a><a class="bold-18" href="single-page.html">Летняя спецодежда </a></div>
-							<div class="mini-card"><a class="card-img" href="./img/product2.webp" data-fancybox><img class="lazy" src="./img/product2.webp" width="260" height="361" alt="img"></a><a class="bold-18" href="#!">Униформа</a></div>
-							<div class="mini-card"><a class="card-img" href="./img/product3.webp" data-fancybox><img class="lazy" src="./img/product3.webp" width="260" height="361" alt="img"></a><a class="bold-18" href="#!">Зимняя одежда</a></div>
-							<div class="mini-card"><a class="card-img" href="./img/product4.webp" data-fancybox><img class="lazy" src="./img/product4.webp" width="260" height="361" alt="img"></a><a class="bold-18" href="#!">Рабочая одежда</a></div>
-						</div>
-					</div>
-				</section>
-				<!--=====получить образец ====-->
-				<section class="get-sample">
-					<div class="container">
-						<div class="get-sample-content d-grid">
-							<div class="get-sample-img">
-								<picture><img class="lazy" src="./img/forma.webp" width="361" height="312" alt="img"></picture>
-							</div>
-							<div class="get-sample-text">
-								<h2 class="h1">Получить образец</h2>
-								<p>Получите образец нашей работы в кратчайшие сроки. Сделаем по вашим лекалам.</p>
-							</div>
-							<div class="get-sample-btn">
-								<button class="btn" type="button">ЗАПРОСИТЬ СЕЙЧАС</button>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--======BENEFITS=====-->
-				<section class="benefits grey-bg p-80">
-					<div class="container">
-						<div class="benefits-content">
-							<!--=== single item====-->
-							<div class="benefit-item">
-								<div class="benefit-img">
-									<svg class="svg-benefit1">
-										<use href="./img/sprite.svg#svg-benefit1"></use>
-									</svg>
-								</div>
-								<p>Гарантия не менее 1 года на нашу продукцию</p><a class="link" href="#!">Подробнее</a>
-							</div>
-							<!--=== single item====-->
-							<div class="benefit-item">
-								<div class="benefit-img">
-									<svg class="svg-benefit1">
-										<use href="./img/sprite.svg#svg-benefit2"></use>
-									</svg>
-								</div>
-								<p>Собственное производство, до 10000 костюмов в месяц</p><a class="link" href="#!">Подробнее</a>
-							</div>
-							<!--=== single item====-->
-							<div class="benefit-item">
-								<div class="benefit-img">
-									<svg class="svg-benefit1">
-										<use href="./img/sprite.svg#svg-benefit3"></use>
-									</svg>
-								</div>
-								<p>Качественные ткани, фурнитура и материалы</p><a class="link" href="#!"> </a>
-							</div>
-							<!--=== single item====-->
-							<div class="benefit-item">
-								<div class="benefit-img">
-									<svg class="svg-benefit1">
-										<use href="./img/sprite.svg#svg-benefit4"></use>
-									</svg>
-								</div>
-								<p>Изготовим и нанесем логотипы и шевроны под заказ</p><a class="link" href="#!">Подробнее</a>
-							</div>
-							<!--=== single item====-->
-							<div class="benefit-item">
-								<div class="benefit-img">
-									<svg class="svg-benefit1">
-										<use href="./img/sprite.svg#svg-benefit5"></use>
-									</svg>
-								</div>
-								<p>Пошив под ключ на давальческом сырье от 300 штук</p>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--==== клиенты===-->
-				<section class="clients">
-					<div class="container">
-						<h2 class="h1">Наши клиенты</h2>
-						<div class="clients-wrapper">
-							<div class="clients-grid d-grid">
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo1.webp" width="157" height="56" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo2.webp" width="101" height="64" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo3.webp" width="160" height="35" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo4.webp" width="124" height="64" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo5.webp" width="136" height="64" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo6.webp" width="159" height="57" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo7.webp" width="160" height="55" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo8.webp" width="64" height="64" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo9.webp" width="160" height="24" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo10.webp" width="79" height="64" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo11.webp" width="115" height="51" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo12.webp" width="161" height="25" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo13.webp" width="155" height="49" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo14.webp" width="81" height="64" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo15.webp" width="157" height="30" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo16.webp" width="78" height="64" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo17.webp" width="138" height="64" alt="alt"></div>
-								<div class="client-logo"><img class="lazy" src="./img/logos/logo18.webp" width="160" height="44" alt="alt"></div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--=====ABOUT ====-->
-				<section class="about">
-					<div class="container">
-						<div class="about-content d-grid">
-							<!--====img block ====-->
-							<div class="about-img">
-								<!--====заголовок для моб версии ===-->
-								<div class="about-mobile-title">
-									<div class="txt-light">о компании</div>
-									<div class="h1">Форма<span class="txt-red">Т</span> это:</div>
-								</div>
-								<!--==== img-label===-->
-								<div class="statistic-item">
-									<p>18 000 +</p><span>Изделий выпущено<br> за последний год</span>
-								</div><img src="./img/hero-slide2.webp" width="710" height="500" alt="img">
-							</div>
-							<!--====text block ====-->
-							<div class="about-text">
-								<div class="txt-light">о компании</div>
-								<div class="h1">Форма<span class="txt-red">Т</span> это:</div>
-								<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. </p>
-								<button class="btn" type="button">подробнее</button>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--=====subscribe form =====-->
-				<section class="subscribe dark-bg">
-					<div class="container">
-						<div class="subscribe-content d-grid">
-							<div class="subscribe-title">
-								<h2 class="h1">Подпишитесь на рассылку</h2>
-								<div class="txt-20">Новинки, акции и новости нашей компании Вы получите первыми!</div>
-							</div>
-							<!--====form====-->
-							<form class="d-flex" action="#">
-								<div class="form-item">
-									<input type="text" name="email" placeholder="Введите ваш email">
-								</div>
-								<div class="form-btn">
-									<button class="button-outline btn-slim" type="submit">Подписаться</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</section>
-				<!--===== support ===-->
-				<section class="support">
-					<div class="container">
-						<div class="support-content d-grid">
-							<div class="support-consultant">
-								<h2 class="h2">С вами работают</h2>
-								<div class="support-consultant-info">
-									<div class="support-photo"><img src="./img/support.webp" width="360" height="400" alt="img"></div>
-									<div class="support-consultant-block">
-										<div class="support-name">
-											<div class="h3">Наталья</div>
-											<div class="txt-18">Менеджер</div>
-										</div>
-										<div class="support-contacts"><a class="contact-link" href="tel:+78998998989">
-												<div class="txt-18">Телефон</div>
-												<div class="h3">+ 7 899 899 89 89</div></a>
-											<div class="online-state active"><span class="online-state__dot"></span><span class="online-state__text txt-18">Сейчас работаем, звоните!</span></div>
-										</div><a class="contact-link social-wapp-round" href="#!"><span class="round-icon"><img src="./img/wa-white.webp" width="16" height="16" alt="whatsapp"></span><span class="txt-18"> Написать в Whatsapp</span></a>
-									</div>
-								</div>
-							</div>
-							<!--===== form block ====-->
-							<div class="support-form">
-								<h2 class="h2">Отправить заявку</h2>
-								<form class="contact-form" action="#" method="method">
-									<div class="form-item">
-										<label>Ваше имя:</label>
-										<input type="text" name="name">
-									</div>
-									<div class="form-item">
-										<label>Email:</label>
-										<input type="text" name="email">
-									</div>
-									<div class="form-item">
-										<label>Телефон:</label>
-										<input type="text" name="phone">
-									</div>
-									<div class="form-item form-item--file">
-										<div class="custom-file-input">
-											<input class="file-input" id="file-input" type="file">
-											<label class="file-label" for="file-input">
-												<svg class="svg-paper">
-													<use href="./img/sprite.svg#svg-paper"></use>
-												</svg><span class="file-text">Прикрепить файл</span>
-											</label>
-										</div>
-									</div>
-									<div class="form-item">
-										<label>Комментарий к заявке:</label>
-										<textarea name="message"></textarea>
-									</div>
-									<div class="form-btn">
-										<button class="btn" type="submit">Отправить</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-			<footer class="footer">
-				<div class="footer-top">
-					<div class="container">
-						<div class="footer-content d-grid">
-							<!--====left===-->
-							<div class="footer-text"><a class="logo" href="index.html">
-									<svg class="svg-logo svg-logo--white">
-										<use href="./img/sprite.svg#svg-logo"></use>
-									</svg></a>
-								<p class="txt-14">Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря</p>
-							</div>
-							<!--===right===-->
-							<div class="footer-nav">
-								<ul class="menu-list">
-									<li><a class="link" href="#!"> Главная</a></li>
-									<li><a class="link" href="#!"> Каталог</a></li>
-									<li><a class="link" href="#!"> О компании</a></li>
-									<li><a class="link" href="#!"> Главная</a></li>
-									<li><a class="link" href="#!"> Личный кабинет</a></li>
-								</ul>
-								<ul class="menu-list">
-									<li><a class="link" href="#!"> Индивидульный пошив</a></li>
-									<li><a class="link" href="#!"> Покупателям</a></li>
-									<li><a class="link" href="#!"> Контакты</a></li>
-								</ul>
-								<div class="footer-contacts">
-									<div class="custom-select-wrapper">
-													<div class="select-city">
-														<div class="select-city-trigger">Москва</div>
-														<div class="select-city-tabs">
-															<div class="tabs-trigger"><span class="tab-btn active">А</span><span class="tab-btn">Б</span><span class="tab-btn">в</span><span class="tab-btn">г</span><span class="tab-btn">д</span><span class="tab-btn">е</span><span class="tab-btn">ж</span><span class="tab-btn">з</span><span class="tab-btn">и</span><span class="tab-btn">К</span><span class="tab-btn">л</span><span class="tab-btn">м</span><span class="tab-btn">н</span><span class="tab-btn">о</span><span class="tab-btn">п</span><span class="tab-btn">р</span><span class="tab-btn">с</span><span class="tab-btn">т</span><span class="tab-btn">у</span><span class="tab-btn">ф</span><span class="tab-btn">х</span><span class="tab-btn">ц</span><span class="tab-btn">ч</span><span class="tab-btn">ш</span><span class="tab-btn">щ</span><span class="tab-btn">э</span><span class="tab-btn">ю</span><span class="tab-btn">я</span></div>
-															<div class="tabs-content">
-																<div class="tab-item active"><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span></div>
-																<div class="tab-item"><span class="custom-option" data-value="4">Брянск</span><span class="custom-option" data-value="5">Белгород</span><span class="custom-option" data-value="3">Буйнакск</span><span class="custom-option" data-value="4">Брянск</span><span class="custom-option" data-value="5">Белгород</span><span class="custom-option" data-value="3">Буйнакск</span><span class="custom-option" data-value="4">Брянск</span><span class="custom-option" data-value="5">Белгород</span><span class="custom-option" data-value="3">Буйнакск</span></div>
-																<div class="tab-item"><span class="custom-option" data-value="6">Воркута</span><span class="custom-option" data-value="7">Волгоград</span><span class="custom-option" data-value="7">Волгоград</span><span class="custom-option" data-value="7">Волгоград</span></div>
-															</div>
-														</div>
-													</div>
-									</div><a class="contact-link contact-phone" href="tel:+77897897878">+7 789 789 78 78</a><a class="contact-link contact-email" href="emailto:info@format.ru">info@format.ru</a>
-									<address>117105, г. Москва,<br> Рязанский проспект, дом 10 с18</address>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom">
-					<div class="container">
-						<p class="copyright-txt">© 2024 ФормаТ. Все права защищены.</p>
-						<div class="footer-info-txt">
-							<p>Вся представленная на сайте информация, касающаяся технических характеристик автомобилей и спецтехники, стоимости услуг, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса РФ.</p>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-		<!--=============== jquery ==================-->
-		<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
-		<!--=============== lazy ==================-->
-		<script src="./libs/jquery.lazy.min.js"></script>
-		<!--=============== swiper js ===============-->
-		<script src="./libs/swiper/swiper.js"></script>
-		<!--============fancybox====================-->
-		<script src="./libs/fancybox/fancybox.js"></script>
-		<!--=============== main js ===================-->
-		<script src="./js/main.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--====убрать синий цвет у ссылок в сафари ========-->
+  <meta name="format-detection" content="telephone=no">
+  <style>
+    //- @font-face {
+    //- 	font-family: 'Mont';
+    //- 	src: url('./fonts/Mont-Regular.woff2') format("woff2");
+    //- 	font-weight: 400;
+    //- 	font-style: normal;
+    //- 	font-display: swap;
+    //- }
+    //- @font-face {
+    //- 	font-family: 'Mont';
+    //- 	src: url('./fonts/Mont-SemiBold.woff2') format("woff2");
+    //- 	font-weight: 600;
+    //- 	font-style: normal;
+    //- 	font-display: swap;
+    //- }
+    //- @font-face {
+    //- 	font-family: 'Mont';
+    //- 	src: url('./fonts/Mont-Bold.woff2') format("woff2");
+    //- 	font-weight: 700;
+    //- 	font-style: normal;
+    //- 	font-display: swap;
+    //- }
+    //- @font-face {
+    //- 	font-family: 'Mont';
+    //- 	src: url('./fonts/Mont-Light.woff2') format("woff2");
+    //- 	font-weight: 300;
+    //- 	font-style: normal;
+    //- 	font-display: swap;
+    //- }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('./fonts/Montserrat-Regular.woff2') format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('./fonts/Montserrat-Medium.woff2') format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('./fonts/Montserrat-SemiBold.woff2') format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('./fonts/Montserrat-Bold.woff2') format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <!--======= swiper slider ======-->
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+  <!--============ fancybox =============-->
+  <link rel="stylesheet" href="./libs/fancybox/fancybox.css">
+  <!--============ main.css =============-->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Page</title>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <!--==== header top ====-->
+      <div class="header-row header-top">
+        <p class="demi-12">Производитель спецодежды и текстиля на заказ</p>
+        <div class="header-column fl-y">
+          <!--==== phone===-->
+          <a class="contact-link" href="tel:+77897897878">
+            <svg class="svg-phone">
+              <use href="./img/sprite.svg#svg-phone"></use>
+            </svg>
+            <span class="d-desck">Заказать обратный звонок</span>
+            <span class="d-laptop">+7 789 789 78 78</span>
+          </a>
+          <!--==== wa===-->
+          <a class="contact-link social-wapp" href="#!">
+            <img src="./img/wa.svg" width="16" height="16" alt="whatsapp">
+            <span> Whatsapp</span>
+          </a>
+          <!--==== email===-->
+          <a class="contact-link contact-link--email" href="mailto:info@format.ru">
+            <svg class="svg-envelope">
+              <use href="./img/sprite.svg#svg-envelope"></use>
+            </svg>
+            <span>info@format.ru</span>
+          </a>
+          <!--=====menu-toggle===-->
+          <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <!--==== header bottom ====-->
+      <div class="header-row header-bottom">
+        <a class="logo" href="index.html">
+          <svg class="svg-logo">
+            <use href="./img/sprite.svg#svg-logo"></use>
+          </svg>
+        </a>
+        <div class="menu-wrapper" id="menu">
+          <div class="menu-wrapper-content">
+            <div class="header-menu drop-menu">
+              <ul class="menu-list">
+                <li class="menu-list-item">
+                  <a class="menu-link" href="index.html">Главная</a>
+                </li>
+                <!-- пункт меню  с подменю -->
+                <li class="menu-list-item drop-menu drop-menu_2">
+                  <div class="drop-icon drop-icon-mobile">
+                    <a class="menu-link" href="#!">Каталог</a>
+                  </div>
+                  <!-- второй  уровень-->
+                  <div class="submenu submenu-2">
+                    <ul class="submenu-list">
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="catalogy.html">Пошив рабочей одежды</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">Пошив униформы</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">Пошив медицинской формы</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">Пошив текстиля на заказ</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">ОЕМ товары под логотипы</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">Шевроны</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#!">О компании</a>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#!">Индивидуальный пошив</a>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#!">Покупателям</a>
+                </li>
+              </ul>
+            </div>
+            <!--=====logo===-->
+            <div class="menu-logo">
+              <svg class="svg-logo svg-logo--white">
+                <use href="./img/sprite.svg#svg-logo"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-phone">
+          <a class="txt-big" href="">+7 789 789 78 78</a>
+          <div class="online-state active">
+            <span class="online-state__dot"></span>
+            <span class="online-state__text">Сейчас работаем</span>
+          </div>
+        </div>
+        <button class="btn-cart btn-icon" type="button">
+          <svg class="svg-cart">
+            <use href="./img/sprite.svg#svg-cart"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <!--======= HERO ======-->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-swiper-wrapper">
+            <!--===slider====-->
+            <div class="hero-swiper swiper">
+              <div class="swiper-wrapper">
+                <!--=== single slide ====-->
+                <div class="swiper-slide">
+                  <div class="hero-slide">
+                    <!--====slide text ====-->
+                    <div class="hero-slide-text">
+                      <div class="h1">Производство спецодежды из наличия и на заказ</div>
+                      <!--====slide img mobile====-->
+                      <div class="hero-slide-img__mobile">
+                        <div class="hero-slide-label">
+                          <img src="./img/mark.webp" width="78" height="31" alt="logo">
+                        </div>
+                        <picture>
+                          <img class="lazy" src="./img/hero-slide.webp" width="305" height="207" alt="img">
+                        </picture>
+                      </div>
+                      <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
+                      <div class="btn-group">
+                        <a class="btn" href="#!">Связаться с нами</a>
+                        <a class="button" href="#!">Вторая кнопка</a>
+                      </div>
+                    </div>
+                    <!--====slide img ====-->
+                    <div class="hero-slide-img">
+                      <div class="hero-slide-label">
+                        <img src="./img/mark.webp" width="219" height="86" alt="logo">
+                      </div>
+                      <picture>
+                        <img class="lazy" src="./img/hero-slide.webp" width="857" height="580" alt="img">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <!--=== single slide ====-->
+                <div class="swiper-slide">
+                  <div class="hero-slide">
+                    <!--====slide text ====-->
+                    <div class="hero-slide-text">
+                      <div class="h1">Качество, оперативность, низкие цены!</div>
+                      <!--====slide img _mobile ====-->
+                      <div class="hero-slide-img__mobile">
+                        <picture>
+                          <img class="lazy" src="./img/hero-slide2.webp" width="305" height="207" alt="img">
+                        </picture>
+                      </div>
+                      <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
+                      <div class="btn-group">
+                        <a class="btn" href="#!">Связаться с нами</a>
+                        <a class="button" href="#!">Вторая кнопка</a>
+                      </div>
+                    </div>
+                    <!--====slide img ====-->
+                    <div class="hero-slide-img">
+                      <picture>
+                        <img class="lazy" src="./img/hero-slide2.webp" width="857" height="580" alt="img">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <!--=== single slide ====-->
+                <div class="swiper-slide">
+                  <div class="hero-slide">
+                    <!--====slide text ====-->
+                    <div class="hero-slide-text">
+                      <div class="h1">Производство спецодежды из наличия и на заказ</div>
+                      <!--====slide img mobile====-->
+                      <div class="hero-slide-img__mobile">
+                        <picture>
+                          <img class="lazy" src="./img/hero-slide3.webp" width="305" height="207" alt="img">
+                        </picture>
+                      </div>
+                      <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
+                      <div class="btn-group">
+                        <a class="btn" href="#!">Связаться с нами</a>
+                        <a class="button" href="#!">Вторая кнопка</a>
+                      </div>
+                    </div>
+                    <!--====slide img ====-->
+                    <div class="hero-slide-img">
+                      <picture>
+                        <img class="lazy" src="./img/hero-slide3.webp" width="857" height="580" alt="img">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <!--=== single slide ====-->
+                <div class="swiper-slide">
+                  <div class="hero-slide">
+                    <!--====slide text ====-->
+                    <div class="hero-slide-text">
+                      <div class="h1">Постоянным клиентам скидка до 30%!</div>
+                      <!--====slide img mobile====-->
+                      <div class="hero-slide-img__mobile">
+                        <picture>
+                          <img class="lazy" src="./img/hero-slide4.webp" width="305" height="207" alt="img">
+                        </picture>
+                      </div>
+                      <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
+                      <div class="btn-group">
+                        <a class="btn" href="#!">Связаться с нами</a>
+                        <a class="button" href="#!">Вторая кнопка</a>
+                      </div>
+                    </div>
+                    <!--====slide img ====-->
+                    <div class="hero-slide-img">
+                      <picture>
+                        <img class="lazy" src="./img/hero-slide4.webp" width="857" height="580" alt="img">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--=====slider paginatopn ======-->
+              <div class="hero-pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--====== statistic ========-->
+      <section class="statistic">
+        <div class="container">
+          <div class="statistic-bg">
+            <div class="statistic-content">
+              <div class="statistic-img">
+                <img src="./img/img.webp" width="260" height="150" alt="alt">
+              </div>
+              <div class="statistic-item">
+                <p>18 000 +</p>
+                <span>Изделий выпущено
+                  <br> за последний год
+                </span>
+              </div>
+              <div class="statistic-item">
+                <p>346</p>
+                <span>Сотрудников</span>
+              </div>
+              <div class="statistic-item">
+                <p>1 348</p>
+                <span>Станков запущено</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <h2 class="h1">Пошив на заказ</h2>
+          <div class="services-content">
+            <!--==== single card ===-->
+            <div class="serv-card">
+              <div class="serv-card__img">
+                <img class="lazy" src="./img/serv1.webp" width="360" height="360" alt="alt">
+              </div>
+              <div class="serv-card__text">
+                <div class="h3 serv-card-btn">Пошив рабочей одежды</div>
+                <ul class="mark-list">
+                  <li>
+                    <a href="#!">Пошив сигнальных жилетов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих костюмов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив халатов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив комбинезонов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих брюк</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив фартуков</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив зимней спецодежды</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--==== single card ===-->
+            <div class="serv-card">
+              <div class="serv-card__img">
+                <img class="lazy" src="./img/serv2.webp" width="360" height="360" alt="alt">
+              </div>
+              <div class="serv-card__text">
+                <div class="h3 serv-card-btn">Пошив униформы</div>
+                <ul class="mark-list">
+                  <li>
+                    <a href="#!">Пошив сигнальных жилетов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих костюмов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив халатов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив комбинезонов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих брюк</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив фартуков</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив зимней спецодежды</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--==== single card ===-->
+            <div class="serv-card">
+              <div class="serv-card__img">
+                <img class="lazy" src="./img/serv3.webp" width="360" height="360" alt="alt">
+              </div>
+              <div class="serv-card__text">
+                <div class="h3 serv-card-btn">Пошив медицинской формы</div>
+                <ul class="mark-list">
+                  <li>
+                    <a href="#!">Пошив сигнальных жилетов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих костюмов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив халатов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив комбинезонов</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--==== single card ===-->
+            <div class="serv-card">
+              <div class="serv-card__img">
+                <img class="lazy" src="./img/serv4.webp" width="360" height="360" alt="alt">
+              </div>
+              <div class="serv-card__text">
+                <div class="h3 serv-card-btn">Пошив текстиля на заказ</div>
+                <ul class="mark-list">
+                  <li>
+                    <a href="#!">Пошив сигнальных жилетов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих костюмов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив халатов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив комбинезонов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих брюк</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--==== single card ===-->
+            <div class="serv-card">
+              <div class="serv-card__img">
+                <img class="lazy" src="./img/serv5.webp" width="360" height="360" alt="alt">
+              </div>
+              <div class="serv-card__text">
+                <div class="h3 serv-card-btn">ОЕМ товары под логотипы</div>
+                <ul class="mark-list">
+                  <li>
+                    <a href="#!">Пошив сигнальных жилетов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих костюмов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив халатов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив комбинезонов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих брюк</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--==== single card ===-->
+            <div class="serv-card">
+              <div class="serv-card__img">
+                <img class="lazy" src="./img/serv6.webp" width="360" height="360" alt="alt">
+              </div>
+              <div class="serv-card__text">
+                <div class="h3 serv-card-btn">Шевроны</div>
+                <ul class="mark-list">
+                  <li>
+                    <a href="#!">Пошив сигнальных жилетов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив рабочих костюмов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив халатов</a>
+                  </li>
+                  <li>
+                    <a href="#!">Пошив комбинезонов</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--====== GET CATALOGY ====-->
+      <section class="get-catalogy">
+        <div class="get-catalogy-bg dark-bg">
+          <div class="container">
+            <div class="get-catalogy-row">
+              <h2 class="h1">Наш каталог</h2>
+              <p class="txt-20">Получите наш каталог в формате PDF на email за 5&nbsp;секунд</p>
+              <!--====form====-->
+              <form class="get-catalogy-form" action="#">
+                <div class="form-item">
+                  <input type="text" name="email" placeholder="Введите ваш email">
+                </div>
+                <div class="form-btn">
+                  <button class="button-outline btn-slim" type="submit">Получить</button>
+                </div>
+              </form>
+              <!--=== image====-->
+              <div class="get-catalogy-img">
+                <picture>
+                  <img class="lazy" src="./img/mockup1.webp" width="400" height="545" alt="img">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=====OUR COLLECTION====-->
+      <section class="collection">
+        <div class="container">
+          <h2 class="h1">Наша коллекция</h2>
+          <div class="collection-wrapper">
+            <div class="mini-card">
+              <a class="card-img" href="./img/product1.webp" data-fancybox>
+                <img class="lazy" src="./img/product1.webp" width="260" height="361" alt="img">
+              </a>
+              <a class="bold-18" href="single-page.html">Летняя спецодежда </a>
+            </div>
+            <div class="mini-card">
+              <a class="card-img" href="./img/product2.webp" data-fancybox>
+                <img class="lazy" src="./img/product2.webp" width="260" height="361" alt="img">
+              </a>
+              <a class="bold-18" href="#!">Униформа</a>
+            </div>
+            <div class="mini-card">
+              <a class="card-img" href="./img/product3.webp" data-fancybox>
+                <img class="lazy" src="./img/product3.webp" width="260" height="361" alt="img">
+              </a>
+              <a class="bold-18" href="#!">Зимняя одежда</a>
+            </div>
+            <div class="mini-card">
+              <a class="card-img" href="./img/product4.webp" data-fancybox>
+                <img class="lazy" src="./img/product4.webp" width="260" height="361" alt="img">
+              </a>
+              <a class="bold-18" href="#!">Рабочая одежда</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=====получить образец ====-->
+      <section class="get-sample">
+        <div class="container">
+          <div class="get-sample-content d-grid">
+            <div class="get-sample-img">
+              <picture>
+                <img class="lazy" src="./img/forma.webp" width="361" height="312" alt="img">
+              </picture>
+            </div>
+            <div class="get-sample-text">
+              <h2 class="h1">Получить образец</h2>
+              <p>Получите образец нашей работы в кратчайшие сроки. Сделаем по вашим лекалам.</p>
+            </div>
+            <div class="get-sample-btn">
+              <button class="btn" type="button">ЗАПРОСИТЬ СЕЙЧАС</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--======BENEFITS=====-->
+      <section class="benefits grey-bg p-80">
+        <div class="container">
+          <div class="benefits-content">
+            <!--=== single item====-->
+            <div class="benefit-item">
+              <div class="benefit-img">
+                <svg class="svg-benefit1">
+                  <use href="./img/sprite.svg#svg-benefit1"></use>
+                </svg>
+              </div>
+              <p>Гарантия не менее 1 года на нашу продукцию</p>
+              <a class="link" href="#!">Подробнее</a>
+            </div>
+            <!--=== single item====-->
+            <div class="benefit-item">
+              <div class="benefit-img">
+                <svg class="svg-benefit1">
+                  <use href="./img/sprite.svg#svg-benefit2"></use>
+                </svg>
+              </div>
+              <p>Собственное производство, до 10000 костюмов в месяц</p>
+              <a class="link" href="#!">Подробнее</a>
+            </div>
+            <!--=== single item====-->
+            <div class="benefit-item">
+              <div class="benefit-img">
+                <svg class="svg-benefit1">
+                  <use href="./img/sprite.svg#svg-benefit3"></use>
+                </svg>
+              </div>
+              <p>Качественные ткани, фурнитура и материалы</p>
+              <a class="link" href="#!"> </a>
+            </div>
+            <!--=== single item====-->
+            <div class="benefit-item">
+              <div class="benefit-img">
+                <svg class="svg-benefit1">
+                  <use href="./img/sprite.svg#svg-benefit4"></use>
+                </svg>
+              </div>
+              <p>Изготовим и нанесем логотипы и шевроны под заказ</p>
+              <a class="link" href="#!">Подробнее</a>
+            </div>
+            <!--=== single item====-->
+            <div class="benefit-item">
+              <div class="benefit-img">
+                <svg class="svg-benefit1">
+                  <use href="./img/sprite.svg#svg-benefit5"></use>
+                </svg>
+              </div>
+              <p>Пошив под ключ на давальческом сырье от 300 штук</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--==== клиенты===-->
+      <section class="clients">
+        <div class="container">
+          <h2 class="h1">Наши клиенты</h2>
+          <div class="clients-wrapper">
+            <div class="clients-grid d-grid">
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo1.webp" width="157" height="56" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo2.webp" width="101" height="64" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo3.webp" width="160" height="35" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo4.webp" width="124" height="64" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo5.webp" width="136" height="64" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo6.webp" width="159" height="57" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo7.webp" width="160" height="55" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo8.webp" width="64" height="64" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo9.webp" width="160" height="24" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo10.webp" width="79" height="64" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo11.webp" width="115" height="51" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo12.webp" width="161" height="25" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo13.webp" width="155" height="49" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo14.webp" width="81" height="64" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo15.webp" width="157" height="30" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo16.webp" width="78" height="64" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo17.webp" width="138" height="64" alt="alt">
+              </div>
+              <div class="client-logo">
+                <img class="lazy" src="./img/logos/logo18.webp" width="160" height="44" alt="alt">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=====ABOUT ====-->
+      <section class="about">
+        <div class="container">
+          <div class="about-content d-grid">
+            <!--====img block ====-->
+            <div class="about-img">
+              <!--====заголовок для моб версии ===-->
+              <div class="about-mobile-title">
+                <div class="txt-light">о компании</div>
+                <div class="h1">Форма<span class="txt-red">Т</span> это:</div>
+              </div>
+              <!--==== img-label===-->
+              <div class="statistic-item">
+                <p>18 000 +</p>
+                <span>Изделий выпущено
+                  <br> за последний год
+                </span>
+              </div>
+              <img src="./img/hero-slide2.webp" width="710" height="500" alt="img">
+            </div>
+            <!--====text block ====-->
+            <div class="about-text">
+              <div class="txt-light">о компании</div>
+              <div class="h1">Форма<span class="txt-red">Т</span> это:</div>
+              <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. </p>
+              <button class="btn" type="button">подробнее</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=====subscribe form =====-->
+      <section class="subscribe dark-bg">
+        <div class="container">
+          <div class="subscribe-content d-grid">
+            <div class="subscribe-title">
+              <h2 class="h1">Подпишитесь на рассылку</h2>
+              <div class="txt-20">Новинки, акции и новости нашей компании Вы получите первыми!</div>
+            </div>
+            <!--====form====-->
+            <form class="d-flex" action="#">
+              <div class="form-item">
+                <input type="text" name="email" placeholder="Введите ваш email">
+              </div>
+              <div class="form-btn">
+                <button class="button-outline btn-slim" type="submit">Подписаться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--===== support ===-->
+      <section class="support">
+        <div class="container">
+          <div class="support-content d-grid">
+            <div class="support-consultant">
+              <h2 class="h2">С вами работают</h2>
+              <div class="support-consultant-info">
+                <div class="support-photo">
+                  <img src="./img/support.webp" width="360" height="400" alt="img">
+                </div>
+                <div class="support-consultant-block">
+                  <div class="support-name">
+                    <div class="h3">Наталья</div>
+                    <div class="txt-18">Менеджер</div>
+                  </div>
+                  <div class="support-contacts">
+                    <a class="contact-link" href="tel:+78998998989">
+                      <div class="txt-18">Телефон</div>
+                      <div class="h3">+ 7 899 899 89 89</div>
+                    </a>
+                    <div class="online-state active">
+                      <span class="online-state__dot"></span>
+                      <span class="online-state__text txt-18">Сейчас работаем, звоните!</span>
+                    </div>
+                  </div>
+                  <a class="contact-link social-wapp-round" href="#!">
+                    <span class="round-icon">
+                      <img src="./img/wa-white.webp" width="16" height="16" alt="whatsapp">
+                    </span>
+                    <span class="txt-18"> Написать в Whatsapp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--===== form block ====-->
+            <div class="support-form">
+              <h2 class="h2">Отправить заявку</h2>
+              <form class="contact-form" action="#" method="method">
+                <div class="form-item">
+                  <label>Ваше имя:</label>
+                  <input type="text" name="name">
+                </div>
+                <div class="form-item">
+                  <label>Email:</label>
+                  <input type="text" name="email">
+                </div>
+                <div class="form-item">
+                  <label>Телефон:</label>
+                  <input type="text" name="phone">
+                </div>
+                <div class="form-item form-item--file">
+                  <div class="custom-file-input">
+                    <input class="file-input" id="file-input" type="file">
+                    <label class="file-label" for="file-input">
+                      <svg class="svg-paper">
+                        <use href="./img/sprite.svg#svg-paper"></use>
+                      </svg>
+                      <span class="file-text">Прикрепить файл</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-item">
+                  <label>Комментарий к заявке:</label>
+                  <textarea name="message"></textarea>
+                </div>
+                <div class="form-btn">
+                  <button class="btn" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-content d-grid">
+            <!--====left===-->
+            <div class="footer-text">
+              <a class="logo" href="index.html">
+                <svg class="svg-logo svg-logo--white">
+                  <use href="./img/sprite.svg#svg-logo"></use>
+                </svg>
+              </a>
+              <p class="txt-14">Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря</p>
+            </div>
+            <!--===right===-->
+            <div class="footer-nav">
+              <ul class="menu-list">
+                <li>
+                  <a class="link" href="#!"> Главная</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Каталог</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> О компании</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Главная</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Личный кабинет</a>
+                </li>
+              </ul>
+              <ul class="menu-list">
+                <li>
+                  <a class="link" href="#!"> Индивидульный пошив</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Покупателям</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Контакты</a>
+                </li>
+              </ul>
+              <div class="footer-contacts">
+                <div class="custom-select-wrapper">
+                  <div class="select-city">
+                    <div class="select-city-trigger">Москва</div>
+                    <div class="select-city-tabs">
+                      <div class="tabs-trigger">
+                        <span class="tab-btn active">А</span>
+                        <span class="tab-btn">Б</span>
+                        <span class="tab-btn">в</span>
+                        <span class="tab-btn">г</span>
+                        <span class="tab-btn">д</span>
+                        <span class="tab-btn">е</span>
+                        <span class="tab-btn">ж</span>
+                        <span class="tab-btn">з</span>
+                        <span class="tab-btn">и</span>
+                        <span class="tab-btn">К</span>
+                        <span class="tab-btn">л</span>
+                        <span class="tab-btn">м</span>
+                        <span class="tab-btn">н</span>
+                        <span class="tab-btn">о</span>
+                        <span class="tab-btn">п</span>
+                        <span class="tab-btn">р</span>
+                        <span class="tab-btn">с</span>
+                        <span class="tab-btn">т</span>
+                        <span class="tab-btn">у</span>
+                        <span class="tab-btn">ф</span>
+                        <span class="tab-btn">х</span>
+                        <span class="tab-btn">ц</span>
+                        <span class="tab-btn">ч</span>
+                        <span class="tab-btn">ш</span>
+                        <span class="tab-btn">щ</span>
+                        <span class="tab-btn">э</span>
+                        <span class="tab-btn">ю</span>
+                        <span class="tab-btn">я</span>
+                      </div>
+                      <div class="tabs-content">
+                        <div class="tab-item active">
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                        </div>
+                        <div class="tab-item">
+                          <span class="custom-option" data-value="4">Брянск</span>
+                          <span class="custom-option" data-value="5">Белгород</span>
+                          <span class="custom-option" data-value="3">Буйнакск</span>
+                          <span class="custom-option" data-value="4">Брянск</span>
+                          <span class="custom-option" data-value="5">Белгород</span>
+                          <span class="custom-option" data-value="3">Буйнакск</span>
+                          <span class="custom-option" data-value="4">Брянск</span>
+                          <span class="custom-option" data-value="5">Белгород</span>
+                          <span class="custom-option" data-value="3">Буйнакск</span>
+                        </div>
+                        <div class="tab-item">
+                          <span class="custom-option" data-value="6">Воркута</span>
+                          <span class="custom-option" data-value="7">Волгоград</span>
+                          <span class="custom-option" data-value="7">Волгоград</span>
+                          <span class="custom-option" data-value="7">Волгоград</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="contact-link contact-phone" href="tel:+77897897878">+7 789 789 78 78</a>
+                <a class="contact-link contact-email" href="emailto:info@format.ru">info@format.ru</a>
+                <address>117105, г. Москва,
+                  <br> Рязанский проспект, дом 10 с18
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright-txt">© 2024 ФормаТ. Все права защищены.</p>
+          <div class="footer-info-txt">
+            <p>Вся представленная на сайте информация, касающаяся технических характеристик автомобилей и спецтехники, стоимости услуг, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса РФ.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--=============== jquery ==================-->
+  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+  <!--=============== lazy ==================-->
+  <script src="./libs/jquery.lazy.min.js"></script>
+  <!--=============== swiper js ===============-->
+  <script src="./libs/swiper/swiper.js"></script>
+  <!--============fancybox====================-->
+  <script src="./libs/fancybox/fancybox.js"></script>
+  <!--=============== main js ===================-->
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
