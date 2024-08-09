@@ -3,6 +3,9 @@
 	padding-bottom: 40px;
 	background-color: #000000;
 	color: #ffffff;
+	@media (max-width: 1023px) {
+	padding-top: 70px;
+	}
 }
 .footer-top{
 	padding-bottom: 40px;
@@ -14,19 +17,32 @@
 		grid-column: span 12;
 		max-width: 600px;
 		margin-bottom: 20px;
+		.txt-14{font-size: 10px;}
 	}
 	@media (max-width: 767px) {
-	margin-bottom: 16px;
+	margin-bottom: 0;
 	text-align: center;
 	}
 }
 .footer-nav{
+	padding-top: 20px;
 	grid-column: span 7;
 	display: flex;
-	column-gap: 40px;
-	justify-content: space-between;
-	a{display: inline;}
-	li +li{margin-top: 20px;}
+	column-gap: 64px;
+	
+	a{
+		display: inline; font-size: 16px; font-weight: 400;
+		@media (max-width: 767px) {
+		font-size: 12px;
+		}
+	}
+	li +li{
+		margin-top: 20px;
+		@media (max-width: 767px) {
+		margin-top: 14px;
+		}
+	}
+	
 	@media (max-width: 1023px) {
 		grid-column: span 12;
 	}
@@ -35,16 +51,23 @@
 		grid-template-columns: 1fr;
 		text-align: center;
 		row-gap:16px;
+		padding-top: 0;
 	}
 }
 .footer .custom-select-wrapper{
+	
 	@media (max-width: 1023px) {
-	display: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	}
 }
 .select-city{
 	width:fit-content;
 	position: relative;
+	@media (max-width: 767px) {
+	width: 100%;
+	}
 }
 .select-city{
 	.select-city-trigger{
@@ -67,6 +90,10 @@
 			z-index: 3;
 			transition: .3s; 
 		}
+		@media (max-width: 1023px) {
+			margin-inline: auto;
+			margin-top: 14px;
+		}
 	}
 	.select-city-trigger.open:after{
 		transform:rotate(180deg);
@@ -76,6 +103,11 @@
 	display: flex;
 	column-gap: 5px;
 	padding-bottom: 10px;
+	@media (max-width: 1023px) {
+	margin-inline: auto;
+	flex-wrap:wrap;
+	row-gap:10px;
+	}
 }
 
 .select-city .tab-btn {
@@ -85,6 +117,7 @@
 	&:hover{
 		opacity: .8;
 	}
+
 }
 
 .select-city .tab-btn.active {
@@ -121,7 +154,11 @@
 	background-color: #000000;
 	padding: 14px;
 	padding-right: 10px;
-
+	
+	@media (max-width: 767px) {
+		top: 50px;
+		width: 100%;
+	}
 	.tabs-content{
 		max-height: 110px;
 		overflow: hidden;
@@ -154,23 +191,37 @@
 	display: block;
 }
 .footer-contacts{
+	margin-left: auto;
+	
 	.contact-link, address{
 		font-size: 12px;
 		color: white;
 		display: block;
+		margin-top: 12px;
+		@media (max-width: 767px) {
 		margin-top: 20px;
+		}
 	}
 	.contact-phone{
 		font-weight: 700;
-		font-size: 14px;
+		font-size: 13px;
+		@media (max-width: 767px) {
+		font-size: 22px;
+		margin-top: 48px;
+		}
 	}
 	address{
 		max-width: 150px;
+		font-style: normal;
 		@media (max-width: 767px) {
 		margin-left: auto;
 		margin-right: auto;
+		max-width: 100%;
 		
 		}
+	}
+	@media (max-width: 1199px) {
+	margin-left: 0;
 	}
 }
 .footer-bottom{
@@ -192,7 +243,7 @@
 		text-align: center;
 		flex-direction: column;
 		align-items: center;
-		row-gap:24px ;
+		row-gap:30px ;
 		p{
 			font-size: 10px;
 		}
