@@ -43,7 +43,7 @@
 	transition: .3s;
 	&:hover{
 		background: #fafafa;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 }
 .catalogy-menu-mobile {
@@ -53,6 +53,7 @@
 		background: #f2f2f2;
 		text-decoration: underline;
 		text-decoration-skip-ink: none;
+		&:hover{text-decoration: none;}
 	}
 
 	.custom-select-trigger,
