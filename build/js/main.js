@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		speed: 1000,
 		effect: 'fade',
 		loop: true,
-		// autoplay:{
-		// 	delay: 3000,
-		// },
+		autoplay:{
+			delay: 3000,
+		},
 		pagination:{
 			 el: ".hero-pagination",
 			 clickable: true,
@@ -340,20 +340,29 @@ document.addEventListener("DOMContentLoaded", function () {
     //     }
     // });
 
-	/*================ STAGES TABS============ */
-	$('.custom-tabs').each(function() {
-		
-		let ths = $(this);
-		ths.find('.tab-item').not(':first').hide();
-		console.log($('.tab-item'));
-		ths.find('.tab-btn').click(function() {
-			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
+	/*================ TABS============ */
+	const buttons = document.querySelectorAll('.duotabs-btn');
+    const contents = document.querySelectorAll('.duotabs-content');
+	if(buttons.length >0){
+		buttons.forEach(button => {
+			button.addEventListener('click', function () {
+				const tabId = button.getAttribute('data-duotab');
+				buttons.forEach(btn => btn.classList.remove('active'));
+				contents.forEach(content => content.classList.remove('active'));
 
-			ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-		}).eq(0).addClass('active');
-		
-	});
-
+				buttons.forEach(btn => {
+					if (btn.getAttribute('data-duotab') === tabId) {
+						btn.classList.add('active');
+					}
+				});
+				contents.forEach(content => {
+					if (content.getAttribute('data-content') === tabId) {
+						content.classList.add('active');
+					}
+				});
+			});
+		});
+	}
 	/*============== ACORDION ========== */
 	;(function ($, window, document, undefined) {
 		"use strict";

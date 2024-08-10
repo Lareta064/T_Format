@@ -1,595 +1,921 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!--====убрать синий цвет у ссылок в сафари ========-->
-		<meta name="format-detection" content="telephone=no">
-		<style>
-			@font-face {
-				font-family: 'Montserrat';
-				src: url('./fonts/Montserrat-Regular.woff2') format("woff2");
-				font-weight: 400;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Montserrat';
-				src: url('./fonts/Montserrat-Medium.woff2') format("woff2");
-				font-weight: 500;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Montserrat';
-				src: url('./fonts/Montserrat-SemiBold.woff2') format("woff2");
-				font-weight: 600;
-				font-style: normal;
-				font-display: swap;
-			}
-			@font-face {
-				font-family: 'Montserrat';
-				src: url('./fonts/Montserrat-Bold.woff2') format("woff2");
-				font-weight: 700;
-				font-style: normal;
-				font-display: swap;
-			}
-		</style>
-		<!--======= swiper slider ======-->
-		<link rel="stylesheet" href="./libs/swiper/swiper.min.css">
-		<!--============ fancybox =============-->
-		<link rel="stylesheet" href="./libs/fancybox/fancybox.css">
-		<!--============ main.css =============-->
-		<link rel="stylesheet" href="css/main.css">
-		<title>Каталог</title>
-	</head>
-	<body>
-		<div class="page-wrapper">
-			<header class="header">
-				<!--==== header top ====-->
-				<div class="header-row header-top">
-					<p class="demi-12">Производитель спецодежды и текстиля на заказ</p>
-					<div class="header-column fl-y">
-						<!--==== phone===--><a class="contact-link d-desck" href="#!" data-target="call-form">
-							<svg class="svg-phone">
-								<use href="./img/sprite.svg#svg-phone"></use>
-							</svg><span class="d-desck">Заказать обратный звонок</span></a><a class="contact-link d-laptop" href="tel:+77897897878">
-							<svg class="svg-phone">
-								<use href="./img/sprite.svg#svg-phone"></use>
-							</svg><span class="d-laptop">+7 789 789 78 78</span></a>
-						<!--==== wa===--><a class="contact-link social-wapp" href="#!"><img src="./img/wa.svg" width="16" height="16" alt="whatsapp"><span> Whatsapp</span></a>
-						<!--==== email===--><a class="contact-link contact-link--email" href="mailto:info@format.ru">
-							<svg class="svg-envelope">
-								<use href="./img/sprite.svg#svg-envelope"></use>
-							</svg><span>info@format.ru</span></a>
-						<!--=====menu-toggle===-->
-						<button class="menu-toggle" id="menu-toggle"><span></span></button>
-					</div>
-				</div>
-				<!--==== header bottom ====-->
-				<div class="header-row header-bottom"><a class="logo" href="index.html">
-						<svg class="svg-logo">
-							<use href="./img/sprite.svg#svg-logo"></use>
-						</svg></a>
-					<div class="menu-wrapper" id="menu">
-						<div class="menu-wrapper-content">
-							<div class="header-menu drop-menu">
-								<ul class="menu-list">
-									<li class="menu-list-item"><a class="menu-link" href="index.html">Главная</a></li>
-									<!-- пункт меню  с подменю -->
-									<li class="menu-list-item drop-menu drop-menu_2">
-										<div class="drop-icon drop-icon-mobile"><a class="menu-link" href="#!">Каталог</a></div>
-										<!-- второй  уровень-->
-										<div class="submenu submenu-2">
-											<ul class="submenu-list">
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="catalogy.html">Пошив рабочей одежды</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">Пошив униформы</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">Пошив медицинской формы</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">Пошив текстиля на заказ</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">ОЕМ товары под логотипы</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="drop-menu drop-menu_3">
-													<div class="drop-icon"><a class="submenu-link" href="#!">Шевроны</a></div>
-													<!-- третий уровень -->
-													<div class="submenu submenu-3">
-														<ul class="sub-submenu">
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив халатов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив комбинезонов</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив фартуков</a></li>
-															<li class="sub-submenu-item"><a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a></li>
-														</ul>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="menu-list-item"><a class="menu-link" href="#!">О компании</a></li>
-									<li class="menu-list-item"><a class="menu-link" href="blog-page.html">Индивидуальный пошив</a></li>
-									<li class="menu-list-item"><a class="menu-link" href="#!">Покупателям</a></li>
-								</ul>
-							</div>
-							<!--=====logo===-->
-							<div class="menu-logo">
-								<svg class="svg-logo svg-logo--white">
-									<use href="./img/sprite.svg#svg-logo"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-					<div class="contacts-phone"><a class="txt-big" href="">+7 789 789 78 78</a>
-						<div class="online-state active"><span class="online-state__dot"></span><span class="online-state__text">Сейчас работаем</span></div>
-					</div>
-					<button class="btn-cart btn-icon" type="button">
-						<svg class="svg-cart">
-							<use href="./img/sprite.svg#svg-cart"></use>
-						</svg>
-					</button>
-				</div>
-			</header>
-			<main class="main inner-main">
-				<!--====hero=====-->
-				<section class="catalogy-main-content">
-					<div class="container">
-						<!--=====breadcrumbs===-->
-						<div class="breadcrumbs">
-							<ul>
-								<li><a href="index.html">Главная </a></li>
-								<li><a href="catalogy.html">Каталог</a></li>
-								<li><a href="#!">Спецодежда</a></li>
-							</ul>
-						</div>
-						<!--===content ====-->
-						<h1 class="h1">Спецодежда на заказ</h1>
-						<div class="preview-text">
-							<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
-						</div>
-						<div class="catalogy-menu"><a class="label-link" href=""> Пошив сигнальных жилетов</a><a class="label-link" href=""> Пошив  жилетов</a><a class="label-link" href=""> Пошив рабочих костюмов</a><a class="label-link" href=""> Пошив халатов</a><a class="label-link" href=""> Пошив сигнальных жилетов</a><a class="label-link" href=""> Пошив халатов</a></div>
-						<!--====== ссылки-меню для моб версии =====-->
-						<div class="catalogy-menu-mobile"><a class="label-link" href="#!" id="label-trigger">Пошив сигнальных жилетов</a>
-							<div class="catalogy-menu-drop" id="catalogy-menu-drop"><a class="label-link" href="">Пошив сигнальных жилетов</a><a class="label-link" href="">Пошив  жилетов</a><a class="label-link" href="">Пошив рабочих костюмов</a><a class="label-link" href="">Пошив халатов</a><a class="label-link" href="">Пошив рабочих костюмов</a><a class="label-link" href="">Пошив халатов</a></div>
-						</div>
-						<!--======ARTICLE =====-->
-						<article class="catalogy-category">
-							<h2 class="h2">Пошив спецодежды</h2>
-							<!--====FILTERS=======-->
-							<div class="filters-block d-flex">
-								<label class="form-checkbox d-flex">
-									<input type="checkbox" name="checkbox_name"><span class="txt-12">Показывать только в наличии</span>
-								</label>
-								<div class="filters-block-inner d-flex" id="filters-drop">
-									<!--==== этоткомпонент виден на экранах меньше 768пикс, в выпадающем фильтре===-->
-									<label class="form-checkbox d-flex">
-										<input type="checkbox" name="checkbox_name"><span class="txt-12">Показывать только в наличии</span>
-									</label>
-									<!--====price inputs=====-->
-									<div class="form-group d-flex">
-										<p>Фильровать по цене</p>
-										<label>от
-											<input type="number" name="price_min">
-										</label>
-										<label>до
-											<input type="number" name="price_max">
-										</label>
-										<button class="button button--dark btn-mini" type="button">Применить</button>
-									</div>
-									<!--====custom select=====-->
-									<div class="custom-select-wrapper filter-select">
-										<div class="custom-select">
-											<div class="custom-select-trigger">Фильтровать по</div>
-											<div class="custom-options"><span class="custom-option" data-value="1">По цвету</span><span class="custom-option" data-value="2">По сезону</span><span class="custom-option" data-value="3">По возрастанию</span><span class="custom-option" data-value="4">По убыванию</span></div>
-										</div>
-									</div>
-								</div>
-								<!--====== filter icon for mobile ===-->
-								<button class="btn-icon filters-toggle" id="filters-toggle">
-									<svg class="svg-filters">
-										<use href="./img/sprite.svg#svg-flters"></use>
-									</svg>
-								</button>
-							</div>
-							<!--======= PRODUCT CARDS ========-->
-							<div class="catalogy-cards">
-								<!--===single-card======-->
-								<div class="mini-card-box">
-									<div class="product-card"><a class="card-img" href="#!"><img class="lazy" src="./img/product1.webp" width="260" height="361" alt="img"/>
-											<div class="label-red">Акция</div>
-											<div class="label-green">Новинка</div></a>
-										<div class="card-info"><a class="h4" href="single-page.html">Костюм 	Костюм УЛУЙШН - 678</a>
-											<div class="d-flex">
-												<div class="card-group">
-													<div class="online-state active"><span class="online-state__dot"></span><span class="online-state__text demi-12">В наличии</span></div>
-													<div class="card-price">от <span>1 590</span> руб.</div>
-												</div>
-												<!--====button===-->
-												<div class="card-button">
-													<button class="btn">
-														<svg class="svg-cart">
-															<use href="./img/sprite.svg#svg-cart"></use>
-														</svg><span>В корзину</span>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--===single-card======-->
-								<div class="mini-card-box">
-									<div class="product-card"><a class="card-img" href="#!"><img class="lazy" src="./img/product2.webp" width="260" height="361" alt="img"/></a>
-										<div class="card-info"><a class="h4" href="single-page.html">Халат темный бязевый</a>
-											<div class="d-flex">
-												<div class="card-group">
-													<div class="online-state active"><span class="online-state__dot"></span><span class="online-state__text demi-12">В наличии</span></div>
-													<div class="card-price">от <span>1 590</span> руб.</div>
-												</div>
-												<!--====button===-->
-												<div class="card-button">
-													<button class="btn">
-														<svg class="svg-cart">
-															<use href="./img/sprite.svg#svg-cart"></use>
-														</svg><span>В корзину</span>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--===single-card======-->
-								<div class="mini-card-box">
-									<div class="product-card"><a class="card-img" href="#!"><img class="lazy" src="./img/product5.webp" width="260" height="361" alt="img"/>
-											<div class="label-red">Акция</div></a>
-										<div class="card-info"><a class="h4" href="single-page.html">Костюм Автосервис</a>
-											<div class="d-flex">
-												<div class="card-group">
-													<div class="online-state to-order"><span class="online-state__dot"></span><span class="online-state__text demi-12">Под заказ</span></div>
-													<div class="card-price">от <span>1 590</span> руб.</div>
-												</div>
-												<!--====button===-->
-												<div class="card-button">
-													<button class="btn">
-														<svg class="svg-cart">
-															<use href="./img/sprite.svg#svg-cart"></use>
-														</svg><span>В корзину</span>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--===single-card======-->
-								<div class="mini-card-box">
-									<div class="product-card"><a class="card-img" href="#!"><img class="lazy" src="./img/product6.webp" width="260" height="361" alt="img"/></a>
-										<div class="card-info"><a class="h4" href="single-page.html">Какое-то название в две строки</a>
-											<div class="d-flex">
-												<div class="card-group">
-													<div class="card-price">от <span>1 590</span> руб.</div>
-												</div>
-												<!--====button===-->
-												<div class="card-button">
-													<button class="btn">
-														<svg class="svg-cart">
-															<use href="./img/sprite.svg#svg-cart"></use>
-														</svg><span>В корзину</span>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--===single-card======-->
-								<div class="mini-card-box">
-									<div class="product-card"><a class="card-img" href="#!"><img class="lazy" src="./img/product1.webp" width="260" height="361" alt="img"/>
-											<div class="label-red">Акция</div>
-											<div class="label-green">Новинка</div></a>
-										<div class="card-info"><a class="h4" href="single-page.html">Костюм 	летний</a>
-											<div class="d-flex">
-												<div class="card-group">
-													<div class="card-price">от <span>1 590</span> руб.</div>
-												</div>
-												<!--====button===-->
-												<div class="card-button">
-													<button class="btn">
-														<svg class="svg-cart">
-															<use href="./img/sprite.svg#svg-cart"></use>
-														</svg><span>В корзину</span>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="mini-card-box">
-									<div class="product-card"><a class="card-img" href="#!"><img class="lazy" src="./img/product3.webp" width="260" height="361" alt="img"/>
-											<div class="label-red">Акция</div></a>
-										<div class="card-info"><a class="h4" href="single-page.html">Костюм Тундра</a>
-											<div class="d-flex">
-												<div class="card-group">
-													<div class="card-price">от <span>1 590</span> руб.</div>
-												</div>
-												<!--====button===-->
-												<div class="card-button">
-													<button class="btn">
-														<svg class="svg-cart">
-															<use href="./img/sprite.svg#svg-cart"></use>
-														</svg><span>В корзину</span>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--===single-card======-->
-								<div class="mini-card-box">
-									<div class="product-card"><a class="card-img" href="#!"><img class="lazy" src="./img/product4.webp" width="260" height="361" alt="img"/></a>
-										<div class="card-info"><a class="h4" href="single-page.html">Костюм 	Костюм УЛУЙШН - 678</a>
-											<div class="d-flex">
-												<div class="card-group">
-													<div class="online-state active"><span class="online-state__dot"></span><span class="online-state__text demi-12">В наличии</span></div>
-													<div class="card-price">от <span>1 590</span> руб.</div>
-												</div>
-												<!--====button===-->
-												<div class="card-button">
-													<button class="btn">
-														<svg class="svg-cart">
-															<use href="./img/sprite.svg#svg-cart"></use>
-														</svg><span>В корзину</span>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--===single-card======-->
-								<div class="mini-card-box">
-									<div class="product-card"><a class="card-img" href="#!"><img class="lazy" src="./img/product2.webp" width="260" height="361" alt="img"/></a>
-										<div class="card-info"><a class="h4" href="single-page.html">Костюм 	Костюм УЛУЙШН - 678</a>
-											<div class="d-flex">
-												<div class="card-group">
-													<div class="online-state active"><span class="online-state__dot"></span><span class="online-state__text demi-12">В наличии</span></div>
-													<div class="card-price">от <span>1 590</span> руб.</div>
-												</div>
-												<!--====button===-->
-												<div class="card-button">
-													<button class="btn">
-														<svg class="svg-cart">
-															<use href="./img/sprite.svg#svg-cart"></use>
-														</svg><span>В корзину</span>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="pagination"><a href="#!">1</a><a class="active" href="#!">2</a><a href="#!">3</a><a href="#!">4</a><a href="#!">...</a><a href="#!">8</a></div>
-						</article>
-						<!--====ARTICLE =====-->
-						<article class="article-description d-grid">
-							<div class="article-description__txt">
-								<div class="h2">Тут еще подзаголовок</div>
-								<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
-								<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
-								<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
-							</div>
-							<div class="article-description__img"><img class="lazy" src="./img/banner.webp" width="273" height="476" alt="img"></div>
-						</article>
-					</div>
-				</section>
-				<!--=====subscribe form =====-->
-				<section class="subscribe dark-bg">
-					<div class="container">
-						<div class="subscribe-content d-grid">
-							<div class="subscribe-title">
-								<h2 class="h1">Подпишитесь на рассылку</h2>
-								<div class="txt-20">Новинки, акции и новости нашей компании Вы получите первыми!</div>
-							</div>
-							<!--====form====-->
-							<form class="d-flex" action="#">
-								<div class="form-item">
-									<input type="text" name="email" placeholder="Введите ваш email">
-								</div>
-								<div class="form-btn">
-									<button class="button-outline btn-slim" type="submit">Подписаться</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</section>
-				<!--===== support ===-->
-				<section class="support">
-					<div class="container">
-						<div class="support-content d-grid">
-							<div class="support-consultant">
-								<h2 class="h2">С вами работают</h2>
-								<div class="support-consultant-info">
-									<div class="support-photo"><img src="./img/support.webp" width="360" height="400" alt="img"></div>
-									<div class="support-consultant-block">
-										<div class="support-name">
-											<div class="h3">Наталья</div>
-											<div class="txt-18">Менеджер</div>
-										</div>
-										<div class="support-contacts"><a class="contact-link" href="tel:+78998998989">
-												<div class="txt-18">Телефон</div>
-												<div class="h3">+ 7 899 899 89 89</div></a>
-											<div class="online-state active"><span class="online-state__dot"></span><span class="online-state__text txt-18">Сейчас работаем, звоните!</span></div>
-										</div><a class="contact-link social-wapp-round" href="#!"><img src="./img/wa.svg" width="16" height="16" alt="whatsapp"><span class="txt-18"> Написать в Whatsapp</span></a>
-									</div>
-								</div>
-							</div>
-							<!--===== form block ====-->
-							<div class="support-form">
-								<h2 class="h2">Отправить заявку</h2>
-								<form class="contact-form" action="#" method="method">
-									<div class="form-item">
-										<label>Ваше имя:</label>
-										<input type="text" name="name">
-									</div>
-									<div class="form-item">
-										<label>Email:</label>
-										<input type="text" name="email">
-									</div>
-									<div class="form-item">
-										<label>Телефон:</label>
-										<input type="text" name="phone">
-									</div>
-									<div class="form-item form-item--file">
-										<div class="custom-file-input">
-											<input class="file-input" id="file-input" type="file">
-											<label class="file-label" for="file-input">
-												<svg class="svg-paper">
-													<use href="./img/sprite.svg#svg-paper"></use>
-												</svg><span class="file-text">Прикрепить файл</span>
-											</label>
-										</div>
-									</div>
-									<div class="form-item">
-										<label>Комментарий к заявке:</label>
-										<textarea name="message"></textarea>
-									</div>
-									<div class="form-btn">
-										<button class="btn" type="submit">Отправить</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-			<footer class="footer">
-				<div class="footer-top">
-					<div class="container">
-						<div class="footer-content d-grid">
-							<!--====left===-->
-							<div class="footer-text"><a class="logo" href="index.html">
-									<svg class="svg-logo svg-logo--white">
-										<use href="./img/sprite.svg#svg-logo"></use>
-									</svg></a>
-								<p class="txt-14">Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря</p>
-							</div>
-							<!--===right===-->
-							<div class="footer-nav">
-								<ul class="menu-list">
-									<li><a class="link" href="#!"> Главная</a></li>
-									<li><a class="link" href="#!"> Каталог</a></li>
-									<li><a class="link" href="#!"> О компании</a></li>
-									<li><a class="link" href="#!"> Личный кабинет</a></li>
-								</ul>
-								<ul class="menu-list">
-									<li><a class="link" href="#!"> Индивидульный пошив</a></li>
-									<li><a class="link" href="#!"> Покупателям</a></li>
-									<li><a class="link" href="#!"> Контакты</a></li>
-								</ul>
-								<div class="footer-contacts">
-									<div class="custom-select-wrapper">
-													<div class="select-city">
-														<div class="select-city-trigger">Москва</div>
-														<div class="select-city-tabs">
-															<div class="tabs-trigger"><span class="tab-btn active">А</span><span class="tab-btn">Б</span><span class="tab-btn">в</span><span class="tab-btn">г</span><span class="tab-btn">д</span><span class="tab-btn">е</span><span class="tab-btn">ж</span><span class="tab-btn">з</span><span class="tab-btn">и</span><span class="tab-btn">К</span><span class="tab-btn">л</span><span class="tab-btn">м</span><span class="tab-btn">н</span><span class="tab-btn">о</span><span class="tab-btn">п</span><span class="tab-btn">р</span><span class="tab-btn">с</span><span class="tab-btn">т</span><span class="tab-btn">у</span><span class="tab-btn">ф</span><span class="tab-btn">х</span><span class="tab-btn">ц</span><span class="tab-btn">ч</span><span class="tab-btn">ш</span><span class="tab-btn">щ</span><span class="tab-btn">э</span><span class="tab-btn">ю</span><span class="tab-btn">я</span></div>
-															<div class="tabs-content">
-																<div class="tab-item active"><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span><span class="custom-option" data-value="1">Арзамас</span><span class="custom-option" data-value="2">Архангельск</span><span class="custom-option" data-value="3">Астрахань</span></div>
-																<div class="tab-item"><span class="custom-option" data-value="4">Брянск</span><span class="custom-option" data-value="5">Белгород</span><span class="custom-option" data-value="3">Буйнакск</span><span class="custom-option" data-value="4">Брянск</span><span class="custom-option" data-value="5">Белгород</span><span class="custom-option" data-value="3">Буйнакск</span><span class="custom-option" data-value="4">Брянск</span><span class="custom-option" data-value="5">Белгород</span><span class="custom-option" data-value="3">Буйнакск</span></div>
-																<div class="tab-item"><span class="custom-option" data-value="6">Воркута</span><span class="custom-option" data-value="7">Волгоград</span><span class="custom-option" data-value="7">Волгоград</span><span class="custom-option" data-value="7">Волгоград</span></div>
-															</div>
-														</div>
-													</div>
-									</div><a class="contact-link contact-phone" href="tel:+77897897878">+7 789 789 78 78</a><a class="contact-link contact-email" href="emailto:info@format.ru">info@format.ru</a>
-									<address>117105, г. Москва,<br> Рязанский проспект, дом 10 с18</address>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-bottom">
-					<div class="container">
-						<p class="copyright-txt">© 2024 ФормаТ. Все права защищены.</p>
-						<div class="footer-info-txt">
-							<p>Вся представленная на сайте информация, касающаяся технических характеристик автомобилей и спецтехники, стоимости услуг, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса РФ.</p>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-		<!--=============== jquery ==================-->
-		<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
-		<!--=============== lazy ==================-->
-		<script src="./libs/jquery.lazy.min.js"></script>
-		<!--=============== swiper js ===============-->
-		<script src="./libs/swiper/swiper.js"></script>
-		<!--============fancybox====================-->
-		<script src="./libs/fancybox/fancybox.js"></script>
-		<!--=============== main js ===================-->
-		<script src="./js/main.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--====убрать синий цвет у ссылок в сафари ========-->
+  <meta name="format-detection" content="telephone=no">
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('./fonts/Montserrat-Regular.woff2') format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('./fonts/Montserrat-Medium.woff2') format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('./fonts/Montserrat-SemiBold.woff2') format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('./fonts/Montserrat-Bold.woff2') format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <!--======= swiper slider ======-->
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css">
+  <!--============ fancybox =============-->
+  <link rel="stylesheet" href="./libs/fancybox/fancybox.css">
+  <!--============ main.css =============-->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Каталог</title>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <!--==== header top ====-->
+      <div class="header-row header-top">
+        <p class="demi-12">Производитель спецодежды и текстиля на заказ</p>
+        <div class="header-column fl-y">
+          <!--==== phone===-->
+          <a class="contact-link d-desck" href="#!" data-target="call-form">
+            <svg class="svg-phone">
+              <use href="./img/sprite.svg#svg-phone"></use>
+            </svg>
+            <span class="d-desck">Заказать обратный звонок</span>
+          </a>
+          <a class="contact-link d-laptop" href="tel:+77897897878">
+            <svg class="svg-phone">
+              <use href="./img/sprite.svg#svg-phone"></use>
+            </svg>
+            <span class="d-laptop">+7 789 789 78 78</span>
+          </a>
+          <!--==== wa===-->
+          <a class="contact-link social-wapp" href="#!">
+            <img src="./img/wa.svg" width="16" height="16" alt="whatsapp">
+            <span> Whatsapp</span>
+          </a>
+          <!--==== email===-->
+          <a class="contact-link contact-link--email" href="mailto:info@format.ru">
+            <svg class="svg-envelope">
+              <use href="./img/sprite.svg#svg-envelope"></use>
+            </svg>
+            <span>info@format.ru</span>
+          </a>
+          <!--=====menu-toggle===-->
+          <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <!--==== header bottom ====-->
+      <div class="header-row header-bottom">
+        <a class="logo" href="index.html">
+          <svg class="svg-logo">
+            <use href="./img/sprite.svg#svg-logo"></use>
+          </svg>
+        </a>
+        <div class="menu-wrapper" id="menu">
+          <div class="menu-wrapper-content">
+            <div class="header-menu drop-menu">
+              <ul class="menu-list">
+                <li class="menu-list-item">
+                  <a class="menu-link" href="index.html">Главная</a>
+                </li>
+                <!-- пункт меню  с подменю -->
+                <li class="menu-list-item drop-menu drop-menu_2">
+                  <div class="drop-icon drop-icon-mobile">
+                    <a class="menu-link" href="#!">Каталог</a>
+                  </div>
+                  <!-- второй  уровень-->
+                  <div class="submenu submenu-2">
+                    <ul class="submenu-list">
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="catalogy.html">Пошив рабочей одежды</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">Пошив униформы</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">Пошив медицинской формы</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">Пошив текстиля на заказ</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">ОЕМ товары под логотипы</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="drop-menu drop-menu_3">
+                        <div class="drop-icon">
+                          <a class="submenu-link" href="#!">Шевроны</a>
+                        </div>
+                        <!-- третий уровень -->
+                        <div class="submenu submenu-3">
+                          <ul class="sub-submenu">
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив сигнальных жилетов сигнальных жилетов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих костюмов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив халатов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив комбинезонов</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив рабочих брюк</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив фартуков</a>
+                            </li>
+                            <li class="sub-submenu-item">
+                              <a class="sub-submenu-link" href="#!">Пошив1 зимней спецодежды</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#!">О компании</a>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="blog-page.html">Индивидуальный пошив</a>
+                </li>
+                <li class="menu-list-item">
+                  <a class="menu-link" href="#!">Покупателям</a>
+                </li>
+              </ul>
+            </div>
+            <!--=====logo===-->
+            <div class="menu-logo">
+              <svg class="svg-logo svg-logo--white">
+                <use href="./img/sprite.svg#svg-logo"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-phone">
+          <a class="txt-big" href="">+7 789 789 78 78</a>
+          <div class="online-state active">
+            <span class="online-state__dot"></span>
+            <span class="online-state__text">Сейчас работаем</span>
+          </div>
+        </div>
+        <button class="btn-cart btn-icon" type="button">
+          <svg class="svg-cart">
+            <use href="./img/sprite.svg#svg-cart"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="main inner-main">
+      <!--====hero=====-->
+      <section class="catalogy-main-content">
+        <div class="container">
+          <!--=====breadcrumbs===-->
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="index.html">Главная </a>
+              </li>
+              <li>
+                <a href="catalogy.html">Каталог</a>
+              </li>
+              <li>
+                <a href="#!">Спецодежда</a>
+              </li>
+            </ul>
+          </div>
+          <!--===content ====-->
+          <h1 class="h1">Спецодежда на заказ</h1>
+          <div class="preview-text">
+            <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
+          </div>
+          <div class="catalogy-menu">
+            <a class="label-link" href=""> Пошив сигнальных жилетов</a>
+            <a class="label-link" href=""> Пошив жилетов</a>
+            <a class="label-link" href=""> Пошив рабочих костюмов</a>
+            <a class="label-link" href=""> Пошив халатов</a>
+            <a class="label-link" href=""> Пошив сигнальных жилетов</a>
+            <a class="label-link" href=""> Пошив халатов</a>
+          </div>
+          <!--====== ссылки-меню для моб версии =====-->
+          <div class="catalogy-menu-mobile">
+            <a class="label-link" href="#!" id="label-trigger">Пошив сигнальных жилетов</a>
+            <div class="catalogy-menu-drop" id="catalogy-menu-drop">
+              <a class="label-link" href="">Пошив сигнальных жилетов</a>
+              <a class="label-link" href="">Пошив жилетов</a>
+              <a class="label-link" href="">Пошив рабочих костюмов</a>
+              <a class="label-link" href="">Пошив халатов</a>
+              <a class="label-link" href="">Пошив рабочих костюмов</a>
+              <a class="label-link" href="">Пошив халатов</a>
+            </div>
+          </div>
+          <!--======ARTICLE =====-->
+          <article class="catalogy-category">
+            <h2 class="h2">Пошив спецодежды</h2>
+            <!--====FILTERS=======-->
+            <div class="filters-block d-flex">
+              <label class="form-checkbox d-flex">
+                <input type="checkbox" name="checkbox_name">
+                <span class="txt-12">Показывать только в наличии</span>
+              </label>
+              <div class="filters-block-inner d-flex" id="filters-drop">
+                <!--==== этоткомпонент виден на экранах меньше 768пикс, в выпадающем фильтре===-->
+                <label class="form-checkbox d-flex">
+                  <input type="checkbox" name="checkbox_name">
+                  <span class="txt-12">Показывать только в наличии</span>
+                </label>
+                <!--====price inputs=====-->
+                <div class="form-group d-flex">
+                  <p>Фильровать по цене</p>
+                  <label>от
+                    <input type="number" name="price_min">
+                  </label>
+                  <label>до
+                    <input type="number" name="price_max">
+                  </label>
+                  <button class="button button--dark btn-mini" type="button">Применить</button>
+                </div>
+                <!--====custom select=====-->
+                <div class="custom-select-wrapper filter-select">
+                  <div class="custom-select">
+                    <div class="custom-select-trigger">Фильтровать по</div>
+                    <div class="custom-options">
+                      <span class="custom-option" data-value="1">По цвету</span>
+                      <span class="custom-option" data-value="2">По сезону</span>
+                      <span class="custom-option" data-value="3">По возрастанию</span>
+                      <span class="custom-option" data-value="4">По убыванию</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--====== filter icon for mobile ===-->
+              <button class="btn-icon filters-toggle" id="filters-toggle">
+                <svg class="svg-filters">
+                  <use href="./img/sprite.svg#svg-flters"></use>
+                </svg>
+              </button>
+            </div>
+            <!--======= PRODUCT CARDS ========-->
+            <div class="catalogy-cards">
+              <!--===single-card======-->
+              <div class="mini-card-box">
+                <div class="product-card">
+                  <a class="card-img" href="#!">
+                    <img class="lazy" src="./img/product1.webp" width="260" height="361" alt="img" />
+                    <div class="label-red">Акция</div>
+                    <div class="label-green">Новинка</div>
+                  </a>
+                  <div class="card-info">
+                    <a class="h4" href="single-page.html">Костюм Костюм УЛУЙШН - 678</a>
+                    <div class="d-flex">
+                      <div class="card-group">
+                        <div class="online-state active">
+                          <span class="online-state__dot"></span>
+                          <span class="online-state__text demi-12">В наличии</span>
+                        </div>
+                        <div class="card-price">от <span>1 590</span> руб.</div>
+                      </div>
+                      <!--====button===-->
+                      <div class="card-button">
+                        <button class="btn">
+                          <svg class="svg-cart">
+                            <use href="./img/sprite.svg#svg-cart"></use>
+                          </svg>
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--===single-card======-->
+              <div class="mini-card-box">
+                <div class="product-card">
+                  <a class="card-img" href="#!">
+                    <img class="lazy" src="./img/product2.webp" width="260" height="361" alt="img" />
+                  </a>
+                  <div class="card-info">
+                    <a class="h4" href="single-page.html">Халат темный бязевый</a>
+                    <div class="d-flex">
+                      <div class="card-group">
+                        <div class="online-state active">
+                          <span class="online-state__dot"></span>
+                          <span class="online-state__text demi-12">В наличии</span>
+                        </div>
+                        <div class="card-price">от <span>1 590</span> руб.</div>
+                      </div>
+                      <!--====button===-->
+                      <div class="card-button">
+                        <button class="btn">
+                          <svg class="svg-cart">
+                            <use href="./img/sprite.svg#svg-cart"></use>
+                          </svg>
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--===single-card======-->
+              <div class="mini-card-box">
+                <div class="product-card">
+                  <a class="card-img" href="#!">
+                    <img class="lazy" src="./img/product5.webp" width="260" height="361" alt="img" />
+                    <div class="label-red">Акция</div>
+                  </a>
+                  <div class="card-info">
+                    <a class="h4" href="single-page.html">Костюм Автосервис</a>
+                    <div class="d-flex">
+                      <div class="card-group">
+                        <div class="online-state to-order">
+                          <span class="online-state__dot"></span>
+                          <span class="online-state__text demi-12">Под заказ</span>
+                        </div>
+                        <div class="card-price">от <span>1 590</span> руб.</div>
+                      </div>
+                      <!--====button===-->
+                      <div class="card-button">
+                        <button class="btn">
+                          <svg class="svg-cart">
+                            <use href="./img/sprite.svg#svg-cart"></use>
+                          </svg>
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--===single-card======-->
+              <div class="mini-card-box">
+                <div class="product-card">
+                  <a class="card-img" href="#!">
+                    <img class="lazy" src="./img/product6.webp" width="260" height="361" alt="img" />
+                  </a>
+                  <div class="card-info">
+                    <a class="h4" href="single-page.html">Какое-то название в две строки</a>
+                    <div class="d-flex">
+                      <div class="card-group">
+                        <div class="card-price">от <span>1 590</span> руб.</div>
+                      </div>
+                      <!--====button===-->
+                      <div class="card-button">
+                        <button class="btn">
+                          <svg class="svg-cart">
+                            <use href="./img/sprite.svg#svg-cart"></use>
+                          </svg>
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--===single-card======-->
+              <div class="mini-card-box">
+                <div class="product-card">
+                  <a class="card-img" href="#!">
+                    <img class="lazy" src="./img/product1.webp" width="260" height="361" alt="img" />
+                    <div class="label-red">Акция</div>
+                    <div class="label-green">Новинка</div>
+                  </a>
+                  <div class="card-info">
+                    <a class="h4" href="single-page.html">Костюм летний</a>
+                    <div class="d-flex">
+                      <div class="card-group">
+                        <div class="card-price">от <span>1 590</span> руб.</div>
+                      </div>
+                      <!--====button===-->
+                      <div class="card-button">
+                        <button class="btn">
+                          <svg class="svg-cart">
+                            <use href="./img/sprite.svg#svg-cart"></use>
+                          </svg>
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mini-card-box">
+                <div class="product-card">
+                  <a class="card-img" href="#!">
+                    <img class="lazy" src="./img/product3.webp" width="260" height="361" alt="img" />
+                    <div class="label-red">Акция</div>
+                  </a>
+                  <div class="card-info">
+                    <a class="h4" href="single-page.html">Костюм Тундра</a>
+                    <div class="d-flex">
+                      <div class="card-group">
+                        <div class="card-price">от <span>1 590</span> руб.</div>
+                      </div>
+                      <!--====button===-->
+                      <div class="card-button">
+                        <button class="btn">
+                          <svg class="svg-cart">
+                            <use href="./img/sprite.svg#svg-cart"></use>
+                          </svg>
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--===single-card======-->
+              <div class="mini-card-box">
+                <div class="product-card">
+                  <a class="card-img" href="#!">
+                    <img class="lazy" src="./img/product4.webp" width="260" height="361" alt="img" />
+                  </a>
+                  <div class="card-info">
+                    <a class="h4" href="single-page.html">Костюм Костюм УЛУЙШН - 678</a>
+                    <div class="d-flex">
+                      <div class="card-group">
+                        <div class="online-state active">
+                          <span class="online-state__dot"></span>
+                          <span class="online-state__text demi-12">В наличии</span>
+                        </div>
+                        <div class="card-price">от <span>1 590</span> руб.</div>
+                      </div>
+                      <!--====button===-->
+                      <div class="card-button">
+                        <button class="btn">
+                          <svg class="svg-cart">
+                            <use href="./img/sprite.svg#svg-cart"></use>
+                          </svg>
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--===single-card======-->
+              <div class="mini-card-box">
+                <div class="product-card">
+                  <a class="card-img" href="#!">
+                    <img class="lazy" src="./img/product2.webp" width="260" height="361" alt="img" />
+                  </a>
+                  <div class="card-info">
+                    <a class="h4" href="single-page.html">Костюм Костюм УЛУЙШН - 678</a>
+                    <div class="d-flex">
+                      <div class="card-group">
+                        <div class="online-state active">
+                          <span class="online-state__dot"></span>
+                          <span class="online-state__text demi-12">В наличии</span>
+                        </div>
+                        <div class="card-price">от <span>1 590</span> руб.</div>
+                      </div>
+                      <!--====button===-->
+                      <div class="card-button">
+                        <button class="btn">
+                          <svg class="svg-cart">
+                            <use href="./img/sprite.svg#svg-cart"></use>
+                          </svg>
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination">
+              <a href="#!">1</a>
+              <a class="active" href="#!">2</a>
+              <a href="#!">3</a>
+              <a href="#!">4</a>
+              <a href="#!">...</a>
+              <a href="#!">8</a>
+            </div>
+          </article>
+          <!--====ARTICLE =====-->
+          <article class="article-description d-grid">
+            <div class="article-description__txt">
+              <div class="h2">Тут еще подзаголовок</div>
+              <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
+              <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
+              <p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.</p>
+            </div>
+            <div class="article-description__img">
+              <img class="lazy" src="./img/banner.webp" width="273" height="476" alt="img">
+            </div>
+          </article>
+        </div>
+      </section>
+      <!--=====subscribe form =====-->
+      <section class="subscribe dark-bg">
+        <div class="container">
+          <div class="subscribe-content d-grid">
+            <div class="subscribe-title">
+              <h2 class="h1">Подпишитесь на рассылку</h2>
+              <div class="txt-20">Новинки, акции и новости нашей компании Вы получите первыми!</div>
+            </div>
+            <!--====form====-->
+            <form class="d-flex" action="#">
+              <div class="form-item">
+                <input type="text" name="email" placeholder="Введите ваш email">
+              </div>
+              <div class="form-btn">
+                <button class="button-outline btn-slim" type="submit">Подписаться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--===== support ===-->
+      <section class="support">
+        <div class="container">
+          <div class="support-content d-grid">
+            <div class="support-consultant">
+              <h2 class="h2">С вами работают</h2>
+              <div class="support-consultant-info">
+                <div class="support-photo">
+                  <img src="./img/support.webp" width="360" height="400" alt="img">
+                </div>
+                <div class="support-consultant-block">
+                  <div class="support-name">
+                    <div class="h3">Наталья</div>
+                    <div class="txt-18">Менеджер</div>
+                  </div>
+                  <div class="support-contacts">
+                    <a class="contact-link" href="tel:+78998998989">
+                      <div class="txt-18">Телефон</div>
+                      <div class="h3">+ 7 899 899 89 89</div>
+                    </a>
+                    <div class="online-state active">
+                      <span class="online-state__dot"></span>
+                      <span class="online-state__text txt-18">Сейчас работаем, звоните!</span>
+                    </div>
+                  </div>
+                  <a class="contact-link social-wapp-round" href="#!">
+                    <img src="./img/wa.svg" width="16" height="16" alt="whatsapp">
+                    <span class="txt-18"> Написать в Whatsapp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--===== form block ====-->
+            <div class="support-form">
+              <h2 class="h2">Отправить заявку</h2>
+              <form class="contact-form" action="#" method="method">
+                <div class="form-item">
+                  <label>Ваше имя:</label>
+                  <input type="text" name="name">
+                </div>
+                <div class="form-item">
+                  <label>Email:</label>
+                  <input type="text" name="email">
+                </div>
+                <div class="form-item">
+                  <label>Телефон:</label>
+                  <input type="text" name="phone">
+                </div>
+                <div class="form-item form-item--file">
+                  <div class="custom-file-input">
+                    <input class="file-input" id="file-input" type="file">
+                    <label class="file-label" for="file-input">
+                      <svg class="svg-paper">
+                        <use href="./img/sprite.svg#svg-paper"></use>
+                      </svg>
+                      <span class="file-text">Прикрепить файл</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-item">
+                  <label>Комментарий к заявке:</label>
+                  <textarea name="message"></textarea>
+                </div>
+                <div class="form-btn">
+                  <button class="btn" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-content d-grid">
+            <!--====left===-->
+            <div class="footer-text">
+              <a class="logo" href="index.html">
+                <svg class="svg-logo svg-logo--white">
+                  <use href="./img/sprite.svg#svg-logo"></use>
+                </svg>
+              </a>
+              <p class="txt-14">Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря</p>
+            </div>
+            <!--===right===-->
+            <div class="footer-nav">
+              <ul class="menu-list">
+                <li>
+                  <a class="link" href="#!"> Главная</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Каталог</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> О компании</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Личный кабинет</a>
+                </li>
+              </ul>
+              <ul class="menu-list">
+                <li>
+                  <a class="link" href="#!"> Индивидульный пошив</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Покупателям</a>
+                </li>
+                <li>
+                  <a class="link" href="#!"> Контакты</a>
+                </li>
+              </ul>
+              <div class="footer-contacts">
+                <div class="custom-select-wrapper">
+                  <div class="select-city">
+                    <div class="select-city-trigger">Москва</div>
+                    <div class="select-city-tabs">
+                      <div class="tabs-trigger">
+                        <span class="tab-btn active">А</span>
+                        <span class="tab-btn">Б</span>
+                        <span class="tab-btn">в</span>
+                        <span class="tab-btn">г</span>
+                        <span class="tab-btn">д</span>
+                        <span class="tab-btn">е</span>
+                        <span class="tab-btn">ж</span>
+                        <span class="tab-btn">з</span>
+                        <span class="tab-btn">и</span>
+                        <span class="tab-btn">К</span>
+                        <span class="tab-btn">л</span>
+                        <span class="tab-btn">м</span>
+                        <span class="tab-btn">н</span>
+                        <span class="tab-btn">о</span>
+                        <span class="tab-btn">п</span>
+                        <span class="tab-btn">р</span>
+                        <span class="tab-btn">с</span>
+                        <span class="tab-btn">т</span>
+                        <span class="tab-btn">у</span>
+                        <span class="tab-btn">ф</span>
+                        <span class="tab-btn">х</span>
+                        <span class="tab-btn">ц</span>
+                        <span class="tab-btn">ч</span>
+                        <span class="tab-btn">ш</span>
+                        <span class="tab-btn">щ</span>
+                        <span class="tab-btn">э</span>
+                        <span class="tab-btn">ю</span>
+                        <span class="tab-btn">я</span>
+                      </div>
+                      <div class="tabs-content">
+                        <div class="tab-item active">
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                          <span class="custom-option" data-value="1">Арзамас</span>
+                          <span class="custom-option" data-value="2">Архангельск</span>
+                          <span class="custom-option" data-value="3">Астрахань</span>
+                        </div>
+                        <div class="tab-item">
+                          <span class="custom-option" data-value="4">Брянск</span>
+                          <span class="custom-option" data-value="5">Белгород</span>
+                          <span class="custom-option" data-value="3">Буйнакск</span>
+                          <span class="custom-option" data-value="4">Брянск</span>
+                          <span class="custom-option" data-value="5">Белгород</span>
+                          <span class="custom-option" data-value="3">Буйнакск</span>
+                          <span class="custom-option" data-value="4">Брянск</span>
+                          <span class="custom-option" data-value="5">Белгород</span>
+                          <span class="custom-option" data-value="3">Буйнакск</span>
+                        </div>
+                        <div class="tab-item">
+                          <span class="custom-option" data-value="6">Воркута</span>
+                          <span class="custom-option" data-value="7">Волгоград</span>
+                          <span class="custom-option" data-value="7">Волгоград</span>
+                          <span class="custom-option" data-value="7">Волгоград</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="contact-link contact-phone" href="tel:+77897897878">+7 789 789 78 78</a>
+                <a class="contact-link contact-email" href="emailto:info@format.ru">info@format.ru</a>
+                <address>117105, г. Москва,
+                  <br> Рязанский проспект, дом 10 с18
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright-txt">© 2024 ФормаТ. Все права защищены.</p>
+          <div class="footer-info-txt">
+            <p>Вся представленная на сайте информация, касающаяся технических характеристик автомобилей и спецтехники, стоимости услуг, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса РФ.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--=============== jquery ==================-->
+  <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+  <!--=============== lazy ==================-->
+  <script src="./libs/jquery.lazy.min.js"></script>
+  <!--=============== swiper js ===============-->
+  <script src="./libs/swiper/swiper.js"></script>
+  <!--============fancybox====================-->
+  <script src="./libs/fancybox/fancybox.js"></script>
+  <!--=============== main js ===================-->
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

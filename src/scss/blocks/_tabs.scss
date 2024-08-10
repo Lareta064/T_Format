@@ -63,7 +63,7 @@
 		&:last-child{border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
 		&:hover{background-color: #f2f2f2;}
 		@media (max-width: 767px) {
-			&.active{border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
+			&.active{border-bottom: 1px solid rgba(0, 0, 0, 0.1);background-color: #f2f2f2;}
 		}
 	}
 	.duotabs-content{
