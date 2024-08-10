@@ -26,16 +26,14 @@ tbody tr:nth-child(2n) {
 	table-layout: fixed;
 	td, th{min-width: 130px;}
 }
-table.table-w100{
-	width: 100%;
-	display: table;
-}
+
 td.cell-center, th.cell-center, .row-center {
 	text-align: center;
 }
-table.table-large{
+.table-large{
 	border-left: 1px solid  #bababa;
 	border-right: 1px solid  #bababa;
+	width:max-content;
 	td,th{
 		border-right: 1px solid transparent;
 		border-left: 1px solid transparent;
@@ -50,4 +48,8 @@ table.table-large{
 		
 		text-align: center;
 	}
+}
+table.table-w100 {
+	width: 100%;
+	display: table;
 }
