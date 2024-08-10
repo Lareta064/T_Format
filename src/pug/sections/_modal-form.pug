@@ -1,0 +1,19 @@
+//======= минимальная форма, открывается при клике по компоненту с дата атрибутом data-target="call-form"
+.modal-wrapper(data-modal="call-form")
+	.modal-scroll-wrapper.test
+		.modal-body
+			//===btn close popup ===
+			button(type="button" data-role="modal-close").btn-close
+				span.icon-cross
+			.modal-form
+				.h2 Обратный звонок
+				form.contact-form(action="#")
+					.form-item
+						label Ваше имя
+						input(type="text" name="name" )
+					
+					.form-item
+						label Телефон
+						input(type="text" name="phone")
+					.form-btn.flex-center
+						button.btn(type="submit") Отправить

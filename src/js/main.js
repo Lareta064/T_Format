@@ -439,51 +439,86 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	/*********************** */
 	const trigger = document.querySelector('.select-city-trigger');
-  const tabs = document.querySelector('.select-city-tabs');
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabItems = document.querySelectorAll('.tab-item');
-  const customOptions = document.querySelectorAll('.custom-option');
- if(trigger){
+	const tabs = document.querySelector('.select-city-tabs');
+	const tabButtons = document.querySelectorAll('.tab-btn');
+	const tabItems = document.querySelectorAll('.tab-item');
+	const customOptions = document.querySelectorAll('.custom-option');
+	if(trigger){
 
 
-  // Toggle visibility of tabs on trigger click
-  trigger.addEventListener('click', () => {
-    tabs.classList.toggle('active');
-    trigger.classList.toggle('open', tabs.classList.contains('active')); // Update trigger class
-  });
+		// Toggle visibility of tabs on trigger click
+		trigger.addEventListener('click', () => {
+			tabs.classList.toggle('active');
+			trigger.classList.toggle('open', tabs.classList.contains('active')); // Update trigger class
+		});
 
-  // Handle tab button clicks
-  tabButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-      // Remove active class from all tab buttons
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      // Add active class to the clicked tab button
-      button.classList.add('active');
+		// Handle tab button clicks
+		tabButtons.forEach((button, index) => {
+			button.addEventListener('click', () => {
+			// Remove active class from all tab buttons
+			tabButtons.forEach(btn => btn.classList.remove('active'));
+			// Add active class to the clicked tab button
+			button.classList.add('active');
 
-      // Remove active class from all tab items
-      tabItems.forEach(item => item.classList.remove('active'));
-      // Add active class to the tab item corresponding to the clicked button
-      tabItems[index].classList.add('active');
-    });
-  });
+			// Remove active class from all tab items
+			tabItems.forEach(item => item.classList.remove('active'));
+			// Add active class to the tab item corresponding to the clicked button
+			tabItems[index].classList.add('active');
+			});
+		});
 
-  // Handle option selection
-  customOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      // Set the text of the trigger to the selected option's text
-      trigger.textContent = option.textContent;
-      // Hide the tab content and remove open class
-      tabs.classList.remove('active');
-      trigger.classList.remove('open');
-    });
-  });
+		// Handle option selection
+		customOptions.forEach(option => {
+			option.addEventListener('click', () => {
+			// Set the text of the trigger to the selected option's text
+			trigger.textContent = option.textContent;
+			// Hide the tab content and remove open class
+			tabs.classList.remove('active');
+			trigger.classList.remove('open');
+			});
+		});
 
-  // Close tabs if clicked outside
-  document.addEventListener('click', (event) => {
-    if (!tabs.contains(event.target) && !trigger.contains(event.target)) {
-      tabs.classList.remove('active');
-      trigger.classList.remove('open');
-    }
-  });
+		// Close tabs if clicked outside
+		document.addEventListener('click', (event) => {
+			if (!tabs.contains(event.target) && !trigger.contains(event.target)) {
+			tabs.classList.remove('active');
+			trigger.classList.remove('open');
+			}
+		});
+	}
+	//======= modal wrapper ========
+	const modals = document.querySelectorAll('.modal-wrapper');
+	if(modals.length > 0){
+		const modalOpenButtons = document.querySelectorAll('[data-target]');
+		const modalCloseButtons = document.querySelectorAll('[data-role]');
+		for(let item of modalOpenButtons){
+			
+			item.addEventListener('click', (e)=>{
+				const itemDataValue = item.getAttribute('data-target');
+				for(let modalItem of modals ){
+					const modalItemData = modalItem.getAttribute('data-modal');
+					if(modalItemData == itemDataValue){
+						modalItem.classList.add('active');
+						bodyEl.classList.add('lock');
+					}
+				}
+			});
+			
+		}
+		for(let modalClose of modalCloseButtons){
+			modalClose.addEventListener('click', (e)=>{
+				modalClose.closest('.modal-wrapper').classList.remove('active');
+				bodyEl.classList.remove('lock');
+			});
+		}
+		for(let modal of modals){
+			
+			modal.addEventListener('click', (e)=>{
+				if(e.target == e.currentTarget){
+					modal.classList.remove('active');
+					bodyEl.classList.remove('lock');
+				}
+			});
+		}
 	}
 });
