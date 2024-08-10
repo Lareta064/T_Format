@@ -26,6 +26,7 @@ form, label, input, textarea{display: block;}
 	textarea{
 		height: 130px;
 		resize: none;
+		padding: 13px;
 		@media (max-width: 767px) {
 		height: 100px;
 		}

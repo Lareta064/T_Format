@@ -219,15 +219,16 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 	// ======custom input type file ====
-	const fileInput = document.getElementById('file-input');
-  	const fileLabel = document.querySelector('.file-label');
-	if(fileInput){
+	const fileInputs = document.querySelectorAll('.file-input');
 
-		fileInput.addEventListener('change', function() {
-			const fileName = fileInput.files[0]?.name || 'Прикрепить файл';
-			fileLabel.querySelector('.file-text').textContent = fileName;
-		});
-	}
+    fileInputs.forEach(input => {
+        const fileLabel = input.closest('.custom-file-input').querySelector('.file-label');
+
+        input.addEventListener('change', function () {
+            const fileName = input.files[0]?.name || 'Прикрепить файл';
+            fileLabel.querySelector('.file-text').textContent = fileName;
+        });
+    });
 		/*========CUSTOM SELECT======= */
  	const customSelects = document.querySelectorAll('.custom-select');
 

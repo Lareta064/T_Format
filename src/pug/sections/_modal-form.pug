@@ -1,6 +1,6 @@
 //======= минимальная форма, открывается при клике по компоненту с дата атрибутом data-target="call-form"
 .modal-wrapper(data-modal="call-form")
-	.modal-scroll-wrapper.test
+	.modal-scroll-wrapper
 		.modal-body
 			//===btn close popup ===
 			button(type="button" data-role="modal-close").btn-close
@@ -17,3 +17,58 @@
 						input(type="text" name="phone")
 					.form-btn.flex-center
 						button.btn(type="submit") Отправить
+
+//======= Модальная форма -Получить образец, открывается при клике по компоненту с дата атрибутом data-target="get-sample"====
+.modal-wrapper(data-modal="get-sample")
+	.modal-scroll-wrapper
+		.modal-body
+			//===btn close popup ===
+			button(type="button" data-role="modal-close").btn-close
+				span.icon-cross
+			.modal-form
+				.h2 Получить образец
+				form.contact-form(action="#")
+					.form-item
+						label Ваше имя
+						input(type="text" name="name" )
+					.form-item
+						label Ваш email
+						input(type="email" name="email")
+					.form-item
+						label Телефон
+						input(type="text" name="phone")
+					.form-btn.flex-center
+						button.btn(type="submit") Заказать
+
+//======= Большая Модальная форма, открывается при клике по компоненту с дата атрибутом data-target="full-form"====
+.modal-wrapper.modal-wrapper--scroll(data-modal="full-form")
+	.modal-scroll-wrapper
+		.modal-body
+			//===btn close popup ===
+			button(type="button" data-role="modal-close").btn-close
+				span.icon-cross
+			.modal-form
+				.h2 Полная форма заявки
+				form.contact-form(action="#")
+					.form-item
+						label Ваше имя
+						input(type="text" name="name" )
+					.form-item
+						label Ваш email
+						input(type="email" name="email")
+					.form-item
+						label Телефон
+						input(type="text" name="phone")
+					.form-item.form-item--file
+						.custom-file-input
+							input#file-input2.file-input(type='file')
+							label.file-label(for='file-input2')
+								svg.svg-paper
+									use(href='./img/sprite.svg#svg-paper')
+								span.file-text Прикрепить файл
+								
+					.form-item
+						label Комментарий к заявке:
+						textarea(name="message")
+					.form-btn.flex-center
+						button.btn(type="submit") Заказать

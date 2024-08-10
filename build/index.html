@@ -452,7 +452,7 @@
 								<p>Получите образец нашей работы в кратчайшие сроки. Сделаем по вашим лекалам.</p>
 							</div>
 							<div class="get-sample-btn">
-								<button class="btn" type="button">ЗАПРОСИТЬ СЕЙЧАС</button>
+								<button class="btn" type="button" data-target="get-sample">ЗАПРОСИТЬ СЕЙЧАС</button>
 							</div>
 						</div>
 					</div>
@@ -558,7 +558,7 @@
 								<div class="txt-light">о компании</div>
 								<div class="h1">Форма<span class="txt-red">Т</span> это:</div>
 								<p>Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. Мы поддерживаем достойный уровень качества благодаря педантичному подходу к выбору материалов и использованию современных технологий при пошиве спецодежды.Мы занимаем лидирующие позиции по производству спецодежды и ее реализации благодаря большому выбору товаров и гибкой ценовой политике. </p>
-								<button class="btn" type="button">подробнее</button>
+								<button class="btn" type="button" data-target="full-form">подробнее</button>
 							</div>
 						</div>
 					</div>
@@ -698,7 +698,7 @@
 			</footer>
 			<!--======= минимальная форма, открывается при клике по компоненту с дата атрибутом data-target="call-form"-->
 			<div class="modal-wrapper" data-modal="call-form">
-				<div class="modal-scroll-wrapper test">
+				<div class="modal-scroll-wrapper">
 					<div class="modal-body">
 						<!--===btn close popup ===-->
 						<button class="btn-close" type="button" data-role="modal-close"><span class="icon-cross"></span></button>
@@ -715,6 +715,78 @@
 								</div>
 								<div class="form-btn flex-center">
 									<button class="btn" type="submit">Отправить</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--======= Модальная форма -Получить образец, открывается при клике по компоненту с дата атрибутом data-target="get-sample"====-->
+			<div class="modal-wrapper" data-modal="get-sample">
+				<div class="modal-scroll-wrapper">
+					<div class="modal-body">
+						<!--===btn close popup ===-->
+						<button class="btn-close" type="button" data-role="modal-close"><span class="icon-cross"></span></button>
+						<div class="modal-form">
+							<div class="h2">Получить образец</div>
+							<form class="contact-form" action="#">
+								<div class="form-item">
+									<label>Ваше имя</label>
+									<input type="text" name="name">
+								</div>
+								<div class="form-item">
+									<label>Ваш email</label>
+									<input type="email" name="email">
+								</div>
+								<div class="form-item">
+									<label>Телефон</label>
+									<input type="text" name="phone">
+								</div>
+								<div class="form-btn flex-center">
+									<button class="btn" type="submit">Заказать</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--======= Большая Модальная форма, открывается при клике по компоненту с дата атрибутом data-target="full-form"====-->
+			<div class="modal-wrapper modal-wrapper--scroll" data-modal="full-form">
+				<div class="modal-scroll-wrapper">
+					<div class="modal-body">
+						<!--===btn close popup ===-->
+						<button class="btn-close" type="button" data-role="modal-close"><span class="icon-cross"></span></button>
+						<div class="modal-form">
+							<div class="h2">Полная форма заявки</div>
+							<form class="contact-form" action="#">
+								<div class="form-item">
+									<label>Ваше имя</label>
+									<input type="text" name="name">
+								</div>
+								<div class="form-item">
+									<label>Ваш email</label>
+									<input type="email" name="email">
+								</div>
+								<div class="form-item">
+									<label>Телефон</label>
+									<input type="text" name="phone">
+								</div>
+								<div class="form-item form-item--file">
+									<div class="custom-file-input">
+										<input class="file-input" id="file-input2" type="file">
+										<label class="file-label" for="file-input2">
+											<svg class="svg-paper">
+												<use href="./img/sprite.svg#svg-paper"></use>
+											</svg><span class="file-text">Прикрепить файл</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-item">
+									<label>Комментарий к заявке:</label>
+									<textarea name="message"></textarea>
+								</div>
+								<div class="form-btn flex-center">
+									<button class="btn" type="submit">Заказать</button>
 								</div>
 							</form>
 						</div>

@@ -3,7 +3,6 @@
 	top: 0;
 	left: 0;
 	right: 0;
-
 	height: 100%;
 	bottom: 0;
 	display: flex;
@@ -22,8 +21,6 @@
 		width: min(800px, 100%);
 		padding: 48px;
 		background: white;
-		
-
 		.btn-close {
 			position: absolute;
 			top: -17px;
@@ -58,11 +55,8 @@
 			height: 100%;
 			display: flex;
 			align-items: center;
-
-			&>* {
-				width: 100%;
-			}
-
+			.h2 {font-size: 20px;}
+			&>* {width: 100%;}
 		}
 	}
 	.modal-scroll-wrapper{
@@ -89,21 +83,21 @@
 			margin-bottom: 10px;
 			}
 		}
+		.custom-file-input .file-text{font-size: 12px;}
 		.btn{min-width: 260px;}
 		@media (max-width: 767px) {
-		row-gap: 24px;
+		row-gap: 18px;
 		}
 	}
 }
  
 .modal-wrapper--scroll {
-	padding-block: 40px;
+	padding-block: 20px;
 	align-items: flex-start;
 	height: 100%;
 	overflow-y: auto;
 
 	@media (max-width: 767px) {
 		padding-block: 0;
-
 	}
 }
