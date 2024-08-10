@@ -93,71 +93,70 @@ block content
 							li Маркированный список
 					
 					//===  block ====
-					article.custom-text
+					article.custom-text.custom-table
 						.h2 Таблицы
-						//-значения ширины таблицы с текстами, первой и последней ячеек прописаны в css , в root
+						
 						.two-column-block
-							//====table===
-							.table-large
-								table
-									thead
-										tr
-											th Наименование
-											th Тип
-											th №
+							//==== по классу .table-large у яеек нет промежуточных границ, у ячейки с .cell-center  контент будет выстроен по центру, по классу  .table-w100 - таблица занимает 100% ширины ===
+							table.table-large.table-w100
+								thead
+									tr
+										th Наименование
+										th Тип
+										th.cell-center №
 
-									tbody
-										tr
-											td Варежка
-											td Соломенная
-											td 32
-										tr
-											td Халат медицинский
-											td Бязевый
-											td 40
-										tr
-											td Комбинизон с карманами
-											td Полиэстер
-											td 48
-							//==table===
-							.table
-								table
-									thead
-										tr
-											td Размер
-										
-											td Рост
-									tbody
-										tr
-											td 44-46
-											td 170-176
-										tr
-											td 46-48
-											td 170-176 						
-										tr
-											td 48-50
-											td 170-176
-										tr
-											td 50-52
-											td 170-176
-										tr
-											td 52-54
-											td 170-176
-										tr
-											td 54-56
-											td 170-176
-										tr
-											td 56-58
-											td 170-176
-										tr
-											td 58-60
-											td 170-176
-										tr
-											td 60-62
-											td 170-176
-										tr
-											td 62-64
-											td 170-176
+								tbody
+									tr
+										td Варежка
+										td Соломенная
+										td 32
+									tr
+										td Халат медицинский
+										td Бязевый
+										td.cell-center 40
+									tr
+										td Комбинизон с карманами
+										td Полиэстер
+										td.cell-center48
+							
+							//=====класс .table задает ячейкам мин ширину 130px , класс .row-center у tr  ставит в ячейках этого ряда контент по центру===
+							table.table
+								thead
+									tr.row-center
+										td Размер
+									
+										td Рост
+								tbody
+									tr.row-center
+										td 44-46
+										td 170-176
+									tr.row-center
+										td 46-48
+										td 170-176
+									tr.row-center
+										td 48-50
+										td 170-176
+									tr.row-center
+										td 50-52
+										td 170-176
+									tr.row-center
+										td 52-54
+										td 170-176
+									tr.row-center
+										td 54-56
+										td 170-176
+									tr.row-center
+										td 56-58
+										td 170-176
+									tr.row-center
+										td 58-60
+										td 170-176
+									tr.row-center
+										td 60-62
+										td 170-176
+									tr.row-center
+										td 62-64
+										td 170-176
 					//===== блок с текстовыми колонками =====			
 					article.custom-text
 						.h2 Колонки

@@ -278,91 +278,87 @@
 							</ul>
 						</article>
 						<!--===  block ====-->
-						<article class="custom-text">
+						<article class="custom-text custom-table">
 							<div class="h2">Таблицы</div>
 							<div class="two-column-block">
-								<!--====table===-->
-								<div class="table-large">
-									<table>
-										<thead>
-											<tr>
-												<th>Наименование</th>
-												<th>Тип</th>
-												<th>№</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Варежка</td>
-												<td>Соломенная</td>
-												<td>32</td>
-											</tr>
-											<tr>
-												<td>Халат медицинский</td>
-												<td>Бязевый</td>
-												<td>40</td>
-											</tr>
-											<tr>
-												<td>Комбинизон с карманами</td>
-												<td>Полиэстер</td>
-												<td>48</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<!--==table===-->
-								<div class="table">
-									<table>
-										<thead>
-											<tr>
-												<td>Размер</td>
-												<td>Рост</td>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>44-46</td>
-												<td>170-176</td>
-											</tr>
-											<tr>
-												<td>46-48</td>
-												<td>170-176 						</td>
-											</tr>
-											<tr>
-												<td>48-50</td>
-												<td>170-176</td>
-											</tr>
-											<tr>
-												<td>50-52</td>
-												<td>170-176</td>
-											</tr>
-											<tr>
-												<td>52-54</td>
-												<td>170-176</td>
-											</tr>
-											<tr>
-												<td>54-56</td>
-												<td>170-176</td>
-											</tr>
-											<tr>
-												<td>56-58</td>
-												<td>170-176</td>
-											</tr>
-											<tr>
-												<td>58-60</td>
-												<td>170-176</td>
-											</tr>
-											<tr>
-												<td>60-62</td>
-												<td>170-176</td>
-											</tr>
-											<tr>
-												<td>62-64</td>
-												<td>170-176</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+								<!--==== по классу .table-large у яеек нет промежуточных границ, у ячейки с .cell-center  контент будет выстроен по центру, по классу  .table-w100 - таблица занимает 100% ширины ===-->
+								<table class="table-large table-w100">
+									<thead>
+										<tr>
+											<th>Наименование</th>
+											<th>Тип</th>
+											<th class="cell-center">№</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Варежка</td>
+											<td>Соломенная</td>
+											<td>32</td>
+										</tr>
+										<tr>
+											<td>Халат медицинский</td>
+											<td>Бязевый</td>
+											<td class="cell-center">40</td>
+										</tr>
+										<tr>
+											<td>Комбинизон с карманами</td>
+											<td>Полиэстер</td>
+											<td class="cell-center48"></td>
+										</tr>
+									</tbody>
+								</table>
+								<!--=====класс .table задает ячейкам мин ширину 130px , класс .row-center у tr  ставит в ячейках этого ряда контент по центру===-->
+								<table class="table">
+									<thead>
+										<tr class="row-center">
+											<td>Размер</td>
+											<td>Рост</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="row-center">
+											<td>44-46</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>46-48</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>48-50</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>50-52</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>52-54</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>54-56</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>56-58</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>58-60</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>60-62</td>
+											<td>170-176</td>
+										</tr>
+										<tr class="row-center">
+											<td>62-64</td>
+											<td>170-176</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</article>
 						<!--===== блок с текстовыми колонками =====			-->
