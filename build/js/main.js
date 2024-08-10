@@ -341,18 +341,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // });
 
 	/*================ STAGES TABS============ */
-	$('.custom-tabs').each(function() {
+	// $('.custom-tabs').each(function() {
 		
-		let ths = $(this);
-		ths.find('.tab-item').not(':first').hide();
-		console.log($('.tab-item'));
-		ths.find('.tab-btn').click(function() {
-			ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
+	// 	let ths = $(this);
+	// 	ths.find('.tab-item').not(':first').hide();
+	// 	console.log($('.tab-item'));
+	// 	ths.find('.tab-btn').click(function() {
+	// 		ths.find('.tab-btn').removeClass('active').eq($(this).index()).addClass('active');
 
-			ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-		}).eq(0).addClass('active');
+	// 		ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+	// 	}).eq(0).addClass('active');
 		
-	});
+	// });
 
 	/*============== ACORDION ========== */
 	;(function ($, window, document, undefined) {
@@ -522,4 +522,67 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		}
 	}
+const tabWrappers = document.querySelectorAll('.duo-tabs-wrapper');
+    const mediaQuery = window.matchMedia('(max-width: 1199px)');
+
+    function setupTabLogic() {
+        tabWrappers.forEach(wrapper => {
+            const tabButtons = wrapper.querySelectorAll('.duo-tabs-btn');
+            const tabContents = wrapper.querySelectorAll('.duo-tabs-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const tabId = button.getAttribute('data-duotab');
+
+                    if (mediaQuery.matches) {
+                        // For screens < 1200px: Toggle active state on repeat click
+                        if (button.classList.contains('active')) {
+                            button.classList.remove('active');
+                            wrapper.querySelector(`.duo-tabs-content[data-content="${tabId}"]`).classList.remove('active');
+                        } else {
+                            tabButtons.forEach(btn => btn.classList.remove('active'));
+                            tabContents.forEach(content => content.classList.remove('active'));
+
+                            button.classList.add('active');
+                            wrapper.querySelector(`.duo-tabs-content[data-content="${tabId}"]`).classList.add('active');
+                        }
+                    } else {
+                        // For screens >= 1200px: Normal behavior, ensure one active
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        tabContents.forEach(content => content.classList.remove('active'));
+
+                        button.classList.add('active');
+                        wrapper.querySelector(`.duo-tabs-content[data-content="${tabId}"]`).classList.add('active');
+                    }
+                });
+            });
+        });
+    }
+
+    function resetActiveTabs() {
+        if (!mediaQuery.matches) {
+            tabWrappers.forEach(wrapper => {
+                const tabButtons = wrapper.querySelectorAll('.duo-tabs-btn');
+                const tabContents = wrapper.querySelectorAll('.duo-tabs-content');
+
+                // Remove active classes from all
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Set first tab and content as active
+                tabButtons[0].classList.add('active');
+                tabContents[0].classList.add('active');
+            });
+        }
+    }
+
+    // Initial setup
+    setupTabLogic();
+    resetActiveTabs();
+
+    // Re-apply event listeners and reset active tabs on screen resize
+    window.addEventListener('resize', function() {
+        setupTabLogic();
+        resetActiveTabs();
+    });
 });

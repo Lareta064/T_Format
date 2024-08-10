@@ -1,0 +1,29 @@
+.duo-tabs-wrapper{
+	position: relative;
+	.duo-tabs-btn{
+		display: inline-block;
+		height: 40px;
+		padding:15px;
+		text-align: center;
+		&.active{background-color: red;}
+		@media (max-width: 1199px) {
+		display: block;
+		}
+	}
+	.duo-tabs-content{
+		position: absolute;
+		top: 40px;
+		left: 0;
+		right: 0;
+		border:2px solid red;
+		background-color: #fff;
+		display: none;
+		&.active{display: block; background-color: yellow;}
+		@media (max-width: 1199px) {
+		position: relative;
+		top: 0;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		}
+	}
+}
