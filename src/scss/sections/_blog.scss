@@ -114,6 +114,10 @@
 			width: 100%;
 			aspect-ratio:231/321;
 			object-fit: cover;
+			transition: .3s; 
+			&:hover{
+				filter:brightness(1.15)
+			}
 		}
 		@media (max-width: 1199px) {
 			padding-inline: 8px;

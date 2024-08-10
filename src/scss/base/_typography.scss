@@ -64,6 +64,10 @@
 		border-bottom: 0;
 	}
 }
+a.link{
+	transition: .3s; 
+	&:hover{opacity: .6;}
+}
 .txt-light{font-weight: 300;}
 .icon-item,.contact-link{
 	svg, img{flex-shrink: 0;}

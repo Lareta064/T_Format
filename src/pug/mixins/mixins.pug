@@ -34,7 +34,7 @@ mixin mini-card(title, img, state="", label1, label2)
 
 mixin product-card(title, img, state="", label1, label2)
 	.product-card
-		a(href="./img/product"+ img +".webp" data-fancybox).card-img
+		a(href="#!").card-img
 			img.lazy(src="./img/product"+ img +".webp", width="260" height="361" alt="img")
 			if label1
 				.label-red Акция

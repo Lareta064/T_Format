@@ -31,7 +31,8 @@
 	column-gap: 64px;
 	
 	a{
-		display: inline; font-size: 16px; font-weight: 400;
+		display: inline; font-size: 16px; font-weight: 400; transition: .3s; 
+		&:hover{opacity: .7;}
 		@media (max-width: 767px) {
 		font-size: 12px;
 		}

@@ -22,12 +22,13 @@
 		text-decoration: underline;
 		text-decoration-skip-ink: none;
 		color: var(--dark);
-		&:hover{text-decoration: none;}
-	}
+		&:hover{text-decoration: none; opacity: .6;}
+	 }
 	}
 .card-img{
 	overflow: hidden;
 	display: block;
+	transition: .3s; 
 }
 .card-img img{
 	transition: .3s; 
@@ -54,6 +55,8 @@
 		.h4{
 			flex-grow:1;
 			margin-bottom: 16px;
+			transition: .3s; 
+			&:hover{opacity: .6;}
 		}
 		.d-flex{
 			justify-content: space-between;
@@ -123,6 +126,9 @@
 }
 .border-img{
 	border:1px solid rgba(0,0,0, .3);
+}
+.product-card .card-img:hover{
+	filter: brightness(1.15);
 }
 .label-green,
 .label-red {

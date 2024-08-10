@@ -4,6 +4,10 @@
 		width: 100%;
 		aspect-ratio: 260 / 173;
 		object-fit: cover;
+		transition: .3s; 
+		&:hover{
+			filter:brightness(1.15)
+		}
 	}
 	&__txt{
 		padding-top: 16px;
@@ -17,7 +21,8 @@
 			-webkit-box-orient: vertical;
 			-webkit-line-clamp: 2;
 			overflow: hidden;
-			&:hover{text-decoration: none;}
+			transition: .3s; 
+			&:hover{text-decoration: none; opacity: .6;}
 	}
 	.txt-14{
 		

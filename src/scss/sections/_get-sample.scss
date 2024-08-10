@@ -53,6 +53,7 @@
 		@media (max-width: 767px) {
 			grid-column: span 12;
 			max-width: 360px;
+			margin-inline: auto;
 			&>*+* {margin-top: 16px;}
 		}
 	}
