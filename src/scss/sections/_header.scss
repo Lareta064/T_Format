@@ -41,6 +41,25 @@
 		right: 0;
 		top: 0;
 		min-width: unset!important;
+		.count-label{
+			position: absolute;
+			top: 12px;
+			right: 14px;
+			z-index: 3;
+			color: white;
+			padding-inline: 5px;
+			height: 16px;
+			border-radius: 3px;
+			font-size: 10px;
+			background-color: var(--red);
+			@media (max-width: 767px) {
+				top: -8px;
+				right: -6px;
+			}
+		}
+		&:hover{
+			.count-label{background-color: var(--dark);}
+		}
 	}
 	@media (max-width: 1439px) {
 		.logo .svg-logo{width: 135px; height: 30px;}
@@ -48,7 +67,6 @@
 	@media (max-width: 767px) {
 		.btn-cart{
 			position: relative;
-			
 			width: 34px;
 			height: 34px;
 			

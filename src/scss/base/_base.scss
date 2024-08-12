@@ -48,6 +48,10 @@
 	  touch-action: none;
 	  -ms-touch-action: none;
 	  height: 100vh;
+    padding-right: 17px;
+    @media (max-width: 1199px) {
+    padding-right: 0;
+    }
   }
   section .h1{
     margin-bottom: 30px;
@@ -146,18 +150,18 @@ article{
 /*======= классы сетки========*/
 .d-flex, .flex-center, .fl-y, .fl-x, .fl-col-y, .fl-col-x, .fl-justify,
 .icon-item,.header-row,.contact-link,.online-state,.btn-group,
-.round-icon,.product-info-menu,.product-info-article, .btn-close{
+.round-icon,.product-info-menu,.product-info-article, .btn-close,.count-label{
   display: flex;
   column-gap:14px;
 }
 .fl-y, .fl-col-y,.flex-center,.icon-item,.fl-justify,.header-row,
-.contact-link,.online-state,.btn-group,.product-info-menu,.product-info-article, .btn-close{
+.contact-link,.online-state,.btn-group,.product-info-menu,.product-info-article, .btn-close,.count-label{
   align-items: center;
 }
 .fl-col{
   flex-direction: column;
 }
-.flex-center, .fl-x,.fl-col-x, .btn-close{
+.flex-center, .fl-x,.fl-col-x, .btn-close,.count-label{
   justify-content: center;
 }
 .fl-justify,.header-top,.product-info-menu,.product-info-article{
